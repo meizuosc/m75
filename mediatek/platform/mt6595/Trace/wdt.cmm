@@ -1,0 +1,9 @@
+;AP WDT disable
+d.s asd:0x10007000 %le %long 0x22000000
+
+;SPM WDT disable
+d.s ASD:0x10006014 %le %long (DATA.Long(ASD:0x10006014)|(0x400000))
+d.s ASD:0x10006014 %le %long (DATA.Long(ASD:0x10006014)&~(0x400000))
+d.s ASD:0x10006314 %le %long ((0xb160000)|DATA.Long(ASD:0x10006314)&~(0x100))
+d.s ASD:0x100063E4 %le %long 0x0002
+

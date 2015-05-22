@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+
+    <!-- Ignore the LintError issue, .class is not generated -->
+    <issue id="LintError" severity="ignore"/>
+
+</lint>

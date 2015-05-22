@@ -1,0 +1,3 @@
+kernel/../mediatek/platform/mt6589/kernel/drivers/power/pmic_mt6320.ko
+kernel/../mediatek/platform/mt6589/kernel/drivers/power/upmu_common.ko
+kernel/../mediatek/platform/mt6589/kernel/drivers/power/mt6320_battery.ko

@@ -1,0 +1,361 @@
+[Chip Type]
+Chip = MT8320
+GPIO_Pull_Sel = 1
+PMIC_Config = 0
+GPIO_ModeNum = 8
+AndroidPhone = 1
+
+[GPIO]
+GPIO0   = MODE0(GPIO0)            MODE1(IDDIG_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN0_S)      PU
+GPIO1   = MODE0(GPIO1)            MODE1(SRCLKENAI_S)      MODE2()                 MODE3()                 MODE4(EINT12)           MODE5()                 MODE6()                 MODE7(TESTA_IN1_S)      PD
+GPIO2   = MODE0(GPIO2)            MODE1(SRCLKENA_S)       MODE2()                 MODE3()                 MODE4(EINT13)           MODE5()                 MODE6()                 MODE7(TESTA_IN2_S)      PD
+GPIO3   = MODE0(GPIO3)            MODE1(SRCVOLTEN_S)      MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN3_S)      PD
+GPIO4   = MODE0(GPIO4)            MODE1(WATCHDOG_S)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN4_S)      PD
+GPIO5   = MODE0(GPIO5)            MODE1(RTC32K_S)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO6   = MODE0(GPIO6)            MODE1(ACCDET_S)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN5_S)      PD
+GPIO7   = MODE0(GPIO7)            MODE1(CONRSTB_S)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN6_S)      PD
+GPIO8   = MODE0(GPIO8)            MODE1(CONPMUEN_S)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO9   = MODE0(GPIO9)            MODE1(MDWAKEUP_S)       MODE2()                 MODE3()                 MODE4(EINT14)           MODE5()                 MODE6()                 MODE7(TESTA_IN7_S)      PD
+GPIO10  = MODE0(GPIO10)           MODE1(JTCK_S)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO11  = MODE0(GPIO11)           MODE1(JTDO_S)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO12  = MODE0(GPIO12)           MODE1(JTDI_S)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO13  = MODE0(GPIO13)           MODE1(JTMS_S)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO14  = MODE0(GPIO14)           MODE1(UTXD0_S)          MODE2(IRTXD)            MODE3(SDA3)             MODE4(EINT15)           MODE5(ACTIVITY)         MODE6()                 MODE7(TESTA_IN8_S)      PU
+GPIO15  = MODE0(GPIO15)           MODE1(URXD0_S)          MODE2(IRRXD)            MODE3(SCL3)             MODE4(EINT16)           MODE5(LINK)             MODE6()                 MODE7(TESTA_IN9_S)      PU
+GPIO16  = MODE0(GPIO16)           MODE1(UPDN0_S)          MODE2(IRPDN)            MODE3(USB_DRVVBUS)      MODE4(EINT17)           MODE5(SPEED)            MODE6(PWM9)             MODE7(TESTA_IN10_S)     PU
+GPIO17  = MODE0(GPIO17)           MODE1(UTXD1_S)          MODE2()                 MODE3()                 MODE4()                 MODE5(DUPLEX)           MODE6()                 MODE7(TESTA_IN11_S)     PU
+GPIO18  = MODE0(GPIO18)           MODE1(URXD1_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN12_S)     PU
+GPIO19  = MODE0(GPIO19)           MODE1(UTXD2_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN13_S)     PU
+GPIO20  = MODE0(GPIO20)           MODE1(URXD2_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN14_S)     PU
+GPIO21  = MODE0(GPIO21)           MODE1(UTXD3_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN15_S)     PU
+GPIO22  = MODE0(GPIO22)           MODE1(URXD3_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN16_S)     PU
+GPIO23  = MODE0(GPIO23)           MODE1(PWM0_S)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN17_S)     PD
+GPIO24  = MODE0(GPIO24)           MODE1(PWM1_S)           MODE2()                 MODE3()                 MODE4()                 MODE5(ACTIVITY)         MODE6()                 MODE7(TESTA_IN18_S)     PD
+GPIO25  = MODE0(GPIO25)           MODE1(PWM2_S)           MODE2()                 MODE3()                 MODE4(EINT18)           MODE5(LINK)             MODE6()                 MODE7(TESTA_IN19_S)     PD
+GPIO26  = MODE0(GPIO26)           MODE1(PWM3_S)           MODE2()                 MODE3(SDA4)             MODE4(EINT19)           MODE5(SPEED)            MODE6()                 MODE7(TESTA_IN20_S)     PD
+GPIO27  = MODE0(GPIO27)           MODE1(PWM4_S)           MODE2()                 MODE3(SCL4)             MODE4(EINT20)           MODE5(DUPLEX)           MODE6(USB_DRVVBUS)      MODE7(TESTA_IN21_S)     PD
+GPIO28  = MODE0(GPIO28)           MODE1(EINT0_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN22_S)     PD
+GPIO29  = MODE0(GPIO29)           MODE1(EINT1_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN23_S)     PD
+GPIO30  = MODE0(GPIO30)           MODE1(EINT2_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN24_S)     PD
+GPIO31  = MODE0(GPIO31)           MODE1(NLD12)            MODE2()                 MODE3(SDA2)             MODE4(EINT9)            MODE5()                 MODE6()                 MODE7()                 PD
+GPIO32  = MODE0(GPIO32)           MODE1(NREB_S)           MODE2()                 MODE3()                 MODE4(EINT10)           MODE5()                 MODE6()                 MODE7(TESTB_IN0_S)      PD
+GPIO33  = MODE0(GPIO33)           MODE1(NLD11)            MODE2()                 MODE3(SCL2)             MODE4(EINT11)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO34  = MODE0(GPIO34)           MODE1(NLD9)             MODE2()                 MODE3(SDA3)             MODE4(EINT12)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO35  = MODE0(GPIO35)           MODE1(NLD10)            MODE2()                 MODE3(SCL3)             MODE4(EINT13)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO36  = MODE0(GPIO36)           MODE1(NLD4_S)           MODE2()                 MODE3()                 MODE4(EINT14)           MODE5()                 MODE6()                 MODE7(TESTB_IN1_S)      PD
+GPIO37  = MODE0(GPIO37)           MODE1(NALE_S)           MODE2()                 MODE3()                 MODE4(EINT15)           MODE5()                 MODE6()                 MODE7(TESTB_IN2_S)      PD
+GPIO38  = MODE0(GPIO38)           MODE1(NLD14)            MODE2()                 MODE3(SDA4)             MODE4(EINT16)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO39  = MODE0(GPIO39)           MODE1(NRNB_S)           MODE2()                 MODE3()                 MODE4(EINT17)           MODE5()                 MODE6()                 MODE7(TESTB_IN3_S)      PU
+GPIO40  = MODE0(GPIO40)           MODE1(NLD8)             MODE2()                 MODE3(SCL4)             MODE4(EINT18)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO41  = MODE0(GPIO41)           MODE1(NCLE_S)           MODE2()                 MODE3()                 MODE4(EINT19)           MODE5()                 MODE6()                 MODE7(TESTB_IN4_S)      PD
+GPIO42  = MODE0(GPIO42)           MODE1(NLD0_S)           MODE2()                 MODE3()                 MODE4(EINT20)           MODE5()                 MODE6()                 MODE7(TESTB_IN5_S)      PD
+GPIO43  = MODE0(GPIO43)           MODE1(NLD6_S)           MODE2()                 MODE3()                 MODE4(EINT21)           MODE5()                 MODE6()                 MODE7(TESTB_IN6_S)      PD
+GPIO44  = MODE0(GPIO44)           MODE1(NLD3_S)           MODE2()                 MODE3()                 MODE4(EINT22)           MODE5()                 MODE6()                 MODE7(TESTB_IN7_S)      PD
+GPIO45  = MODE0(GPIO45)           MODE1(NLD5_S)           MODE2()                 MODE3()                 MODE4(EINT23)           MODE5()                 MODE6()                 MODE7(TESTB_IN8_S)      PD
+GPIO46  = MODE0(GPIO46)           MODE1(NCEB1_S)          MODE2()                 MODE3()                 MODE4(EINT24)           MODE5(USB_DRVVBUS)      MODE6(PWM9)             MODE7(TESTB_IN9_S)      PU
+GPIO47  = MODE0(GPIO47)           MODE1(NCEB0_S)          MODE2()                 MODE3()                 MODE4(EINT25)           MODE5()                 MODE6()                 MODE7(TESTB_IN10_S)     PU
+GPIO48  = MODE0(GPIO48)           MODE1(NWEB_S)           MODE2()                 MODE3()                 MODE4(EINT26)           MODE5()                 MODE6()                 MODE7(TESTB_IN11_S)     PD
+GPIO49  = MODE0(GPIO49)           MODE1(NLD15)            MODE2()                 MODE3(SDA5)             MODE4(EINT27)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO50  = MODE0(GPIO50)           MODE1(NLD2_S)           MODE2()                 MODE3()                 MODE4(EINT9)            MODE5()                 MODE6()                 MODE7(TESTB_IN12_S)     PD
+GPIO51  = MODE0(GPIO51)           MODE1(NLD1_S)           MODE2()                 MODE3()                 MODE4(EINT10)           MODE5()                 MODE6()                 MODE7(TESTB_IN13_S)     PD
+GPIO52  = MODE0(GPIO52)           MODE1(NLD7_S)           MODE2()                 MODE3()                 MODE4(EINT11)           MODE5()                 MODE6()                 MODE7(TESTB_IN14_S)     PD
+GPIO53  = MODE0(GPIO53)           MODE1(NLD13)            MODE2()                 MODE3(SCL5)             MODE4(EINT12)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO54  = MODE0(GPIO54)           MODE1(SPI1_MO)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO55  = MODE0(GPIO55)           MODE1(SPI1_MI)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO56  = MODE0(GPIO56)           MODE1(SPI1_CSN)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO57  = MODE0(GPIO57)           MODE1(SPI1_CLK)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO58  = MODE0(GPIO58)           MODE1(HDMI_CEC)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO59  = MODE0(GPIO59)           MODE1(HDMI_HTPLG)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO60  = MODE0(GPIO60)           MODE1(HDMI_SDA)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO61  = MODE0(GPIO61)           MODE1(HDMI_SCL)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO62  = MODE0(GPIO62)           MODE1(SATA_PHYSLP)      MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO63  = MODE0(GPIO63)           MODE1(SDA1_T)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN29_T)     PU
+GPIO64  = MODE0(GPIO64)           MODE1(SCL1_T)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN30_T)     PU
+GPIO65  = MODE0(GPIO65)           MODE1(NREB_T)           MODE2()                 MODE3()                 MODE4(EINT10)           MODE5()                 MODE6()                 MODE7(TESTB_IN0_T)      PD
+GPIO66  = MODE0(GPIO66)           MODE1(NLD4_T)           MODE2()                 MODE3()                 MODE4(EINT14)           MODE5()                 MODE6()                 MODE7(TESTB_IN1_T)      PD
+GPIO67  = MODE0(GPIO67)           MODE1(NALE_T)           MODE2()                 MODE3()                 MODE4(EINT15)           MODE5()                 MODE6()                 MODE7(TESTB_IN2_T)      PD
+GPIO68  = MODE0(GPIO68)           MODE1(NRNB_T)           MODE2()                 MODE3()                 MODE4(EINT17)           MODE5()                 MODE6()                 MODE7(TESTB_IN3_T)      PU
+GPIO69  = MODE0(GPIO69)           MODE1(NCLE_T)           MODE2()                 MODE3()                 MODE4(EINT19)           MODE5()                 MODE6()                 MODE7(TESTB_IN4_T)      PD
+GPIO70  = MODE0(GPIO70)           MODE1(NLD0_T)           MODE2()                 MODE3()                 MODE4(EINT20)           MODE5()                 MODE6()                 MODE7(TESTB_IN5_T)      PD
+GPIO71  = MODE0(GPIO71)           MODE1(NLD6_T)           MODE2()                 MODE3()                 MODE4(EINT21)           MODE5()                 MODE6()                 MODE7(TESTB_IN6_T)      PD
+GPIO72  = MODE0(GPIO72)           MODE1(NLD3_T)           MODE2()                 MODE3()                 MODE4(EINT22)           MODE5()                 MODE6()                 MODE7(TESTB_IN7_T)      PD
+GPIO73  = MODE0(GPIO73)           MODE1(NLD5_T)           MODE2()                 MODE3()                 MODE4(EINT23)           MODE5()                 MODE6()                 MODE7(TESTB_IN8_T)      PD
+GPIO74  = MODE0(GPIO74)           MODE1(NCEB1_T)          MODE2()                 MODE3()                 MODE4(EINT24)           MODE5(USB_DRVVBUS)      MODE6(PWM9)             MODE7(TESTB_IN9_T)      PU
+GPIO75  = MODE0(GPIO75)           MODE1(NCEB0_T)          MODE2()                 MODE3()                 MODE4(EINT25)           MODE5()                 MODE6()                 MODE7(TESTB_IN10_T)     PU
+GPIO76  = MODE0(GPIO76)           MODE1(NWEB_T)           MODE2()                 MODE3()                 MODE4(EINT26)           MODE5()                 MODE6()                 MODE7(TESTB_IN11_T)     PD
+GPIO77  = MODE0(GPIO77)           MODE1(NLD2_T)           MODE2()                 MODE3()                 MODE4(EINT9)            MODE5()                 MODE6()                 MODE7(TESTB_IN12_T)     PD
+GPIO78  = MODE0(GPIO78)           MODE1(NLD1_T)           MODE2()                 MODE3()                 MODE4(EINT10)           MODE5()                 MODE6()                 MODE7(TESTB_IN13_T)     PD
+GPIO79  = MODE0(GPIO79)           MODE1(NLD7_T)           MODE2()                 MODE3()                 MODE4(EINT11)           MODE5()                 MODE6()                 MODE7(TESTB_IN14_T)     PD
+GPIO80  = MODE0(GPIO80)           MODE1()                 MODE2(PWM5)             MODE3(SDA3)             MODE4(EINT13)           MODE5(ACTIVITY)         MODE6()                 MODE7()                 
+GPIO81  = MODE0(GPIO81)           MODE1()                 MODE2(PWM6)             MODE3(SCL3)             MODE4(EINT14)           MODE5(LINK)             MODE6()                 MODE7()                 
+GPIO82  = MODE0(GPIO82)           MODE1()                 MODE2(PWM7)             MODE3(SDA4)             MODE4(EINT15)           MODE5(SPEED)            MODE6(PWM9)             MODE7()                 
+GPIO83  = MODE0(GPIO83)           MODE1()                 MODE2(PWM8)             MODE3(SCL4)             MODE4(EINT16)           MODE5(DUPLEX)           MODE6(USB_DRVVBUS)      MODE7()                 
+GPIO84  = MODE0(GPIO84)           MODE1()                 MODE2(PWM9)             MODE3(SDA5)             MODE4(EINT17)           MODE5(ACTIVITY)         MODE6(USB_DRVVBUS)      MODE7()                 
+GPIO85  = MODE0(GPIO85)           MODE1()                 MODE2(PWM9)             MODE3(SCL5)             MODE4(EINT18)           MODE5(LINK)             MODE6(USB_DRVVBUS)      MODE7()                 
+GPIO86  = MODE0(GPIO86)           MODE1(MSDC2_DAT2)       MODE2()                 MODE3()                 MODE4(EINT19)           MODE5()                 MODE6()                 MODE7(TESTB_OUT0)       PU
+GPIO87  = MODE0(GPIO87)           MODE1(MSDC2_DAT3)       MODE2()                 MODE3()                 MODE4(EINT20)           MODE5()                 MODE6()                 MODE7(TESTB_OUT1)       PU
+GPIO88  = MODE0(GPIO88)           MODE1(MSDC2_CMD)        MODE2()                 MODE3()                 MODE4(EINT21)           MODE5()                 MODE6()                 MODE7(TESTB_OUT2)       PU
+GPIO89  = MODE0(GPIO89)           MODE1(MSDC2_CLK)        MODE2()                 MODE3()                 MODE4(EINT22)           MODE5()                 MODE6()                 MODE7(TESTB_OUT3)       PU
+GPIO90  = MODE0(GPIO90)           MODE1(MSDC2_DAT1)       MODE2()                 MODE3()                 MODE4(EINT23)           MODE5()                 MODE6()                 MODE7(TESTB_OUT4)       PU
+GPIO91  = MODE0(GPIO91)           MODE1(MSDC2_DAT0)       MODE2()                 MODE3()                 MODE4(EINT24)           MODE5()                 MODE6()                 MODE7(TESTB_OUT5)       PU
+GPIO92  = MODE0(GPIO92)           MODE1(MSDC3_DAT2)       MODE2(MSDC2_DAT6)       MODE3()                 MODE4(EINT25)           MODE5()                 MODE6()                 MODE7(TESTB_OUT6)       PU
+GPIO93  = MODE0(GPIO93)           MODE1(MSDC3_DAT3)       MODE2(MSDC2_DAT7)       MODE3()                 MODE4(EINT26)           MODE5()                 MODE6()                 MODE7(TESTB_OUT7)       PU
+GPIO94  = MODE0(GPIO94)           MODE1(MSDC3_CMD)        MODE2()                 MODE3(SDA5)             MODE4(EINT27)           MODE5(ACTIVITY)         MODE6()                 MODE7(TESTB_OUT8)       PU
+GPIO95  = MODE0(GPIO95)           MODE1(MSDC3_CLK)        MODE2()                 MODE3(SCL5)             MODE4(EINT9)            MODE5(LINK)             MODE6()                 MODE7(TESTB_OUT9)       PU
+GPIO96  = MODE0(GPIO96)           MODE1(MSDC3_DAT1)       MODE2(MSDC2_DAT5)       MODE3()                 MODE4(EINT10)           MODE5(SPEED)            MODE6()                 MODE7(TESTB_OUT10)      PU
+GPIO97  = MODE0(GPIO97)           MODE1(MSDC3_DAT0)       MODE2(MSDC2_DAT4)       MODE3()                 MODE4(EINT11)           MODE5(DUPLEX)           MODE6()                 MODE7(TESTB_OUT11)      PU
+GPIO98  = MODE0(GPIO98)           MODE1(MSDC0_DAT2)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT12)      PU
+GPIO99  = MODE0(GPIO99)           MODE1(MSDC0_DAT3)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT13)      PU
+GPIO100 = MODE0(GPIO100)          MODE1(MSDC0_CMD)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT14)      PU
+GPIO101 = MODE0(GPIO101)          MODE1(MSDC0_CLK)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT15)      PU
+GPIO102 = MODE0(GPIO102)          MODE1(MSDC0_DAT1)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT16)      PU
+GPIO103 = MODE0(GPIO103)          MODE1(MSDC0_DAT0)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT17)      PU
+GPIO104 = MODE0(GPIO104)          MODE1(MSDC1_DAT2)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT18)      PU
+GPIO105 = MODE0(GPIO105)          MODE1(MSDC1_DAT3)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT19)      PU
+GPIO106 = MODE0(GPIO106)          MODE1(MSDC1_CMD)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT20)      PU
+GPIO107 = MODE0(GPIO107)          MODE1(MSDC1_CLK)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT21)      PU
+GPIO108 = MODE0(GPIO108)          MODE1(MSDC1_DAT1)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT22)      PU
+GPIO109 = MODE0(GPIO109)          MODE1(MSDC1_DAT0)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT23)      PU
+GPIO110 = MODE0(GPIO110)          MODE1(PWM0_T)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN17_T)     PD
+GPIO111 = MODE0(GPIO111)          MODE1(PWM1_T)           MODE2()                 MODE3()                 MODE4()                 MODE5(ACTIVITY)         MODE6()                 MODE7(TESTA_IN18_T)     PD
+GPIO112 = MODE0(GPIO112)          MODE1(PWM2_T)           MODE2()                 MODE3()                 MODE4(EINT18)           MODE5(LINK)             MODE6()                 MODE7(TESTA_IN19_T)     PD
+GPIO113 = MODE0(GPIO113)          MODE1(PWM3_T)           MODE2()                 MODE3(SDA4)             MODE4(EINT19)           MODE5(SPEED)            MODE6()                 MODE7(TESTA_IN20_T)     PD
+GPIO114 = MODE0(GPIO114)          MODE1(PWM4_T)           MODE2()                 MODE3(SCL4)             MODE4(EINT20)           MODE5(DUPLEX)           MODE6(USB_DRVVBUS)      MODE7(TESTA_IN21_T)     PD
+GPIO115 = MODE0(GPIO115)          MODE1(EINT0_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN22_T)     PD
+GPIO116 = MODE0(GPIO116)          MODE1(EINT1_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN23_T)     PD
+GPIO117 = MODE0(GPIO117)          MODE1(EINT2_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN24_T)     PD
+GPIO118 = MODE0(GPIO118)          MODE1(EINT3_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_OUT28_T)    PD
+GPIO119 = MODE0(GPIO119)          MODE1(EINT4_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_OUT29_T)    PD
+GPIO120 = MODE0(GPIO120)          MODE1(EINT5_T)          MODE2()                 MODE3()                 MODE4()                 MODE5(ACTIVITY)         MODE6()                 MODE7(TESTA_OUT30_T)    PD
+GPIO121 = MODE0(GPIO121)          MODE1(EINT6_T)          MODE2()                 MODE3()                 MODE4()                 MODE5(LINK)             MODE6()                 MODE7(TESTA_OUT31_T)    PD
+GPIO122 = MODE0(GPIO122)          MODE1(EINT7_T)          MODE2()                 MODE3(SDA5)             MODE4()                 MODE5(SPEED)            MODE6(PWM9)             MODE7(TESTB_IN15_T)     PD
+GPIO123 = MODE0(GPIO123)          MODE1(EINT8_T)          MODE2()                 MODE3(SCL5)             MODE4()                 MODE5(DUPLEX)           MODE6(USB_DRVVBUS)      MODE7(TESTB_IN16_T)     PD
+GPIO124 = MODE0(GPIO124)          MODE1(XTALSEL_T)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 
+GPIO125 = MODE0(GPIO125)          MODE1(MSDC0_INSI_T)     MODE2(MSDC2_RSTB)       MODE3(USB_DRVVBUS)      MODE4(EINT21)           MODE5(ACTIVITY)         MODE6(PWM9)             MODE7(TESTB_IN17_T)     PU
+GPIO126 = MODE0(GPIO126)          MODE1(MSDC1_INSI_T)     MODE2(MSDC2_RSTB)       MODE3(USB_DRVVBUS)      MODE4(EINT22)           MODE5(LINK)             MODE6(PWM9)             MODE7(TESTB_IN18_T)     PU
+GPIO127 = MODE0(GPIO127)          MODE1(IDDIG_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN0_T)      PU
+GPIO128 = MODE0(GPIO128)          MODE1(SRCLKENAI_T)      MODE2()                 MODE3()                 MODE4(EINT12)           MODE5()                 MODE6()                 MODE7(TESTA_IN1_T)      PD
+GPIO129 = MODE0(GPIO129)          MODE1(SRCLKENA_T)       MODE2()                 MODE3()                 MODE4(EINT13)           MODE5()                 MODE6()                 MODE7(TESTA_IN2_T)      PD
+GPIO130 = MODE0(GPIO130)          MODE1(SRCVOLTEN_T)      MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN3_T)      PD
+GPIO131 = MODE0(GPIO131)          MODE1(WATCHDOG_T)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN4_T)      PD
+GPIO132 = MODE0(GPIO132)          MODE1(RTC32K_T)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO133 = MODE0(GPIO133)          MODE1(ACCDET_T)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN5_T)      PD
+GPIO134 = MODE0(GPIO134)          MODE1(CONRSTB_T)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN6_T)      PD
+GPIO135 = MODE0(GPIO135)          MODE1(CONPMUEN_T)       MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO136 = MODE0(GPIO136)          MODE1(MDWAKEUP_T)       MODE2()                 MODE3()                 MODE4(EINT14)           MODE5()                 MODE6()                 MODE7(TESTA_IN7_T)      PD
+GPIO137 = MODE0(GPIO137)          MODE1(JTCK_T)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO138 = MODE0(GPIO138)          MODE1(JTDO_T)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO139 = MODE0(GPIO139)          MODE1(JTDI_T)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO140 = MODE0(GPIO140)          MODE1(JTMS_T)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO141 = MODE0(GPIO141)          MODE1(KP_ROW2_T)        MODE2()                 MODE3(USB_DRVVBUS)      MODE4(EINT11)           MODE5(ACTIVITY)         MODE6(PWM9)             MODE7()                 PD
+GPIO142 = MODE0(GPIO142)          MODE1(KP_ROW1_T)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO143 = MODE0(GPIO143)          MODE1(KP_ROW0_T)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO144 = MODE0(GPIO144)          MODE1(KP_COL0_T)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO145 = MODE0(GPIO145)          MODE1(KP_COL2_T)        MODE2()                 MODE3(USB_DRVVBUS)      MODE4(EINT18)           MODE5(LINK)             MODE6(PWM9)             MODE7(TESTA_IN31_T)     PD
+GPIO146 = MODE0(GPIO146)          MODE1(KP_COL1_T)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT31_T)    PU
+GPIO147 = MODE0(GPIO147)          MODE1(UTXD0_T)          MODE2(IRTXD)            MODE3(SDA3)             MODE4(EINT15)           MODE5(ACTIVITY)         MODE6()                 MODE7(TESTA_IN8_T)      PU
+GPIO148 = MODE0(GPIO148)          MODE1(URXD0_T)          MODE2(IRRXD)            MODE3(SCL3)             MODE4(EINT16)           MODE5(LINK)             MODE6()                 MODE7(TESTA_IN9_T)      PU
+GPIO149 = MODE0(GPIO149)          MODE1(UPDN0_T)          MODE2(IRPDN)            MODE3(USB_DRVVBUS)      MODE4(EINT17)           MODE5(SPEED)            MODE6(PWM9)             MODE7(TESTA_IN10_T)     PU
+GPIO150 = MODE0(GPIO150)          MODE1(UTXD1_T)          MODE2()                 MODE3()                 MODE4()                 MODE5(DUPLEX)           MODE6()                 MODE7(TESTA_IN11_T)     PU
+GPIO151 = MODE0(GPIO151)          MODE1(URXD1_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN12_T)     PU
+GPIO152 = MODE0(GPIO152)          MODE1(UTXD2_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN13_T)     PU
+GPIO153 = MODE0(GPIO153)          MODE1(URXD2_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN14_T)     PU
+GPIO154 = MODE0(GPIO154)          MODE1(UTXD3_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN15_T)     PU
+GPIO155 = MODE0(GPIO155)          MODE1(URXD3_T)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN16_T)     PU
+GPIO156 = MODE0(GPIO156)          MODE1(ADC_CK_T)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_IN19_T)     PD
+GPIO157 = MODE0(GPIO157)          MODE1(ADC_WS_T)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_IN20_T)     PD
+GPIO158 = MODE0(GPIO158)          MODE1(ADC_DAT_T)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_IN21_T)     PD
+GPIO159 = MODE0(GPIO159)          MODE1(DAC_CK_T)         MODE2()                 MODE3(SDA3)             MODE4(EINT27)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO160 = MODE0(GPIO160)          MODE1(DAC_WS_T)         MODE2()                 MODE3(SCL3)             MODE4(EINT9)            MODE5()                 MODE6()                 MODE7(TESTA_IN25_T)     PD
+GPIO161 = MODE0(GPIO161)          MODE1(DAC_DAT_T)        MODE2()                 MODE3()                 MODE4(EINT10)           MODE5()                 MODE6()                 MODE7(TESTA_IN26_T)     PD
+GPIO162 = MODE0(GPIO162)          MODE1(SDA0_T)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN27_T)     PU
+GPIO163 = MODE0(GPIO163)          MODE1(SCL0_T)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN28_T)     PU
+GPIO164 = MODE0(GPIO164)          MODE1(DPIHSYNC_S)       MODE2()                 MODE3(SDA3)             MODE4(EINT27)           MODE5(ACTIVITY)         MODE6()                 MODE7(TESTA_OUT0_S)     PD
+GPIO165 = MODE0(GPIO165)          MODE1(DPIVSYNC_S)       MODE2()                 MODE3(SCL3)             MODE4(EINT9)            MODE5(LINK)             MODE6()                 MODE7(TESTA_OUT1_S)     PD
+GPIO166 = MODE0(GPIO166)          MODE1(DPIDE_S)          MODE2(OSD_GPORT_ACK)    MODE3(SDA4)             MODE4(EINT10)           MODE5(SPEED)            MODE6(SPDIF)            MODE7(TESTA_OUT2_S)     PD
+GPIO167 = MODE0(GPIO167)          MODE1(DPICK_S)          MODE2()                 MODE3(SCL4)             MODE4(EINT11)           MODE5(DUPLEX)           MODE6()                 MODE7(TESTA_OUT3_S)     PD
+GPIO168 = MODE0(GPIO168)          MODE1(DPIB2_S)          MODE2(CM2DAT2)          MODE3()                 MODE4(EINT12)           MODE5(ACTIVITY)         MODE6( TRACECLK)        MODE7(TESTA_OUT4_S)     PD
+GPIO169 = MODE0(GPIO169)          MODE1(DPIB0_S)          MODE2(CM2MCLK)          MODE3()                 MODE4(EINT13)           MODE5(LINK)             MODE6( TRACEDATA0)      MODE7(TESTA_OUT5_S)     PD
+GPIO170 = MODE0(GPIO170)          MODE1(DPIR4_S)          MODE2(CM2DAT7)          MODE3()                 MODE4(EINT14)           MODE5(SPEED)            MODE6( TRACEDATA1)      MODE7(TESTA_OUT6_S)     PD
+GPIO171 = MODE0(GPIO171)          MODE1(DPIB4_S)          MODE2(CM2DAT0)          MODE3()                 MODE4(EINT15)           MODE5(DUPLEX)           MODE6( TRACEDATA2)      MODE7(TESTA_OUT7_S)     PD
+GPIO172 = MODE0(GPIO172)          MODE1(DPIB3_S)          MODE2(CM2DAT4)          MODE3()                 MODE4(EINT16)           MODE5(EXT_TXC)          MODE6( TRACEDATA3)      MODE7(TESTA_OUT8_S)     PD
+GPIO173 = MODE0(GPIO173)          MODE1(DPIG2_S)          MODE2(CM2DAT6)          MODE3()                 MODE4(EINT17)           MODE5(EXT_TXEN)         MODE6( TRACEDATA4)      MODE7(TESTA_OUT9_S)     PD
+GPIO174 = MODE0(GPIO174)          MODE1(DPIR2_S)          MODE2(CM2DAT3)          MODE3()                 MODE4(EINT18)           MODE5(EXT_TXER)         MODE6( TRACEDATA5)      MODE7(TESTA_OUT10_S)    PD
+GPIO175 = MODE0(GPIO175)          MODE1(DPIG0_S)          MODE2(CM2DAT8)          MODE3()                 MODE4(EINT19)           MODE5(EXT_TXD[0])       MODE6( TRACEDATA6)      MODE7(TESTA_OUT11_S)    PD
+GPIO176 = MODE0(GPIO176)          MODE1(DPIG4_S)          MODE2(CM2DAT9)          MODE3()                 MODE4(EINT20)           MODE5(EXT_TXD[1])       MODE6( TRACEDATA7)      MODE7(TESTA_OUT12_S)    PD
+GPIO177 = MODE0(GPIO177)          MODE1(DPIG1_S)          MODE2(CM2RST)           MODE3()                 MODE4(EINT21)           MODE5(EXT_TXD[2])       MODE6( TRACEDATA8)      MODE7(TESTA_OUT13_S)    PD
+GPIO178 = MODE0(GPIO178)          MODE1(DPIR1_S)          MODE2(CM2DAT5)          MODE3()                 MODE4(EINT22)           MODE5(EXT_TXD[3])       MODE6( TRACEDATA9)      MODE7(TESTA_OUT14_S)    PD
+GPIO179 = MODE0(GPIO179)          MODE1(DPIB6_S)          MODE2(CM2VSYNC)         MODE3()                 MODE4(EINT23)           MODE5(EXT_RXC)          MODE6( TRACEDATA10)     MODE7(TESTA_OUT15_S)    PD
+GPIO180 = MODE0(GPIO180)          MODE1(DPIR5_S)          MODE2(CM2PCLK)          MODE3()                 MODE4(EINT24)           MODE5(EXT_RXDV)         MODE6( TRACEDATA11)     MODE7(TESTA_OUT16_S)    PD
+GPIO181 = MODE0(GPIO181)          MODE1(DPIB5_S)          MODE2(CM2HSYNC)         MODE3()                 MODE4(EINT25)           MODE5(EXT_RXER)         MODE6( TRACEDATA12)     MODE7(TESTA_OUT17_S)    PD
+GPIO182 = MODE0(GPIO182)          MODE1(DPIR7_S)          MODE2(CM2PDN)           MODE3()                 MODE4(EINT26)           MODE5(EXT_RXD[0])       MODE6( TRACEDATA13)     MODE7(TESTA_OUT18_S)    PD
+GPIO183 = MODE0(GPIO183)          MODE1(DPIG3_S)          MODE2(CM2DAT1)          MODE3()                 MODE4(EINT27)           MODE5(EXT_RXD[1])       MODE6( TRACEDATA14)     MODE7(TESTA_OUT19_S)    PD
+GPIO184 = MODE0(GPIO184)          MODE1(DPIR6_S)          MODE2()                 MODE3()                 MODE4(EINT9)            MODE5(EXT_RXD[2])       MODE6( TRACEDATA15)     MODE7(TESTA_OUT20_S)    PD
+GPIO185 = MODE0(GPIO185)          MODE1(DPIG7_S)          MODE2()                 MODE3()                 MODE4(EINT10)           MODE5(EXT_RXD[3])       MODE6( TRACECTL)        MODE7(TESTA_OUT21_S)    PD
+GPIO186 = MODE0(GPIO186)          MODE1(DPIB1_S)          MODE2()                 MODE3()                 MODE4(EINT11)           MODE5(EXT_COL)          MODE6()                 MODE7(TESTA_OUT22_S)    PD
+GPIO187 = MODE0(GPIO187)          MODE1(DPIG6_S)          MODE2()                 MODE3()                 MODE4(EINT12)           MODE5(EXT_MDC)          MODE6()                 MODE7(TESTA_OUT23_S)    PD
+GPIO188 = MODE0(GPIO188)          MODE1(DPIR3_S)          MODE2()                 MODE3()                 MODE4(EINT13)           MODE5(EXT_MDIO)         MODE6()                 MODE7(TESTA_OUT24_S)    PD
+GPIO189 = MODE0(GPIO189)          MODE1(DPIB7_S)          MODE2()                 MODE3()                 MODE4(EINT14)           MODE5()                 MODE6()                 MODE7(TESTA_OUT25_S)    PD
+GPIO190 = MODE0(GPIO190)          MODE1(DPIR0_S)          MODE2()                 MODE3()                 MODE4(EINT15)           MODE5()                 MODE6()                 MODE7(TESTA_OUT26_S)    PD
+GPIO191 = MODE0(GPIO191)          MODE1(DPIG5_S)          MODE2()                 MODE3()                 MODE4(EINT16)           MODE5()                 MODE6()                 MODE7(TESTA_OUT27_S)    PD
+GPIO192 = MODE0(GPIO192)          MODE1(DPIHSYNC_T)       MODE2()                 MODE3(SDA3)             MODE4(EINT27)           MODE5(ACTIVITY)         MODE6()                 MODE7(TESTA_OUT0_T)     PD
+GPIO193 = MODE0(GPIO193)          MODE1(DPIVSYNC_T)       MODE2()                 MODE3(SCL3)             MODE4(EINT9)            MODE5(LINK)             MODE6()                 MODE7(TESTA_OUT1_T)     PD
+GPIO194 = MODE0(GPIO194)          MODE1(DPIDE_T)          MODE2(OSD_GPORT_ACK)    MODE3(SDA4)             MODE4(EINT10)           MODE5(SPEED)            MODE6(SPDIF)            MODE7(TESTA_OUT2_T)     PD
+GPIO195 = MODE0(GPIO195)          MODE1(DPICK_T)          MODE2()                 MODE3(SCL4)             MODE4(EINT11)           MODE5(DUPLEX)           MODE6()                 MODE7(TESTA_OUT3_T)     PD
+GPIO196 = MODE0(GPIO196)          MODE1(DPIB2_T)          MODE2(CM2DAT2)          MODE3()                 MODE4(EINT12)           MODE5(ACTIVITY)         MODE6( TRACECLK)        MODE7(TESTA_OUT4_T)     PD
+GPIO197 = MODE0(GPIO197)          MODE1(DPIB0_T)          MODE2(CM2MCLK)          MODE3()                 MODE4(EINT13)           MODE5(LINK)             MODE6( TRACEDATA0)      MODE7(TESTA_OUT5_T)     PD
+GPIO198 = MODE0(GPIO198)          MODE1(DPIR4_T)          MODE2(CM2DAT7)          MODE3()                 MODE4(EINT14)           MODE5(SPEED)            MODE6( TRACEDATA1)      MODE7(TESTA_OUT6_T)     PD
+GPIO199 = MODE0(GPIO199)          MODE1(DPIB4_T)          MODE2(CM2DAT0)          MODE3()                 MODE4(EINT15)           MODE5(DUPLEX)           MODE6( TRACEDATA2)      MODE7(TESTA_OUT7_T)     PD
+GPIO200 = MODE0(GPIO200)          MODE1(DPIB3_T)          MODE2(CM2DAT4)          MODE3()                 MODE4(EINT16)           MODE5(EXT_TXC)          MODE6( TRACEDATA3)      MODE7(TESTA_OUT8_T)     PD
+GPIO201 = MODE0(GPIO201)          MODE1(DPIG2_T)          MODE2(CM2DAT6)          MODE3()                 MODE4(EINT17)           MODE5(EXT_TXEN)         MODE6( TRACEDATA4)      MODE7(TESTA_OUT9_T)     PD
+GPIO202 = MODE0(GPIO202)          MODE1(DPIR2_T)          MODE2(CM2DAT3)          MODE3()                 MODE4(EINT18)           MODE5(EXT_TXER)         MODE6( TRACEDATA5)      MODE7(TESTA_OUT10_T)    PD
+GPIO203 = MODE0(GPIO203)          MODE1(DPIG0_T)          MODE2(CM2DAT8)          MODE3()                 MODE4(EINT19)           MODE5(EXT_TXD[0])       MODE6( TRACEDATA6)      MODE7(TESTA_OUT11_T)    PD
+GPIO204 = MODE0(GPIO204)          MODE1(DPIG4_T)          MODE2(CM2DAT9)          MODE3()                 MODE4(EINT20)           MODE5(EXT_TXD[1])       MODE6( TRACEDATA7)      MODE7(TESTA_OUT12_T)    PD
+GPIO205 = MODE0(GPIO205)          MODE1(DPIG1_T)          MODE2(CM2RST)           MODE3()                 MODE4(EINT21)           MODE5(EXT_TXD[2])       MODE6( TRACEDATA8)      MODE7(TESTA_OUT13_T)    PD
+GPIO206 = MODE0(GPIO206)          MODE1(DPIR1_T)          MODE2(CM2DAT5)          MODE3()                 MODE4(EINT22)           MODE5(EXT_TXD[3])       MODE6( TRACEDATA9)      MODE7(TESTA_OUT14_T)    PD
+GPIO207 = MODE0(GPIO207)          MODE1(DPIB6_T)          MODE2(CM2VSYNC)         MODE3()                 MODE4(EINT23)           MODE5(EXT_RXC)          MODE6( TRACEDATA10)     MODE7(TESTA_OUT15_T)    PD
+GPIO208 = MODE0(GPIO208)          MODE1(DPIR5_T)          MODE2(CM2PCLK)          MODE3()                 MODE4(EINT24)           MODE5(EXT_RXDV)         MODE6( TRACEDATA11)     MODE7(TESTA_OUT16_T)    PD
+GPIO209 = MODE0(GPIO209)          MODE1(DPIB5_T)          MODE2(CM2HSYNC)         MODE3()                 MODE4(EINT25)           MODE5(EXT_RXER)         MODE6( TRACEDATA12)     MODE7(TESTA_OUT17_T)    PD
+GPIO210 = MODE0(GPIO210)          MODE1(DPIR7_T)          MODE2(CM2PDN)           MODE3()                 MODE4(EINT26)           MODE5(EXT_RXD[0])       MODE6( TRACEDATA13)     MODE7(TESTA_OUT18_T)    PD
+GPIO211 = MODE0(GPIO211)          MODE1(DPIG3_T)          MODE2(CM2DAT1)          MODE3()                 MODE4(EINT27)           MODE5(EXT_RXD[1])       MODE6( TRACEDATA14)     MODE7(TESTA_OUT19_T)    PD
+GPIO212 = MODE0(GPIO212)          MODE1(DPIR6_T)          MODE2()                 MODE3()                 MODE4(EINT9)            MODE5(EXT_RXD[2])       MODE6( TRACEDATA15)     MODE7(TESTA_OUT20_T)    PD
+GPIO213 = MODE0(GPIO213)          MODE1(DPIG7_T)          MODE2()                 MODE3()                 MODE4(EINT10)           MODE5(EXT_RXD[3])       MODE6( TRACECTL)        MODE7(TESTA_OUT21_T)    PD
+GPIO214 = MODE0(GPIO214)          MODE1(DPIB1_T)          MODE2()                 MODE3()                 MODE4(EINT11)           MODE5(EXT_COL)          MODE6()                 MODE7(TESTA_OUT22_T)    PD
+GPIO215 = MODE0(GPIO215)          MODE1(DPIG6_T)          MODE2()                 MODE3()                 MODE4(EINT12)           MODE5(EXT_MDC)          MODE6()                 MODE7(TESTA_OUT23_T)    PD
+GPIO216 = MODE0(GPIO216)          MODE1(DPIR3_T)          MODE2()                 MODE3()                 MODE4(EINT13)           MODE5(EXT_MDIO)         MODE6()                 MODE7(TESTA_OUT24_T)    PD
+GPIO217 = MODE0(GPIO217)          MODE1(DPIB7_T)          MODE2()                 MODE3()                 MODE4(EINT14)           MODE5()                 MODE6()                 MODE7(TESTA_OUT25_T)    PD
+GPIO218 = MODE0(GPIO218)          MODE1(DPIR0_T)          MODE2()                 MODE3()                 MODE4(EINT15)           MODE5()                 MODE6()                 MODE7(TESTA_OUT26_T)    PD
+GPIO219 = MODE0(GPIO219)          MODE1(DPIG5_T)          MODE2()                 MODE3()                 MODE4(EINT16)           MODE5()                 MODE6()                 MODE7(TESTA_OUT27_T)    PD
+GPIO220 = MODE0(GPIO220)          MODE1(MSDC4_DAT2)       MODE2()                 MODE3()                 MODE4(EINT23)           MODE5(ACTIVITY)         MODE6()                 MODE7(TESTB_OUT24)      PU
+GPIO221 = MODE0(GPIO221)          MODE1(MSDC4_DAT3)       MODE2()                 MODE3()                 MODE4(EINT24)           MODE5(LINK)             MODE6()                 MODE7(TESTB_OUT25)      PU
+GPIO222 = MODE0(GPIO222)          MODE1(MSDC4_CMD)        MODE2()                 MODE3()                 MODE4(EINT25)           MODE5(SPEED)            MODE6()                 MODE7(TESTB_OUT26)      PU
+GPIO223 = MODE0(GPIO223)          MODE1(MSDC4_CLK)        MODE2()                 MODE3()                 MODE4(EINT26)           MODE5(DUPLEX)           MODE6()                 MODE7(TESTB_OUT27)      PU
+GPIO224 = MODE0(GPIO224)          MODE1(MSDC4_DAT1)       MODE2()                 MODE3()                 MODE4(EINT27)           MODE5()                 MODE6()                 MODE7(TESTB_OUT28)      PU
+GPIO225 = MODE0(GPIO225)          MODE1(MSDC4_DAT0)       MODE2()                 MODE3()                 MODE4(EINT9)            MODE5()                 MODE6()                 MODE7(TESTB_OUT29)      PU
+GPIO226 = MODE0(GPIO226)          MODE1(SPI0_CS)          MODE2()                 MODE3(SDA4)             MODE4(EINT10)           MODE5(ACTIVITY)         MODE6()                 MODE7()                 PD
+GPIO227 = MODE0(GPIO227)          MODE1(SPI0_MO)          MODE2()                 MODE3(SCL4)             MODE4(EINT11)           MODE5(LINK)             MODE6()                 MODE7()                 PD
+GPIO228 = MODE0(GPIO228)          MODE1(SPI0_MI)          MODE2()                 MODE3(SDA5)             MODE4(EINT12)           MODE5(SPEED)            MODE6()                 MODE7()                 PD
+GPIO229 = MODE0(GPIO229)          MODE1(SPI0_CLK)         MODE2()                 MODE3(SCL5)             MODE4(EINT13)           MODE5(DUPLEX)           MODE6()                 MODE7()                 PD
+GPIO230 = MODE0(GPIO230)          MODE1(LSCE0B)           MODE2(SDA2)             MODE3()                 MODE4(EINT14)           MODE5(ACTIVITY)         MODE6()                 MODE7()                 PU
+GPIO231 = MODE0(GPIO231)          MODE1(LSA0)             MODE2(SCL2)             MODE3()                 MODE4(EINT15)           MODE5(LINK)             MODE6()                 MODE7()                 PD
+GPIO232 = MODE0(GPIO232)          MODE1(LSCK)             MODE2(CM2MCLK)          MODE3()                 MODE4(EINT16)           MODE5(SPEED)            MODE6()                 MODE7()                 PD
+GPIO233 = MODE0(GPIO233)          MODE1(LSDI)             MODE2(CM2RST)           MODE3()                 MODE4(EINT17)           MODE5(DUPLEX)           MODE6()                 MODE7()                 PU
+GPIO234 = MODE0(GPIO234)          MODE1(LSCE1B)           MODE2(CM2PDN)           MODE3()                 MODE4(EINT18)           MODE5()                 MODE6(USB_DRVVBUS)      MODE7()                 PD
+GPIO235 = MODE0(GPIO235)          MODE1(LSDA)             MODE2()                 MODE3()                 MODE4(EINT19)           MODE5()                 MODE6(PWM9)             MODE7()                 PD
+GPIO236 = MODE0(GPIO236)          MODE1(LPCE1B)           MODE2( SEP_LPCE1B)      MODE3(SDA3)             MODE4(EINT20)           MODE5(ACTIVITY)         MODE6()                 MODE7()                 PU
+GPIO237 = MODE0(GPIO237)          MODE1(LWRB)             MODE2()                 MODE3(SCL3)             MODE4(EINT21)           MODE5(LINK)             MODE6()                 MODE7()                 PU
+GPIO238 = MODE0(GPIO238)          MODE1(LRDB)             MODE2()                 MODE3(SDA4)             MODE4(EINT22)           MODE5(SPEED)            MODE6()                 MODE7()                 PU
+GPIO239 = MODE0(GPIO239)          MODE1(LPA0)             MODE2()                 MODE3(SCL4)             MODE4(EINT23)           MODE5(DUPLEX)           MODE6()                 MODE7()                 PD
+GPIO240 = MODE0(GPIO240)          MODE1(LPTE)             MODE2()                 MODE3(SDA5)             MODE4(EINT24)           MODE5()                 MODE6(USB_DRVVBUS)      MODE7()                 PD
+GPIO241 = MODE0(GPIO241)          MODE1(LPCE0B)           MODE2( SEP_LPCE0B)      MODE3(SCL5)             MODE4(EINT25)           MODE5()                 MODE6(PWM9)             MODE7()                 PU
+GPIO242 = MODE0(GPIO242)          MODE1(LRSTB)            MODE2()                 MODE3()                 MODE4(EINT26)           MODE5()                 MODE6()                 MODE7()                 PU
+GPIO243 = MODE0(GPIO243)          MODE1(PCM0_CK)          MODE2(I2SIN_CK)         MODE3(I2SOUT_CK)        MODE4()                 MODE5()                 MODE6( TRACECLK)        MODE7(USB_SCL)          PD
+GPIO244 = MODE0(GPIO244)          MODE1(PCM0_WS)          MODE2(I2SIN_WS)         MODE3(I2SOUT_WS)        MODE4()                 MODE5()                 MODE6( TRACEDATA0)      MODE7(USB_SDA)          PD
+GPIO245 = MODE0(GPIO245)          MODE1(PCM0_DI)          MODE2(I2SIN_DAT)        MODE3()                 MODE4()                 MODE5()                 MODE6( TRACEDATA1)      MODE7()                 PD
+GPIO246 = MODE0(GPIO246)          MODE1(PCM0_DO)          MODE2()                 MODE3(I2SOUT_DAT)       MODE4()                 MODE5()                 MODE6( TRACEDATA2)      MODE7()                 PD
+GPIO247 = MODE0(GPIO247)          MODE1(PCM1_CK)          MODE2(I2SIN_CK)         MODE3(I2SOUT_CK)        MODE4(EINT23)           MODE5()                 MODE6( TRACEDATA3)      MODE7()                 PD
+GPIO248 = MODE0(GPIO248)          MODE1(PCM1_WS)          MODE2(I2SIN_WS)         MODE3(I2SOUT_WS)        MODE4(EINT24)           MODE5()                 MODE6( TRACEDATA4)      MODE7(TESTB_IN22)       PD
+GPIO249 = MODE0(GPIO249)          MODE1(PCM1_DI)          MODE2(I2SIN_DAT)        MODE3()                 MODE4(EINT25)           MODE5()                 MODE6( TRACEDATA5)      MODE7(TESTB_IN23)       PD
+GPIO250 = MODE0(GPIO250)          MODE1(PCM1_DO)          MODE2()                 MODE3(I2SOUT_DAT)       MODE4(EINT26)           MODE5()                 MODE6( TRACEDATA6)      MODE7(TESTB_IN24)       PD
+GPIO251 = MODE0(GPIO251)          MODE1(I2SIN_CK)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6( TRACEDATA7)      MODE7(TESTB_IN25)       PD
+GPIO252 = MODE0(GPIO252)          MODE1(I2SIN_WS)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6( TRACEDATA8)      MODE7(TESTB_IN26)       PD
+GPIO253 = MODE0(GPIO253)          MODE1(I2SIN_DAT)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6( TRACEDATA9)      MODE7(TESTB_IN27)       PD
+GPIO254 = MODE0(GPIO254)          MODE1(CMDAT2)           MODE2(CMCSD2)           MODE3(SDA2)             MODE4(EINT17)           MODE5(ACTIVITY)         MODE6( TRACEDATA10)     MODE7(TESTB_IN28)       PD
+GPIO255 = MODE0(GPIO255)          MODE1(CMMCLK)           MODE2()                 MODE3(SCL2)             MODE4(EINT18)           MODE5(LINK)             MODE6( TRACEDATA11)     MODE7(TESTB_IN29)       PD
+GPIO256 = MODE0(GPIO256)          MODE1(CMDAT0)           MODE2(CMCSD0)           MODE3(SDA3)             MODE4(EINT19)           MODE5(SPEED)            MODE6( TRACEDATA12)     MODE7(TESTB_IN30)       PD
+GPIO257 = MODE0(GPIO257)          MODE1(CMDAT4)           MODE2(CM2CSD0)          MODE3(SCL3)             MODE4(EINT20)           MODE5(DUPLEX)           MODE6( TRACEDATA13)     MODE7(TESTB_IN31)       PD
+GPIO258 = MODE0(GPIO258)          MODE1(CMDAT3)           MODE2(CMCSD3)           MODE3(SDA4)             MODE4(EINT21)           MODE5()                 MODE6( TRACEDATA14)     MODE7(TESTCK1)          PD
+GPIO259 = MODE0(GPIO259)          MODE1(CMRST)            MODE2()                 MODE3(SCL4)             MODE4(EINT22)           MODE5()                 MODE6( TRACEDATA15)     MODE7(TESTCK2)          PD
+GPIO260 = MODE0(GPIO260)          MODE1(CMDAT5)           MODE2(CM2CSD1)          MODE3(SDA5)             MODE4(EINT23)           MODE5()                 MODE6( TRACECTL)        MODE7(TESTCK3)          PD
+GPIO261 = MODE0(GPIO261)          MODE1(CMPCLK)           MODE2(CMCSK)            MODE3(SCL5)             MODE4(EINT24)           MODE5()                 MODE6()                 MODE7(TESTCK4)          PD
+GPIO262 = MODE0(GPIO262)          MODE1(CMPDN)            MODE2()                 MODE3()                 MODE4(EINT25)           MODE5()                 MODE6()                 MODE7(TESTCK5)          PD
+GPIO263 = MODE0(GPIO263)          MODE1(CMDAT1)           MODE2(CMCSD1)           MODE3()                 MODE4(EINT26)           MODE5()                 MODE6()                 MODE7(TESTB_OUT30)      PD
+GPIO264 = MODE0(GPIO264)          MODE1(CMFLASH)          MODE2()                 MODE3()                 MODE4(EINT27)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO265 = MODE0(GPIO265)          MODE1()                 MODE2(CMHSYNC)          MODE3(CM2CSK)           MODE4()                 MODE5()                 MODE6()                 MODE7()                 
+GPIO266 = MODE0(GPIO266)          MODE1()                 MODE2(CMVSYNC)          MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 
+GPIO267 = MODE0(GPIO267)          MODE1()                 MODE2(CMDAT6)           MODE3(CM2CSD2)          MODE4()                 MODE5()                 MODE6()                 MODE7()                 
+GPIO268 = MODE0(GPIO268)          MODE1()                 MODE2(CMDAT7)           MODE3(CM2CSD3)          MODE4()                 MODE5()                 MODE6()                 MODE7()                 
+GPIO269 = MODE0(GPIO269)          MODE1()                 MODE2(CMDAT8)           MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 
+GPIO270 = MODE0(GPIO270)          MODE1()                 MODE2(CMDAT9)           MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 
+GPIO271 = MODE0(GPIO271)          MODE1(EINT3_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_OUT28_S)    PD
+GPIO272 = MODE0(GPIO272)          MODE1(EINT4_S)          MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_OUT29_S)    PD
+GPIO273 = MODE0(GPIO273)          MODE1(EINT5_S)          MODE2()                 MODE3()                 MODE4()                 MODE5(ACTIVITY)         MODE6()                 MODE7(TESTA_OUT30_S)    PD
+GPIO274 = MODE0(GPIO274)          MODE1(EINT6_S)          MODE2()                 MODE3()                 MODE4()                 MODE5(LINK)             MODE6()                 MODE7(TESTA_OUT31_S)    PD
+GPIO275 = MODE0(GPIO275)          MODE1(EINT7_S)          MODE2()                 MODE3(SDA5)             MODE4()                 MODE5(SPEED)            MODE6(PWM9)             MODE7(TESTB_IN15_S)     PD
+GPIO276 = MODE0(GPIO276)          MODE1(EINT8_S)          MODE2()                 MODE3(SCL5)             MODE4()                 MODE5(DUPLEX)           MODE6(USB_DRVVBUS)      MODE7(TESTB_IN16_S)     PD
+GPIO277 = MODE0(GPIO277)          MODE1(XTALSEL_S)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 
+GPIO278 = MODE0(GPIO278)          MODE1(MSDC0_INSI_S)     MODE2(MSDC2_RSTB)       MODE3(USB_DRVVBUS)      MODE4(EINT21)           MODE5(ACTIVITY)         MODE6(PWM9)             MODE7(TESTB_IN17_S)     PU
+GPIO279 = MODE0(GPIO279)          MODE1(MSDC1_INSI_S)     MODE2(MSDC2_RSTB)       MODE3(USB_DRVVBUS)      MODE4(EINT22)           MODE5(LINK)             MODE6(PWM9)             MODE7(TESTB_IN18_S)     PU
+GPIO280 = MODE0(GPIO280)          MODE1(ADC_CK_S)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_IN19_S)     PD
+GPIO281 = MODE0(GPIO281)          MODE1(ADC_WS_S)         MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_IN20_S)     PD
+GPIO282 = MODE0(GPIO282)          MODE1(ADC_DAT_S)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_IN21_S)     PD
+GPIO283 = MODE0(GPIO283)          MODE1(DAC_CK_S)         MODE2()                 MODE3(SDA3)             MODE4(EINT27)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO284 = MODE0(GPIO284)          MODE1(DAC_WS_S)         MODE2()                 MODE3(SCL3)             MODE4(EINT9)            MODE5()                 MODE6()                 MODE7(TESTA_IN25_S)     PD
+GPIO285 = MODE0(GPIO285)          MODE1(DAC_DAT_S)        MODE2()                 MODE3()                 MODE4(EINT10)           MODE5()                 MODE6()                 MODE7(TESTA_IN26_S)     PD
+GPIO286 = MODE0(GPIO286)          MODE1(SDA0_S)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN27_S)     PU
+GPIO287 = MODE0(GPIO287)          MODE1(SCL0_S)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN28_S)     PU
+GPIO288 = MODE0(GPIO288)          MODE1(SDA1_S)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN29_S)     PU
+GPIO289 = MODE0(GPIO289)          MODE1(SCL1_S)           MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTA_IN30_S)     PU
+GPIO290 = MODE0(GPIO290)          MODE1(KP_ROW2_S)        MODE2()                 MODE3(USB_DRVVBUS)      MODE4(EINT11)           MODE5(ACTIVITY)         MODE6(PWM9)             MODE7()                 PD
+GPIO291 = MODE0(GPIO291)          MODE1(KP_ROW1_S)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO292 = MODE0(GPIO292)          MODE1(KP_ROW0_S)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PD
+GPIO293 = MODE0(GPIO293)          MODE1(KP_ROW3)          MODE2()                 MODE3(SCL2)             MODE4(EINT13)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO294 = MODE0(GPIO294)          MODE1(KP_COL3)          MODE2()                 MODE3(SCL3)             MODE4(EINT15)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO295 = MODE0(GPIO295)          MODE1(KP_COL0_S)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7()                 PU
+GPIO296 = MODE0(GPIO296)          MODE1(KP_COL2_S)        MODE2()                 MODE3(USB_DRVVBUS)      MODE4(EINT18)           MODE5(LINK)             MODE6(PWM9)             MODE7(TESTA_IN31_S)     PD
+GPIO297 = MODE0(GPIO297)          MODE1(KP_COL1_S)        MODE2()                 MODE3()                 MODE4()                 MODE5()                 MODE6()                 MODE7(TESTB_OUT31_S)    PU
+GPIO298 = MODE0(GPIO298)          MODE1(KP_COL7)          MODE2()                 MODE3(SDA2)             MODE4(EINT12)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO299 = MODE0(GPIO299)          MODE1(KP_COL5)          MODE2()                 MODE3(SDA3)             MODE4(EINT14)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO300 = MODE0(GPIO300)          MODE1(KP_COL4)          MODE2()                 MODE3(SDA4)             MODE4(EINT16)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO301 = MODE0(GPIO301)          MODE1(KP_ROW4)          MODE2()                 MODE3(SCL4)             MODE4(EINT17)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO302 = MODE0(GPIO302)          MODE1(KP_ROW5)          MODE2()                 MODE3(SDA5)             MODE4(EINT19)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO303 = MODE0(GPIO303)          MODE1(KP_ROW7)          MODE2()                 MODE3(SCL5)             MODE4(EINT20)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO304 = MODE0(GPIO304)          MODE1(KP_COL6)          MODE2()                 MODE3()                 MODE4(EINT21)           MODE5()                 MODE6()                 MODE7()                 PD
+GPIO305 = MODE0(GPIO305)          MODE1(KP_ROW6)          MODE2()                 MODE3()                 MODE4(EINT22)           MODE5()                 MODE6()                 MODE7()                 PD
+
+[GPO]
+
+[EINT]
+EINT_COUNT = 28
+EINT_DEBOUNCE_TIME_COUNT = 28
+
+[EINT_EX_PIN]
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+
+[ADC]
+ADC_COUNT = 2
+
+[ADC_EX_PIN]
+0
+1
+
+[KEYPAD]
+KEY_ROW = 8
+KEY_COLUMN = 9

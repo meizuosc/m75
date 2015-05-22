@@ -1,0 +1,78 @@
+on post-fs-data
+#
+# Connectivity related modules and character device nodes (Begin)
+#
+
+#/dev/ttyMT1 for ext_mdinit
+    chmod 0660 /dev/ttyMT1
+    chown system system /dev/ttyMT1
+
+#/dev/ttyMT2 for Connectivity BT/FM/GPS usage
+    chmod 0660 /dev/ttyMT2
+    chown system system /dev/ttyMT2
+
+	insmod /system/lib/modules/mtk_wmt_detect.ko
+
+	# Create char device file for WMT, GPS, BT, FM, WIFI
+    mknod /dev/stpwmt c 190 0;
+    mknod /dev/stpgps c 191 0;
+    mknod /dev/stpbt  c 192 0;
+
+    chmod 0660 /dev/stpwmt
+    chown system system /dev/stpwmt
+ 
+    mknod /dev/wmtWifi c 153 0
+    chmod 0660 /dev/wmtWifi
+    chown system system /dev/wmtWifi
+
+# BT
+    chmod 0660 /dev/stpbt
+    chown bluetooth radio /dev/stpbt
+
+# GPS
+    chown gps gps /dev/stpgps
+    chown gps gps /sys/class/gpsdrv/gps/pwrctl
+    chown gps gps /sys/class/gpsdrv/gps/suspend
+    chown gps gps /sys/class/gpsdrv/gps/state
+    chown gps gps /sys/class/gpsdrv/gps/pwrsave
+    chown gps gps /sys/class/gpsdrv/gps/status
+    chmod 0660 /dev/stpgps
+
+# WiFi
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/wpa_supplicant 0770 wifi wifi
+    chown wifi wifi /data/misc/wifi
+
+# FM Radio device node
+    mknod /dev/fm     c 193 0;
+    chmod 0660 /dev/fm
+    chown system media /dev/fm
+
+#
+# Connectivity related device nodes & configuration (end)
+#
+
+
+on boot
+
+#
+# Connectivity related services (Begin)
+#
+service wmt_loader  /system/bin/logwrapper /system/bin/wmt_loader
+	user root
+	group root
+	oneshot
+
+service 66xx_launcher /system/bin/logwrapper /system/bin/6620_launcher -m 4 -p /system/etc/firmware/
+    user system
+    group system
+
+service ext_mdinit /system/bin/ext_mdinit  /dev/ttyMT1
+    user system
+    group  ccci system radio shell
+    oneshot
+
+#
+# Connectivity related services (End)
+#

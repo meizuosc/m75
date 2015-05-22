@@ -1,0 +1,7 @@
+#include "../cfgdefault/CFG_Custom1_Default.h"
+#include "../cfgdefault/CFG_GPS_Default.h"
+#include "../cfgdefault/CFG_PRODUCT_INFO_Default.h"
+#include "../cfgdefault/CFG_WIFI_Default.h"
+#include "../cfgdefault/CFG_Rootsign_Default.h"
+#include "../cfgdefault/CFG_Recoverylock_Default.h"
+#include "../cfgdefault/CFG_Calibration_Default.h"

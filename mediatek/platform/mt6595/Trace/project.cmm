@@ -1,0 +1,2 @@
+global &project
+&project="mt6582_evb"

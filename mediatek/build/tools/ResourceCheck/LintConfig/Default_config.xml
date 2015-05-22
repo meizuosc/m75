@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+
+    <!-- Ignore the LintError issue, .class is not generated -->
+    <issue id="LintError" severity="ignore"/>
+
+    <!-- Ignore the MissingTranslation issue in the given files -->
+    <!--
+    <issue id="MissingTranslation" severity="ignore">
+        <ignore path="res/values/mtk_strings.xml" />
+        <ignore path="res/values/strings.xml" />
+    </issue>
+    -->
+    
+    <!-- Ignore the UnusedResources issue in the given file -->
+    <!--
+    <issue id="UnusedResources" severity="ignore">
+        <ignore path="res/values/test_strings.xml" />
+    </issue>
+    -->
+
+</lint>

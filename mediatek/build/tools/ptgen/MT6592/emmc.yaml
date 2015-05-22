@@ -1,0 +1,337 @@
+---
+- Download: Y
+  Download_File: AUTO
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: BOOTLOADERS
+  Partition_Name: PRELOADER
+  Region: EMMC_BOOT_1
+  Reserved: N
+  Size_KB:
+    eng: 256
+    user: 256
+  Type: Raw data
+- Download: Y
+  Download_File: MBR
+  FastBoot_Download:
+    eng: Y
+    user: N
+  FastBoot_Erase:
+    eng: Y
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: MBR
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 512
+    user: 512
+  Type: Raw data
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: PROTECTED
+  Partition_Name: PRO_INFO
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 3072
+    user: 3072
+  Type: Raw data
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: BINREGION
+  Partition_Name: NVRAM
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 5120
+    user: 5120
+  Type: Raw data
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: PROTECTED
+  Partition_Name: PROTECT_F
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 10240
+    user: 10240
+  Type: EXT4
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: PROTECTED
+  Partition_Name: PROTECT_S
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 10240
+    user: 10240
+  Type: EXT4
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: SECCFG
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 128
+    user: 128
+  Type: Raw data
+- Download: Y
+  Download_File: lk.bin
+  FastBoot_Download:
+    eng: Y
+    user: N
+  FastBoot_Erase:
+    eng: Y
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: UBOOT
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 384
+    user: 384
+  Type: Raw data
+- Download: Y
+  Download_File: boot.img
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: BOOTIMG
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 6144
+    user: 6144
+  Type: Raw data
+- Download: Y
+  Download_File: recovery.img
+  FastBoot_Download:
+    eng: Y
+    user: N
+  FastBoot_Erase:
+    eng: Y
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: RECOVERY
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 6144
+    user: 6144
+  Type: Raw data
+- Download: Y
+  Download_File: secro.img
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: SEC_RO
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 6144
+    user: 6144
+  Type: EXT4
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: MISC
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 512
+    user: 512
+  Type: Raw data
+- Download: Y
+  Download_File: logo.bin
+  FastBoot_Download:
+    eng: Y
+    user: N
+  FastBoot_Erase:
+    eng: Y
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: LOGO
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 3072
+    user: 3072
+  Type: Raw data
+- Download: Y
+  Download_File: AUTO
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: CUSTOM
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 56320
+    user: 56320
+  Type: EXT4
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: EXPDB
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 10240
+    user: 10240
+  Type: Raw data
+- Download: Y
+  Download_File: system.img
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: ANDROID
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 716800
+    user: 716800
+  Type: EXT4
+- Download: Y
+  Download_File: cache.img
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: CACHE
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 129024
+    user: 129024
+  Type: EXT4
+- Download: Y
+  Download_File: userdata.img
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: USRDATA
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 1048576
+    user: 1048576
+  Type: EXT4
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: FAT
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 0
+    user: 0
+  Type: FAT
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: RESERVED
+  Partition_Name: OTP
+  Region: EMMC_USER
+  Reserved: Y
+  Size_KB:
+    eng: 44032
+    user: 44032
+  Type: Raw data
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: RESERVED
+  Partition_Name: BMTPOOL
+  Region: EMMC_USER
+  Reserved: Y
+  Size_KB:
+    eng: 21504
+    user: 21504
+  Type: Raw data

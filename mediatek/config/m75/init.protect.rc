@@ -1,0 +1,41 @@
+#init.protect.rc
+
+on early-init
+#create mount point for protect partition
+
+    mkdir /protect_f 0771 system system
+    mkdir /protect_s 0771 system system
+
+# mount protected partitions
+
+on fs_property:ro.mount.fs=EXT4
+#    write /proc/bootprof "INIT:PROTECT:Mount_START"
+    exec /sbin/e2fsck -pfD /dev/block/platform/mtk-msdc.0/by-name/protect1
+    exec /sbin/tune2fs -O has_journal /dev/block/platform/mtk-msdc.0/by-name/protect1
+    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/protect1 /protect_f noatime nosuid nodev wait commit=1,nodelalloc,noauto_da_alloc
+    exec /sbin/e2fsck -pfD /dev/block/platform/mtk-msdc.0/by-name/protect2
+    exec /sbin/tune2fs -O has_journal /dev/block/platform/mtk-msdc.0/by-name/protect2
+    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/protect2 /protect_s noatime nosuid nodev wait commit=1,nodelalloc,noauto_da_alloc	
+#    write /proc/bootprof "INIT:PROTECT:Mount_END"
+
+on fs_property:ro.mount.fs=UBIFS
+#    write /proc/bootprof "INIT:PROTECT:Mount_START"
+    mount yaffs2 mtd@protect_f /protect_f nosuid nodev
+    mount yaffs2 mtd@protect_s /protect_s nosuid nodev
+#    write /proc/bootprof "INIT:PROTECT:Mount_END"
+
+on fs_property:ro.mount.fs=YAFFS
+#    write /proc/bootprof "INIT:PROTECT:Mount_START"
+    mount yaffs2 mtd@protect_f /protect_f nosuid nodev
+    mount yaffs2 mtd@protect_s /protect_s nosuid nodev
+#    write /proc/bootprof "INIT:PROTECT:Mount_END"
+
+#end of mount protected partitions
+
+on post-fs-data
+    # We chown/chmod /protect_f and /protect_s again so because mount is run as root + defaults
+    chown system system /protect_f
+    chmod 0771 /protect_f
+
+    chown system system /protect_s
+    chmod 0771 /protect_s

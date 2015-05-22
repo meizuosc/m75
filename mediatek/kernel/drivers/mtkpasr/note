@@ -1,0 +1,26 @@
+/* MTK PASR body */
+drivers/staging/mtkpasr
+
+/* Memory compaction */
+mm/compaction.c
+
+/* Assistant functions */
+/* New page mobility */
+mm/page_alloc.c
+
+/* Modified vmalloc behavior */
+mm/vmalloc.c
+
+/* Modified hook of drop caches */
+fs/drop_caches.c
+
+/* Bank alignment */
+arch/arm/mm/mmu.c
+
+/* Dual modems in the 1st bank */
+mediatek/platform/mt6589/kernel/core/mt_devs.c
+
+/* Implementation of flush pages */
+mm/vmscan.c
+
+

@@ -1,0 +1,8 @@
+boot       				  /boot       mtd        defaults        defaults
+cache                     /cache      ubifs      defaults        defaults
+userdata                  /data       ubifs      defaults        defaults
+misc      				  /misc       mtd        defaults        defaults
+recovery  				  /recovery   mtd        defaults        defaults
+/dev/block/mmcblk0p1      /sdcard     vfat       defaults        defaults
+system                    /system     ubifs      defaults        defaults
+

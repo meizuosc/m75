@@ -1,0 +1,88 @@
+# custom touch definition			-*- shell-script -*-
+
+# custom: check boot reason, we handle at the moment factory and meta mode
+get_boot_reason() {
+  if [ -f /sys/class/BOOT/BOOT/boot/boot_mode ]; then
+      boot_reason=`cat /sys/class/BOOT/BOOT/boot/boot_mode`
+      echo "initrd: boot reason value:${boot_reason}" >/dev/kmsg || true
+      case "${boot_reason}" in
+          1)
+              # META mode    -> boot directly to Android
+              echo "initrd: Booting to META mode" >/dev/kmsg || true
+              BOOT_MODE="android"
+          ;;
+          4)
+              # FACTORY mode -> boot directly to Android
+              echo "initrd: Booting to FACTORY mode" >/dev/kmsg || true
+              BOOT_MODE="android"
+          ;;
+	  8)
+	      # KERNEL_POWER_OFF_CHARGING_BOOT -> boot directly to Android
+              echo "initrd: Booting to KERNEL_POWER_OFF_CHARGING_BOOT mode" >/dev/kmsg || true
+              BOOT_MODE="android"
+          ;;
+          9)
+	      # LOW_POWER_OFF_CHARGING_BOOT -> boot directly to Android
+              echo "initrd: Booting to LOW_POWER_OFF_CHARGING_BOOT mode" >/dev/kmsg || true
+              BOOT_MODE="android"
+          ;;
+      esac
+  fi
+  echo "initrd: boot mode: $BOOT_MODE" >/dev/kmsg || true
+}
+
+# Boot to android custom build mode
+boot_android() {
+    ANDROID_SYSTEM="/android-system"
+    ANDROID_ROOTFS="/android-rootfs"
+    USER_DATA_TMPMNT="$USER_DATA_TMPMNT"
+
+    echo "initrd: Alternative boot directly to Android mode" >/dev/kmsg || true
+    # Mount Android system so we can extract android ramdisk
+    mkdir -p $ANDROID_SYSTEM
+    mount -o rw /dev/disk/by-label/device $ANDROID_SYSTEM
+
+    echo "initrd: extracting android ramdisk" >/dev/kmsg || true
+    mkdir -p $ANDROID_ROOTFS
+    OLD_CWD=$(pwd)
+    mount -n -t tmpfs tmpfs $ANDROID_ROOTFS
+    cd $ANDROID_ROOTFS
+    cat $ANDROID_SYSTEM/boot/android-ramdisk.img | gzip -d | cpio -i
+    cd $OLD_CWD
+
+    # move to android root mount links
+    mv /emmc@* $ANDROID_ROOTFS/
+
+    # Move system to final Android location
+    mount --move $ANDROID_SYSTEM $ANDROID_ROOTFS/system
+
+    # Mount Android's data from correct user-data subfolder
+    mkdir -p $ANDROID_ROOTFS/data
+    mount -o rw /dev/disk/by-label/userdata $USER_DATA_TMPMNT
+    mount -o bind $USER_DATA_TMPMNT/android-data $ANDROID_ROOTFS/data
+
+    # mount cache
+    mkdir -p $ANDROID_ROOTFS/cache
+    mount -o rw /dev/disk/by-label/cache $ANDROID_ROOTFS/cache
+
+    # Remaining android partitions are mounted by android init
+
+    # Make sure we're booting into android's init
+    ln -s ../init $ANDROID_ROOTFS/sbin/init
+    ln -s ../init $ANDROID_ROOTFS/sbin/recovery
+
+    # Move Android ramdisk to rootmnt
+    echo "initrd: using android ramdisk as rootfs" >/dev/kmsg || true
+    mount --move $ANDROID_ROOTFS ${rootmnt}
+    echo "initrd: booting android..." >/dev/kmsg || true
+}
+
+# Device specific pre mount
+custom_prepare_for_mount() {
+    echo "initrd: Running custom prepare_for_mount" >/dev/kmsg || true
+    # check user data partition size and resized it if needed
+    if [ -e /fstab ]; then
+        USERDATA_PARTITION=$(grep userdata /fstab | awk '{print $1}')
+        [ ! -z "$USERDATA_PARTITION" ] && /sbin/ext4_resize $USERDATA_PARTITION >/dev/kmsg || true
+    fi
+}

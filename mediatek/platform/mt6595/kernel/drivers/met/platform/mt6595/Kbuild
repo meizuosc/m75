@@ -1,0 +1,19 @@
+
+ifeq ($(MET_TOP),)
+	obj-$(CONFIG_MTK_MET_PLF) := met_plf.o
+else
+	obj-m := met_plf.o
+endif
+
+ccflags-y += $(EXTRA_ARGS)
+
+met_plf-y := plf_init.o \
+	plf_trace.o \
+	emi.o mt_emi_bm.o \
+	smi.o mt_smi.o \
+	cci400_pmu.o cci400_pmu_hw.o \
+	thermal.o \
+	pmic.o \
+	mt_gpu_metmonitor.o \
+	ptpod.o \
+  spm_twam.o

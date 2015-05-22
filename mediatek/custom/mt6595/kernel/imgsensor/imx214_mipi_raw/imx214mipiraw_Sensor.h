@@ -1,0 +1,187 @@
+/*******************************************************************************************/
+
+
+/******************************************************************************************/
+
+/* SENSOR FULL SIZE */
+#ifndef __SENSOR_H
+#define __SENSOR_H   
+
+typedef enum group_enum {
+    PRE_GAIN=0,
+    CMMCLK_CURRENT,
+    FRAME_RATE_LIMITATION,
+    REGISTER_EDITOR,
+    GROUP_TOTAL_NUMS
+} FACTORY_GROUP_ENUM;
+
+
+#define ENGINEER_START_ADDR 10
+#define FACTORY_START_ADDR 0
+
+typedef enum engineer_index
+{
+    CMMCLK_CURRENT_INDEX=ENGINEER_START_ADDR,
+    ENGINEER_END
+} FACTORY_ENGINEER_INDEX;
+
+typedef enum register_index
+{
+	SENSOR_BASEGAIN=FACTORY_START_ADDR,
+	PRE_GAIN_R_INDEX,
+	PRE_GAIN_Gr_INDEX,
+	PRE_GAIN_Gb_INDEX,
+	PRE_GAIN_B_INDEX,
+	FACTORY_END_ADDR
+} FACTORY_REGISTER_INDEX;
+
+typedef struct
+{
+    SENSOR_REG_STRUCT	Reg[ENGINEER_END];
+    SENSOR_REG_STRUCT	CCT[FACTORY_END_ADDR];
+} SENSOR_DATA_STRUCT, *PSENSOR_DATA_STRUCT;
+
+typedef enum {
+    SENSOR_MODE_INIT = 0,
+    SENSOR_MODE_PREVIEW,
+    SENSOR_MODE_VIDEO,
+    SENSOR_MODE_CAPTURE,
+} IMX214_SENSOR_MODE;
+
+
+typedef struct
+{
+	kal_uint32 DummyPixels;
+	kal_uint32 DummyLines;
+	
+	kal_uint32 pvShutter;
+	kal_uint32 pvGain;
+	
+	kal_uint32 pvPclk;  // x10 480 for 48MHZ
+	kal_uint32 videoPclk;
+	kal_uint32 capPclk; // x10
+	
+	kal_uint32 shutter;
+	kal_uint32 maxExposureLines;
+
+	kal_uint16 sensorGlobalGain;//sensor gain read from 0x350a 0x350b;
+	kal_uint16 ispBaseGain;//64
+	kal_uint16 realGain;//ispBaseGain as 1x
+
+	kal_int16 imgMirror;
+
+	IMX214_SENSOR_MODE sensorMode;
+
+	kal_bool IMX214AutoFlickerMode;
+	kal_bool IMX214VideoMode;
+	
+}IMX214_PARA_STRUCT,*PIMX214_PARA_STRUCT;
+
+
+    #define CURRENT_MAIN_SENSOR                IMX214_MICRON
+   //if define RAW10, MIPI_INTERFACE must be defined
+   //if MIPI_INTERFACE is marked, RAW10 must be marked too
+    #define MIPI_INTERFACE
+
+   #define IMX214_IMAGE_SENSOR_FULL_HACTIVE    4208-16
+   #define IMX214_IMAGE_SENSOR_FULL_VACTIVE    3120-16
+   #define IMX214_IMAGE_SENSOR_PV_HACTIVE      2104-8
+   #define IMX214_IMAGE_SENSOR_PV_VACTIVE      1560-8
+   #define IMX214_IMAGE_SENSOR_VIDEO_HACTIVE   2104-8
+   #define IMX214_IMAGE_SENSOR_VIDEO_VACTIVE   1184-8
+
+
+   #define IMX214_IMAGE_SENSOR_FULL_WIDTH				(IMX214_IMAGE_SENSOR_FULL_HACTIVE)	
+   #define IMX214_IMAGE_SENSOR_FULL_HEIGHT 				(IMX214_IMAGE_SENSOR_FULL_VACTIVE)
+
+	/* SENSOR PV SIZE */
+
+   #define IMX214_IMAGE_SENSOR_PV_WIDTH        (IMX214_IMAGE_SENSOR_PV_HACTIVE)
+   #define IMX214_IMAGE_SENSOR_PV_HEIGHT       (IMX214_IMAGE_SENSOR_PV_VACTIVE)
+
+   #define IMX214_IMAGE_SENSOR_VIDEO_WIDTH     (IMX214_IMAGE_SENSOR_VIDEO_HACTIVE)
+   #define IMX214_IMAGE_SENSOR_VIDEO_HEIGHT    (IMX214_IMAGE_SENSOR_VIDEO_VACTIVE)
+
+
+	/* SENSOR SCALER FACTOR */
+	#define IMX214_PV_SCALER_FACTOR					    	3
+	#define IMX214_FULL_SCALER_FACTOR					    1
+	                                        	
+	/* SENSOR START/EDE POSITION */         	
+	#define IMX214_FULL_X_START						    		(1)
+	#define IMX214_FULL_Y_START						    		(1)
+	#define IMX214_PV_X_START						    		(1)
+	#define IMX214_PV_Y_START						    		(1)	
+	#define IMX214_VIDEO_X_START								(1)
+	#define IMX214_VIDEO_Y_START								(1)
+
+	#define IMX214_MAX_ANALOG_GAIN					(16)
+	#define IMX214_MIN_ANALOG_GAIN					(1)
+	#define IMX214_ANALOG_GAIN_1X						(0x0020)
+
+	/* SENSOR PIXEL/LINE NUMBERS IN ONE PERIOD */
+    #define	IMX214_IMAGE_SENSOR_FULL_HBLANKING  800
+    #define IMX214_IMAGE_SENSOR_FULL_VBLANKING  38
+
+
+    #define	IMX214_IMAGE_SENSOR_PV_HBLANKING    2904
+    #define IMX214_IMAGE_SENSOR_PV_VBLANKING    964
+	
+    #define	IMX214_IMAGE_SENSOR_VIDEO_HBLANKING    2904
+    #define IMX214_IMAGE_SENSOR_VIDEO_VBLANKING    1340
+
+
+	#define IMX214_FULL_PERIOD_PIXEL_NUMS	    (IMX214_IMAGE_SENSOR_FULL_HACTIVE + IMX214_IMAGE_SENSOR_FULL_HBLANKING)  
+    #define IMX214_FULL_PERIOD_LINE_NUMS	    (IMX214_IMAGE_SENSOR_FULL_VACTIVE + IMX214_IMAGE_SENSOR_FULL_VBLANKING)  
+    #define IMX214_PV_PERIOD_PIXEL_NUMS	        (IMX214_IMAGE_SENSOR_PV_HACTIVE + IMX214_IMAGE_SENSOR_PV_HBLANKING)     
+    #define IMX214_PV_PERIOD_LINE_NUMS	        (IMX214_IMAGE_SENSOR_PV_VACTIVE + IMX214_IMAGE_SENSOR_PV_VBLANKING)    
+    #define IMX214_VIDEO_PERIOD_PIXEL_NUMS 		(IMX214_IMAGE_SENSOR_VIDEO_HACTIVE + IMX214_IMAGE_SENSOR_VIDEO_HBLANKING) 	
+    #define IMX214_VIDEO_PERIOD_LINE_NUMS		(IMX214_IMAGE_SENSOR_VIDEO_VACTIVE + IMX214_IMAGE_SENSOR_VIDEO_VBLANKING)    
+
+
+	/* DUMMY NEEDS TO BE INSERTED */
+	/* SETUP TIME NEED TO BE INSERTED */
+	#define IMX214_IMAGE_SENSOR_PV_INSERTED_PIXELS			2
+	#define IMX214_IMAGE_SENSOR_PV_INSERTED_LINES			2
+
+	#define IMX214_IMAGE_SENSOR_FULL_INSERTED_PIXELS		4
+	#define IMX214_IMAGE_SENSOR_FULL_INSERTED_LINES		    4
+
+#define IMX214MIPI_WRITE_ID 	(0x20)
+#define IMX214MIPI_READ_ID	(0x21)
+
+// SENSOR CHIP VERSION
+
+#define IMX214MIPI_SENSOR_ID            IMX214_SENSOR_ID
+
+#define IMX214MIPI_PAGE_SETTING_REG    (0xFF)
+
+struct IMX214_SENSOR_STRUCT
+{
+    kal_uint8 i2c_write_id;
+    kal_uint8 i2c_read_id;
+};
+
+
+//s_add for porting
+//s_add for porting
+//s_add for porting
+
+//export functions
+UINT32 IMX214MIPIOpen(void);
+UINT32 IMX214MIPIGetResolution(MSDK_SENSOR_RESOLUTION_INFO_STRUCT *pSensorResolution);
+UINT32 IMX214MIPIGetInfo(MSDK_SCENARIO_ID_ENUM ScenarioId, MSDK_SENSOR_INFO_STRUCT *pSensorInfo, MSDK_SENSOR_CONFIG_STRUCT *pSensorConfigData);
+UINT32 IMX214MIPIControl(MSDK_SCENARIO_ID_ENUM ScenarioId, MSDK_SENSOR_EXPOSURE_WINDOW_STRUCT *pImageWindow, MSDK_SENSOR_CONFIG_STRUCT *pSensorConfigData);
+UINT32 IMX214MIPIFeatureControl(MSDK_SENSOR_FEATURE_ENUM FeatureId, UINT8 *pFeaturePara,UINT32 *pFeatureParaLen);
+UINT32 IMX214MIPIClose(void);
+
+//#define Sleep(ms) mdelay(ms)
+//#define RETAILMSG(x,...)
+//#define TEXT
+
+//e_add for porting
+//e_add for porting
+//e_add for porting
+#endif /* __SENSOR_H */
+
+

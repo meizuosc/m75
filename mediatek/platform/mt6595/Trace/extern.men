@@ -1,0 +1,54 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// InTargetReset.men
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ADD
+TOOLBAR
+(
+	SEPARATOR	
+	TOOLITEM "go " "DO go.cmm"
+	[
+
+  ggg       bbbbb
+gg     gg  bb   bb
+gg     gg  bb   bb
+gg     gg  bb   bb  
+gg     gg  bb   bb
+  ggggg    bb   bb
+       gg  bb   bb
+       gg  bb   bb
+       gg  bb   bb
+       gg  bb   bb
+ gg  g     bb   bb
+  gg        bbbbb
+	]
+
+
+	
+	SEPARATOR
+)
+
+TOOLBAR
+(
+	SEPARATOR	
+	TOOLITEM "stop" "DO stop.cmm"
+	[
+
+RRRR   bbb ggggg
+R  RR b      g
+R   R b      g    
+R RR  b      g       
+RR    b      g      
+RRR   b      g      
+R R    b     g      
+R  R   b     g      
+R  R    b    g      
+R  R    b    g      
+R  R     b   g     
+R   R    b   g   
+R   R    b   g    
+R   R bbb    g    
+	]
+
+	
+	SEPARATOR
+)

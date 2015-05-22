@@ -1,0 +1,218 @@
+[Chip Type]
+Chip = MT6572
+GPIO_Pull_Sel = 1
+PMIC_Config = 1
+PMIC_ON_OFF_CONFIG =1
+PMIC_GPIO_Config = 0
+EINT_EXT_Config = 0
+POWER_Config = 1
+POWER_COUNT =3
+EINT_MD1_Config = 1
+GPIO_ModeNum = 8
+SpecialKey_Config = 1
+Extend_Key_Config=1
+AndroidPhone = 1
+
+[GPIO]
+
+GPIO0    =  MODE0(GPIO0)            MODE1(SIM2_SCLK)               MODE2(SIM1_SCLK)           MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7(CONN_MCU_TMS)        PD   NO      
+GPIO1    =  MODE0(GPIO1)            MODE1(SIM2_SIO)                MODE2(SIM1_SIO)            MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7(CONN_MCU_TRST_B)     PD   NO     
+GPIO2    =  MODE0(GPIO2)            MODE1(SIM1_SCLK)               MODE2(SIM2_SCLK)           MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7(CONN_MCU_TDI)        PD   NO     
+GPIO3    =  MODE0(GPIO3)            MODE1(SIM1_SIO)                MODE2(SIM2_SIO)            MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7(CONN_MCU_TCK)        PD   NO     
+GPIO4    =  MODE0(GPIO4)            MODE1(AUD_CLK)                 MODE2()                    MODE3(AUD_ADC_CK)          MODE4()                    MODE5()                    MODE6()                              MODE7(CONN_MCU_DBGI_N)     PD   NO     
+GPIO5    =  MODE0(GPIO5)            MODE1(AUD_MISO)                MODE2()                    MODE3(AUD_ADC_DAT_IN)      MODE4()                    MODE5()                    MODE6()                              MODE7(CONN_MCU_DBGACK_N)   PD   NO     
+GPIO6    =  MODE0(GPIO6)            MODE1(AUD_MOSI)                MODE2()                    MODE3(AUD_ADC_WS)          MODE4()                    MODE5()                    MODE6()                              MODE7(CONN_MCU_TDO)        PD   NO     
+GPIO7    =  MODE0(GPIO7)            MODE1(PMIC_EINT)               MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO8    =  MODE0(GPIO8)            MODE1(PMIC_SPI_CSN)            MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PU   NO     
+GPIO9    =  MODE0(GPIO9)            MODE1(PMIC_SPI_SCK)            MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO10   =  MODE0(GPIO10)           MODE1(PMIC_SPI_MOSI)           MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO11   =  MODE0(GPIO11)           MODE1(PMIC_SPI_MISO)           MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO12   =  MODE0(GPIO12)           MODE1(SRCLKENA)                MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO13   =  MODE0(GPIO13)           MODE1(WATCHDOG)                MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO14   =  MODE0(GPIO14)           MODE1(LPD0)                    MODE2(PWM3)                MODE3()                    MODE4(DPI_B0)              MODE5(DBG_OUT8)            MODE6(DBG_OUT0)                      MODE7(CONN_MCU_TMS)        NP   ESIG-A
+GPIO15   =  MODE0(GPIO15)           MODE1(LPD1)                    MODE2(PWM4)                MODE3()                    MODE4(DPI_B1)              MODE5(DBG_OUT9)            MODE6(DBG_OUT1)                      MODE7(CONN_MCU_TRST_B)     NP   ESIG-A
+GPIO16   =  MODE0(GPIO16)           MODE1(LPD2)                    MODE2(PWM5)                MODE3()                    MODE4(DPI_B2)              MODE5(DBG_OUT10)           MODE6(DBG_OUT2)                      MODE7(CONN_MCU_TDI)        NP   ESIG-A
+GPIO17   =  MODE0(GPIO17)           MODE1(LPD3)                    MODE2()                    MODE3()                    MODE4(DPI_B3)              MODE5(DBG_OUT11)           MODE6(DBG_OUT3)                      MODE7(CONN_MCU_TCK)        NP   ESIG-A
+GPIO18   =  MODE0(GPIO18)           MODE1(LPD4)                    MODE2()                    MODE3()                    MODE4(DPI_B4)              MODE5(DBG_OUT12)           MODE6(DBG_OUT4)                      MODE7(CONN_MCU_DBGI_N)     NP   ESIG-A
+GPIO19   =  MODE0(GPIO19)           MODE1(LPD5)                    MODE2()                    MODE3()                    MODE4(DPI_B5)              MODE5(DBG_OUT13)           MODE6(DBG_OUT5)                      MODE7(CONN_MCU_DBGACK_N)   NP   ESIG-A
+GPIO20   =  MODE0(GPIO20)           MODE1(LPD6)                    MODE2()                    MODE3()                    MODE4(DPI_G0)              MODE5(DBG_OUT14)           MODE6(DBG_OUT6)                      MODE7(CONN_MCU_TDO)        NP   ESIG-A
+GPIO21   =  MODE0(GPIO21)           MODE1(LPD7)                    MODE2()                    MODE3(KCOL7)               MODE4(DPI_G1)              MODE5(DBG_OUT15)           MODE6(DBG_OUT7)                      MODE7()                    NP   ESIG-A
+GPIO22   =  MODE0(GPIO22)           MODE1(LPD8)                    MODE2(PWM_BL)              MODE3()                    MODE4(DPI_G2)              MODE5()                    MODE6(DBG_OUT8)                      MODE7(CONN_GPIO0)          NP   ESIG-A
+GPIO23   =  MODE0(GPIO23)           MODE1(LPD9)                    MODE2(SRCLKENAI)           MODE3()                    MODE4(DPI_G3)              MODE5()                    MODE6(DBG_OUT9)                      MODE7(CONN_GPIO1)          NP   ESIG-A
+GPIO24   =  MODE0(GPIO24)           MODE1(LPD10)                   MODE2(MC1_INS)             MODE3()                    MODE4(DPI_G4)              MODE5()                    MODE6(DBG_OUT10)                     MODE7(CONN_GPIO2)          NP   ESIG-A
+GPIO25   =  MODE0(GPIO25)           MODE1(LPD11)                   MODE2(EINT5)               MODE3()                    MODE4(DPI_G5)              MODE5()                    MODE6(DBG_OUT11)                     MODE7(CONN_GPIO3)          NP   ESIG-A
+GPIO26   =  MODE0(GPIO26)           MODE1(LPD12)                   MODE2(EINT4)               MODE3()                    MODE4(DPI_R0)              MODE5(MD_EINT3)            MODE6(DBG_OUT12)                     MODE7(CONN_GPIO4)          NP   ESIG-A
+GPIO27   =  MODE0(GPIO27)           MODE1(LPD13)                   MODE2(EINT3)               MODE3()                    MODE4(DPI_R1)              MODE5(MD_EINT2)            MODE6(DBG_OUT13)                     MODE7(CONN_GPIO5)          NP   ESIG-A
+GPIO28   =  MODE0(GPIO28)           MODE1(LPD14)                   MODE2(EINT2)               MODE3()                    MODE4(DPI_R2)              MODE5(MD_EINT1)            MODE6(DBG_OUT14)                     MODE7(CONN_GPIO6)          NP   ESIG-A
+GPIO29   =  MODE0(GPIO29)           MODE1(LPD15)                   MODE2(EINT1)               MODE3()                    MODE4(DPI_R3)              MODE5(MD_EINT0)            MODE6(DBG_OUT15)                     MODE7(CONN_GPIO7)          NP   ESIG-A
+GPIO30   =  MODE0(GPIO30)           MODE1(LPD16)                   MODE2(EINT0)               MODE3(PWM2)                MODE4(DPI_R4)              MODE5()                    MODE6()                              MODE7(CONN_MCU_AICE_TCKC)  NP   ESIG-A
+GPIO31   =  MODE0(GPIO31)           MODE1(LPD17)                   MODE2(EINT6)               MODE3(KROW7)               MODE4(DPI_R5)              MODE5()                    MODE6()                              MODE7(CONN_MCU_AICE_TMSC)  NP   ESIG-A
+GPIO32   =  MODE0(GPIO32)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI0)                MODE5()                    MODE6()                              MODE7(CONN_MCU_TMS)        PD   NO     
+GPIO33   =  MODE0(GPIO33)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI1)                MODE5()                    MODE6()                              MODE7(CONN_MCU_TRST_B)     PD   NO     
+GPIO34   =  MODE0(GPIO34)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI2)                MODE5()                    MODE6()                              MODE7(CONN_MCU_TDI)        PD   NO     
+GPIO35   =  MODE0(GPIO35)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI3)                MODE5()                    MODE6()                              MODE7(CONN_MCU_TCK)        PD   NO     
+GPIO36   =  MODE0(GPIO36)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI4)                MODE5()                    MODE6()                              MODE7(CONN_MCU_DBGI_N)     PD   NO     
+GPIO37   =  MODE0(GPIO37)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI5)                MODE5()                    MODE6()                              MODE7(CONN_MCU_DBGACK_N)   PD   NO     
+GPIO38   =  MODE0(GPIO38)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI6)                MODE5()                    MODE6()                              MODE7(CONN_MCU_TDO)        PU   NO     
+GPIO39   =  MODE0(GPIO39)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI7)                MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO40   =  MODE0(GPIO40)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI8)                MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO41   =  MODE0(GPIO41)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI9)                MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO42   =  MODE0(GPIO42)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI10)               MODE5()                    MODE6()                              MODE7()                    PU   NO     
+GPIO43   =  MODE0(GPIO43)           MODE1()                        MODE2()                    MODE3()                    MODE4(NFI11)               MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO44   =  MODE0(GPIO44)           MODE1(MC0_CK)                  MODE2()                    MODE3(LPTE)                MODE4(NFI12)               MODE5()                    MODE6()                              MODE7()                    PU   NO     
+GPIO45   =  MODE0(GPIO45)           MODE1(MC0_CMD)                 MODE2()                    MODE3(LPA0)                MODE4(NFI13)               MODE5()                    MODE6()                              MODE7()                    PU   NO     
+GPIO46   =  MODE0(GPIO46)           MODE1(MC0_DAT0)                MODE2()                    MODE3(LPWRB)               MODE4(NFI14)               MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO47   =  MODE0(GPIO47)           MODE1(MC0_DAT1)                MODE2()                    MODE3(LPRDB)               MODE4(NFI15)               MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO48   =  MODE0(GPIO48)           MODE1(MC0_DAT2)                MODE2()                    MODE3()                    MODE4(NFI16)               MODE5()                    MODE6()                              MODE7()                    PU   NO     
+GPIO49   =  MODE0(GPIO49)           MODE1(MC0_DAT3)                MODE2()                    MODE3(LPCE0B)              MODE4(NFI17)               MODE5()                    MODE6()                              MODE7()                    PU   NO     
+GPIO50   =  MODE0(GPIO50)           MODE1(MC0_DAT4)                MODE2(PWM_BL)              MODE3()                    MODE4(NFI18)               MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO51   =  MODE0(GPIO51)           MODE1(MC0_DAT5)                MODE2(EINT13)              MODE3()                    MODE4(NFI19)               MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO52   =  MODE0(GPIO52)           MODE1(MC0_DAT6)                MODE2(EINT14)              MODE3()                    MODE4(NFI20)               MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO53   =  MODE0(GPIO53)           MODE1(MC0_DAT7)                MODE2(MC1_INS)             MODE3()                    MODE4(NFI21)               MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO54   =  MODE0(GPIO54)           MODE1(MC0_RSTB)                MODE2(EINT12)              MODE3(LRSTB)               MODE4(NFI22)               MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO55   =  MODE0(GPIO55)           MODE1(SD_DAT0)                 MODE2(LPTE)                MODE3(SFCK)                MODE4()                    MODE5(DPI_CK)              MODE6()                              MODE7()                    PD   NO     
+GPIO56   =  MODE0(GPIO56)           MODE1(SD_DAT1)                 MODE2(LPA0)                MODE3(SFCS1)               MODE4(EINT10)              MODE5(DPI_DE)              MODE6()                              MODE7()                    PU   NO     
+GPIO57   =  MODE0(GPIO57)           MODE1(SD_DAT2)                 MODE2(LPWRB)               MODE3(SFIN)                MODE4(EINT11)              MODE5(DPI_VSYNC)           MODE6()                              MODE7()                    PU   NO     
+GPIO58   =  MODE0(GPIO58)           MODE1(SD_DAT3)                 MODE2(LPRDB)               MODE3(SFHOLD)              MODE4(EINT12)              MODE5(DPI_HSYNC)           MODE6()                              MODE7()                    PU   NO     
+GPIO59   =  MODE0(GPIO59)           MODE1(SD_CK)                   MODE2(LRSTB)               MODE3(SFOUT)               MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO     
+GPIO60   =  MODE0(GPIO60)           MODE1(SD_CMD)                  MODE2(LPCE0B)              MODE3(SFWP_B)              MODE4(EINT9)               MODE5(LSCE0B)              MODE6()                              MODE7()                    PU   NO     
+GPIO61   =  MODE0(GPIO61)           MODE1(CMPCLK)                  MODE2(CMCSK)               MODE3()                    MODE4()                    MODE5()                    MODE6(DBG_OUT0)                      MODE7()                    PD   NO     
+GPIO62   =  MODE0(GPIO62)           MODE1(CMMCLK)                  MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6(DBG_OUT1)                      MODE7()                    PD   NO     
+GPIO63   =  MODE0(GPIO63)           MODE1(CMDAT0)                  MODE2()                    MODE3(EINT3)               MODE4()                    MODE5(TDD_TXD)             MODE6(DBG_OUT2)                      MODE7(CONN_GPIO16)         NP   ESIG-B
+GPIO64   =  MODE0(GPIO64)           MODE1(CMDAT1)                  MODE2()                    MODE3(EINT13)              MODE4()                    MODE5(MD_DSPJTD)           MODE6(DBG_OUT3)                      MODE7(CONN_GPIO17)         NP   ESIG-B
+GPIO65   =  MODE0(GPIO65)           MODE1(CMDAT2)                  MODE2()                    MODE3(EINT7)               MODE4()                    MODE5(MD_DSPJTCK)          MODE6(DBG_OUT4)                      MODE7(CONN_GPIO18)         NP   ESIG-B
+GPIO66   =  MODE0(GPIO66)           MODE1(CMDAT3)                  MODE2()                    MODE3(EINT8)               MODE4()                    MODE5(MD_DSPJTMS)          MODE6(DBG_OUT5)                      MODE7(CONN_GPIO19)         NP   ESIG-B
+GPIO67   =  MODE0(GPIO67)           MODE1(MIPI_RDP0_A)             MODE2(CMDAT4)              MODE3(MC1_INS)             MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   ESIG-C
+GPIO68   =  MODE0(GPIO68)           MODE1(MIPI_RDN0_A)             MODE2(CMDAT5)              MODE3(KCOL3)               MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   ESIG-C
+GPIO69   =  MODE0(GPIO69)           MODE1(MIPI_RDP1_A)             MODE2(CMDAT6)              MODE3(KCOL4)               MODE4(EINT7)               MODE5()                    MODE6()                              MODE7()                    NP   ESIG-C
+GPIO70   =  MODE0(GPIO70)           MODE1(MIPI_RDN1_A)             MODE2(CMDAT7)              MODE3(KCOL5)               MODE4(EINT8)               MODE5()                    MODE6()                              MODE7()                    NP   ESIG-C
+GPIO71   =  MODE0(GPIO71)           MODE1(MIPI_RCP_A)              MODE2(CMHSYNC)             MODE3(KCOL6)               MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   ESIG-C
+GPIO72   =  MODE0(GPIO72)           MODE1(MIPI_RCN_A)              MODE2(CMVSYNC)             MODE3(KCOL7)               MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   ESIG-C
+GPIO73   =  MODE0(GPIO73)           MODE1(MIPI_RDP0)               MODE2()                    MODE3(EINT3)               MODE4(MC1_INS)             MODE5()                    MODE6()                              MODE7()                    NP   ESIG-C
+GPIO74   =  MODE0(GPIO74)           MODE1(MIPI_RDN0)               MODE2()                    MODE3(EINT4)               MODE4(KCOL3)               MODE5()                    MODE6()                              MODE7()                    NP   ESIG-C
+GPIO75   =  MODE0(GPIO75)           MODE1(MIPI_RDP1)               MODE2()                    MODE3(EINT7)               MODE4(KCOL4)               MODE5()                    MODE6()                              MODE7()                    NP   ESIG-D
+GPIO76   =  MODE0(GPIO76)           MODE1(MIPI_RDN1)               MODE2()                    MODE3(EINT8)               MODE4(KCOL5)               MODE5()                    MODE6()                              MODE7()                    NP   ESIG-D
+GPIO77   =  MODE0(GPIO77)           MODE1(MIPI_RCP)                MODE2(EINT6)               MODE3(MC1_INS)             MODE4(KCOL6)               MODE5()                    MODE6()                              MODE7()                    NP   ESIG-D
+GPIO78   =  MODE0(GPIO78)           MODE1(MIPI_RCN)                MODE2()                    MODE3(SRCLKENAI)           MODE4(KCOL7)               MODE5()                    MODE6()                              MODE7()                    NP   ESIG-D
+GPIO79   =  MODE0(GPIO79)           MODE1(MIPI_TDP0)               MODE2()                    MODE3(EINT9)               MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   ESIG-D
+GPIO80   =  MODE0(GPIO80)           MODE1(MIPI_TDN0)               MODE2()                    MODE3(EINT10)              MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   ESIG-D
+GPIO81   =  MODE0(GPIO81)           MODE1(MIPI_TDP1)               MODE2()                    MODE3(EINT11)              MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   ESIG-E
+GPIO82   =  MODE0(GPIO82)           MODE1(MIPI_TDN1)               MODE2()                    MODE3(EINT12)              MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   ESIG-E
+GPIO83   =  MODE0(GPIO83)           MODE1(MIPI_TCP)                MODE2()                    MODE3(EINT13)              MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   ESIG-E
+GPIO84   =  MODE0(GPIO84)           MODE1(MIPI_TCN)                MODE2()                    MODE3(EINT14)              MODE4(SRCLKENAI)           MODE5()                    MODE6()                              MODE7()                    NP   ESIG-E
+GPIO85   =  MODE0(GPIO85)           MODE1(MIPI_TDP2)               MODE2()                    MODE3(MD_EINT0)            MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   ESIG-E
+GPIO86   =  MODE0(GPIO86)           MODE1(MIPI_TDN2)               MODE2()                    MODE3(MD_EINT1)            MODE4(MC1_INS)             MODE5()                    MODE6()                              MODE7()                    NP   ESIG-E
+GPIO87   =  MODE0(GPIO87)           MODE1(EINT8)                   MODE2(SFCS2)               MODE3(KCOL3)               MODE4(TDD_TXD)             MODE5(JTCK)                MODE6(DBG_OUT6)                      MODE7(CONN_GPIO20)         NP   ESIG-F
+GPIO88   =  MODE0(GPIO88)           MODE1(EINT9)                   MODE2(MC1_INS)             MODE3(KCOL4)               MODE4()                    MODE5(JTMS)                MODE6(DBG_OUT7)                      MODE7(CONN_GPIO21)         NP   ESIG-F
+GPIO89   =  MODE0(GPIO89)           MODE1(EINT14)                  MODE2(SCL_1_1)             MODE3(KROW7)               MODE4(SIM1_SRST)           MODE5(JTDI)                MODE6(DBG_OUT8)                      MODE7(CONN_GPIO22)         NP   ESIG-F
+GPIO90   =  MODE0(GPIO90)           MODE1(EINT15)                  MODE2(SDA_1_1)             MODE3(KCOL7)               MODE4(SIM2_SRST)           MODE5(JTDO)                MODE6(DBG_OUT9)                      MODE7(CONN_GPIO23)         NP   ESIG-F
+GPIO91   =  MODE0(GPIO91)           MODE1(MC1_CK)                  MODE2()                    MODE3()                    MODE4(JTMS)                MODE5(TDD_TMS)             MODE6()                              MODE7(CONN_DSP_JDI)        NP   ESIG-G
+GPIO92   =  MODE0(GPIO92)           MODE1(MC1_CMD)                 MODE2()                    MODE3()                    MODE4()                    MODE5(TDD_TRSTN)           MODE6()                              MODE7(CONN_DSP_JDO)        NP   ESIG-G
+GPIO93   =  MODE0(GPIO93)           MODE1(MC1_DAT0)                MODE2()                    MODE3()                    MODE4(JTCK)                MODE5(TDD_TCK)             MODE6()                              MODE7(CONN_DSP_JCK)        NP   ESIG-G
+GPIO94   =  MODE0(GPIO94)           MODE1(MC1_DAT1)                MODE2()                    MODE3()                    MODE4()                    MODE5(DAI_RX_GPIO)         MODE6(TDD_TXD)                       MODE7()                    NP   ESIG-G
+GPIO95   =  MODE0(GPIO95)           MODE1(MC1_DAT2)                MODE2()                    MODE3()                    MODE4(JTDI)                MODE5(TDD_TDI)             MODE6()                              MODE7(CONN_DSP_JINTP)      NP   ESIG-G
+GPIO96   =  MODE0(GPIO96)           MODE1(MC1_DAT3)                MODE2()                    MODE3()                    MODE4(JTDO)                MODE5(TDD_TDO)             MODE6()                              MODE7(CONN_DSP_JMS)        NP   ESIG-G
+GPIO97   =  MODE0(GPIO97)           MODE1(SPI_CS)                  MODE2(I2S_IN_WS)           MODE3(KROW3)               MODE4(EINT3)               MODE5(DPI_B6)              MODE6(DBG_OUT0)                      MODE7(MD_CDMA_GPS_SYNC)    NP   ESIG  
+GPIO98   =  MODE0(GPIO98)           MODE1(SPI_SCK)                 MODE2(I2S_IN_CK)           MODE3(KROW4)               MODE4(EINT4)               MODE5(DPI_B7)              MODE6(DBG_OUT1)                      MODE7(MD_EXT_FRAME_SYNC)   NP   ESIG  
+GPIO99   =  MODE0(GPIO99)           MODE1(SPI_MOSI)                MODE2(I2S_IN_DAT)          MODE3(KROW5)               MODE4(EINT7)               MODE5(DPI_G6)              MODE6(DBG_OUT2)                      MODE7()                    NP   ESIG  
+GPIO100  =  MODE0(GPIO100)          MODE1(SPI_MISO)                MODE2(SRCLKENAI)           MODE3(KROW6)               MODE4(EINT14)              MODE5(DPI_G7)              MODE6(DBG_OUT3)                      MODE7()                    NP   ESIG  
+GPIO101  =  MODE0(GPIO101)          MODE1(URXD2)                   MODE2(EINT15)              MODE3(SCL_1_2)             MODE4(JTCK)                MODE5(DPI_R6)              MODE6()                              MODE7()                    NP   ESIG  
+GPIO102  =  MODE0(GPIO102)          MODE1(UTXD2)                   MODE2(PWM_BL)              MODE3(SDA_1_2)             MODE4(JTMS)                MODE5(DPI_R7)              MODE6()                              MODE7()                    NP   ESIG  
+GPIO103  =  MODE0(GPIO103)          MODE1(URXD1)                   MODE2()                    MODE3()                    MODE4()                    MODE5(MD_URXD)             MODE6()                              MODE7(CONN_MCU_AICE_TCKC)  PU   NO   
+GPIO104  =  MODE0(GPIO104)          MODE1(UTXD1)                   MODE2()                    MODE3()                    MODE4()                    MODE5(MD_UTXD)             MODE6()                              MODE7(CONN_MCU_AICE_TMSC)  PU   NO   
+GPIO105  =  MODE0(GPIO105)          MODE1(SCL_0_0)                 MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   NO   
+GPIO106  =  MODE0(GPIO106)          MODE1(SDA_0_0)                 MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   NO   
+GPIO107  =  MODE0(GPIO107)          MODE1(KCOL0)                   MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6(DBG_OUT10)                     MODE7(CONN_GPIO24)         PU   NO   
+GPIO108  =  MODE0(GPIO108)          MODE1(KCOL1)                   MODE2(EINT6)               MODE3(PWM2)                MODE4()                    MODE5(MD_URXD)             MODE6(DBG_OUT11)                     MODE7(CONN_GPIO25)         NP   ESIG  
+GPIO109  =  MODE0(GPIO109)          MODE1(KCOL2)                   MODE2()                    MODE3()                    MODE4(JTCK)                MODE5()                    MODE6(DBG_OUT12)                     MODE7(CONN_GPIO26)         PD   NO   
+GPIO110  =  MODE0(GPIO110)          MODE1(KROW0)                   MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6(DBG_OUT13)                     MODE7(CONN_GPIO27)         PD   NO   
+GPIO111  =  MODE0(GPIO111)          MODE1(KROW1)                   MODE2(LPTE_2ND)            MODE3(PWM1)                MODE4()                    MODE5(MD_UTXD)             MODE6(DBG_OUT14)                     MODE7(CONN_GPIO28)         NP   ESIG  
+GPIO112  =  MODE0(GPIO112)          MODE1(KROW2)                   MODE2()                    MODE3()                    MODE4(JTMS)                MODE5()                    MODE6(DBG_OUT15)                     MODE7(CONN_GPIO29)         PU   NO  
+GPIO113  =  MODE0(GPIO113)          MODE1(SCL_1_0)                 MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   NO   
+GPIO114  =  MODE0(GPIO114)          MODE1(SDA_1_0)                 MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    NP   NO   
+GPIO115  =  MODE0(GPIO115)          MODE1(CONN_WB_CTRL5)           MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO116  =  MODE0(GPIO116)          MODE1(CONN_WB_CTRL4)           MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO117  =  MODE0(GPIO117)          MODE1(CONN_WB_CTRL3)           MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO118  =  MODE0(GPIO118)          MODE1(CONN_WB_CTRL2)           MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO119  =  MODE0(GPIO119)          MODE1(CONN_WB_CTRL1)           MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO120  =  MODE0(GPIO120)          MODE1(CONN_WB_CTRL0)           MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO121  =  MODE0(GPIO121)          MODE1(CONN_SEN)                MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO122  =  MODE0(GPIO122)          MODE1(CONN_SDATA)              MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO123  =  MODE0(GPIO123)          MODE1(CONN_SCLK)               MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO124  =  MODE0(GPIO124)          MODE1(CONN_RSTB)               MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO125  =  MODE0()                 MODE1()                        MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO126  =  MODE0(GPIO126)          MODE1(CONN_F2W_CK)             MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO127  =  MODE0(GPIO127)          MODE1(CONN_F2W_DAT)            MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO128  =  MODE0(GPIO128)          MODE1(PWM1)                    MODE2(EINT2)               MODE3(UCTS1)               MODE4(SRCLKENAI)           MODE5(MD_CLKM0)            MODE6(LSCK)                          MODE7(CONN_GPIO30)         NP   ESIG  
+GPIO129  =  MODE0(GPIO129)          MODE1(PWM2)                    MODE2(EINT1)               MODE3(URTS1)               MODE4(USB_IDDIG)           MODE5(MD_CLKM1)            MODE6(LSDA)                          MODE7(CONN_GPIO31)         NP   ESIG  
+GPIO130  =  MODE0(GPIO130)          MODE1(BPI_BUS0)                MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6(DBG_OUT0)                      MODE7(CONN_GPIO0)          PD   NO   
+GPIO131  =  MODE0(GPIO131)          MODE1(BPI_BUS1)                MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6(DBG_OUT1)                      MODE7(CONN_GPIO1)          PD   NO   
+GPIO132  =  MODE0(GPIO132)          MODE1(BPI_BUS2)                MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6(DBG_OUT2)                      MODE7(CONN_GPIO2)          PD   NO   
+GPIO133  =  MODE0(GPIO133)          MODE1(BPI_BUS3)                MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6(DBG_OUT3)                      MODE7(CONN_GPIO3)          PD   NO   
+GPIO134  =  MODE0(GPIO134)          MODE1(BPI_BUS4)                MODE2(ANT_SEL0)            MODE3()                    MODE4(PWM2)                MODE5(I2S_OUT_WS)          MODE6(DBG_OUT4)                      MODE7(CONN_GPIO4)          PD   NO   
+GPIO135  =  MODE0(GPIO135)          MODE1(BPI_BUS5)                MODE2(ANT_SEL1)            MODE3()                    MODE4(EINT0)               MODE5(I2S_OUT_CK)          MODE6(DBG_OUT5)                      MODE7(CONN_GPIO5)          PD   NO   
+GPIO136  =  MODE0(GPIO136)          MODE1(BPI_BUS6)                MODE2(ANT_SEL2)            MODE3(SFCS2_MX)            MODE4(EINT2)               MODE5(I2S_OUT_DAT)         MODE6(DBG_OUT6)                      MODE7(CONN_GPIO6)          PD   NO   
+GPIO137  =  MODE0(GPIO137)          MODE1(BPI_BUS7)                MODE2(BSI2_DATA)           MODE3(SCL_1_3)             MODE4()                    MODE5()                    MODE6(DBG_OUT7)                      MODE7(CONN_GPIO7)          PD   NO   
+GPIO138  =  MODE0(GPIO138)          MODE1(BPI_BUS8)                MODE2(BSI2_CLK)            MODE3(SDA_1_3)             MODE4()                    MODE5()                    MODE6(DBG_OUT8)                      MODE7(CONN_GPIO8)          PD   NO   
+GPIO139  =  MODE0(GPIO139)          MODE1(BPI_BUS9)                MODE2()                    MODE3()                    MODE4(USB_DRVVBUS)         MODE5()                    MODE6(DBG_OUT9)                      MODE7(CONN_GPIO9)          PD   NO   
+GPIO140  =  MODE0(GPIO140)          MODE1(BPI_BUS10)               MODE2()                    MODE3()                    MODE4(EINT6)               MODE5()                    MODE6(DBG_OUT10)                     MODE7(CONN_GPIO10)         PD   NO   
+GPIO141  =  MODE0(GPIO141)          MODE1(BPI_BUS11)               MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6(DBG_OUT11)                     MODE7(CONN_GPIO11)         PD   NO   
+GPIO142  =  MODE0(GPIO142)          MODE1(BPI_BUS12)               MODE2(LSA0)                MODE3(EINT7)               MODE4(I2S_IN_WS)           MODE5(KROW3)               MODE6(DBG_OUT12)                     MODE7(CONN_GPIO12)         NP   ESIG-H
+GPIO143  =  MODE0(GPIO143)          MODE1(BPI_BUS13)               MODE2(PWM1)                MODE3(EINT4)               MODE4(I2S_IN_CK)           MODE5(KROW4)               MODE6(DBG_OUT13)                     MODE7(CONN_GPIO13)         NP   ESIG-H
+GPIO144  =  MODE0(GPIO144)          MODE1(BPI_BUS14)               MODE2(PWM2)                MODE3(EINT5)               MODE4(I2S_IN_DAT)          MODE5(KROW5)               MODE6(DBG_OUT14)                     MODE7(CONN_GPIO14)         NP   ESIG-H
+GPIO145  =  MODE0(GPIO145)          MODE1(BPI_BUS15)               MODE2(PWM_BL)              MODE3(EINT8)               MODE4(LSDI)                MODE5(KROW6)               MODE6(DBG_OUT15)                     MODE7(CONN_GPIO15)         NP   ESIG-H
+GPIO146  =  MODE0(GPIO146)          MODE1(TXBPI)                   MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO147  =  MODE0(GPIO147)          MODE1(VM0)                     MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO148  =  MODE0(GPIO148)          MODE1(VM1)                     MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO149  =  MODE0(GPIO149)          MODE1(BSI_EN)                  MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO150  =  MODE0(GPIO150)          MODE1(BSI_CLK)                 MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO151  =  MODE0(GPIO151)          MODE1(BSI_DATA0)               MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO152  =  MODE0(GPIO152)          MODE1(BSI_DATA1)               MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+GPIO153  =  MODE0(GPIO153)          MODE1(BSI_DATA2)               MODE2()                    MODE3()                    MODE4()                    MODE5()                    MODE6()                              MODE7()                    PD   NO   
+
+[GPO]
+
+[EINT]
+EINT_COUNT = 16
+EINT_DEBOUNCE_TIME_COUNT = 12
+
+[EINT_MD1]
+EINT_MD1_COUNT = 4
+
+[ADC]
+ADC_COUNT = 6
+
+[ADC_EX_PIN]
+0
+1
+2
+3
+4
+5
+
+[POWER]
+DVDD28_BPI
+DVDD3_LCD
+DVDD3_MC1
+
+[DVDD28_BPI]
+VIO18
+VIO28
+
+[DVDD3_LCD]
+VIO18
+VIO28
+
+[DVDD3_MC1]
+VIO18
+VIO28
+VMC
+
+[KEYPAD]
+KEY_ROW = 8
+KEY_COLUMN = 9
+
+[KEYPAD_EXTEND_TYPE]     
+KEY_ROW = 3              
+KEY_COLUMN = 3
+

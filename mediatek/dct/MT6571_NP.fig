@@ -1,0 +1,251 @@
+[Chip Type]          
+Chip = MT6571        
+GPIO_Pull_Sel = 1    
+PMIC_Config = 1
+PMIC_APP_COUNT = 10
+PMIC_APP_Ver = 2
+PMIC_ON_OFF_CONFIG =1
+PMIC_GPIO_Config = 0 
+EINT_EXT_Config = 0  
+POWER_Config = 1     
+POWER_COUNT =2       
+EINT_MD1_Config = 1  
+GPIO_ModeNum = 8     
+SpecialKey_Config = 1
+Extend_Key_Config=1  
+Reset_Key_Config = 1  
+AndroidPhone = 1     
+                     
+[GPIO]               
+
+
+GPIO0       =        MODE0(GPIO0)     MODE1(SIM2_SCLK)             MODE2(SIM1_SCLK)          MODE3()                 MODE4()             MODE5(RBIST_BBTX_DATA_EN)        MODE6(CONN_GPIO20)   MODE7(CONN_GPIO0)            PD       NO                      MODE_ana()                
+GPIO1       =        MODE0(GPIO1)     MODE1(SIM2_SIO)              MODE2(SIM1_SIO)           MODE3()                 MODE4()             MODE5()                          MODE6(CONN_GPIO21)   MODE7(CONN_GPIO1)            PD       NO                      MODE_ana()                
+GPIO2       =        MODE0(GPIO2)     MODE1(SIM1_SCLK)             MODE2(SIM2_SCLK)          MODE3()                 MODE4()             MODE5()                          MODE6(CONN_GPIO22)   MODE7(CONN_GPIO2)            PD       NO                      MODE_ana()                
+GPIO3       =        MODE0(GPIO3)     MODE1(SIM1_SIO)              MODE2(SIM2_SIO)           MODE3()                 MODE4()             MODE5()                          MODE6(CONN_GPIO23)   MODE7(CONN_GPIO3)            PD       NO                      MODE_ana()                
+GPIO4       =        MODE0(GPIO4)     MODE1(AUD_CLK)               MODE2()                   MODE3(AUD_ADC_CK)       MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO5       =        MODE0(GPIO5)     MODE1(AUD_MISO)              MODE2()                   MODE3(AUD_ADC_DAT_IN)   MODE4()             MODE5(RBIST_RSVD_0)              MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO6       =        MODE0(GPIO6)     MODE1(AUD_MOSI)              MODE2()                   MODE3(AUD_ADC_WS)       MODE4()             MODE5(RBIST_RSVD_1)              MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO7       =        MODE0(GPIO7)     MODE1(PMIC_EINT)             MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO8       =        MODE0(GPIO8)     MODE1(PMIC_SPI_CSN)          MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO9       =        MODE0(GPIO9)     MODE1(PMIC_SPI_SCK)          MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO10      =        MODE0(GPIO10)    MODE1(PMIC_SPI_MOSI)         MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO11      =        MODE0(GPIO11)    MODE1(PMIC_SPI_MISO)         MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO12      =        MODE0(GPIO12)    MODE1(SRCLKENA)              MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO13      =        MODE0(GPIO13)    MODE1(SRCLKENA_D2D_CLK_SEL)  MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO14      =        MODE0(GPIO14)    MODE1(SRCLKENA_D2D_EN_BB)    MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO15      =        MODE0(GPIO15)    MODE1(WATCHDOG)              MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO16      =        MODE0(GPIO16)    MODE1(CMPCLK)                MODE2(CMCSK)              MODE3(EINT5)            MODE4(SRCLKENAI)    MODE5(CONN_MCU_AICE_TCKC)        MODE6(DBG_OUT0)      MODE7(CONN_MCU_TCK)          PD       NO                      MODE_ana()                
+GPIO17      =        MODE0(GPIO17)    MODE1(CMMCLK)                MODE2()                   MODE3()                 MODE4()             MODE5(CONN_MCU_AICE_TMSC)        MODE6(DBG_OUT1)      MODE7(CONN_MCU_TMS)          PD       NO                      MODE_ana()                
+GPIO18      =        MODE0(GPIO18)    MODE1(CMDAT0)                MODE2(KROW3)              MODE3(EINT3)            MODE4(MD_EINT3)     MODE5()                          MODE6(DBG_OUT2)      MODE7(CONN_MCU_TDI)          PD       NO                      MODE_ana()                
+GPIO19      =        MODE0(GPIO19)    MODE1(CMDAT1)                MODE2(KROW4)              MODE3(EINT13)           MODE4()             MODE5(MD_DSPJTD)                 MODE6(DBG_OUT3)      MODE7(CONN_MCU_TRST_B)       PD       NO                      MODE_ana()                
+GPIO20      =        MODE0(GPIO20)    MODE1(CMDAT2)                MODE2(KROW5)              MODE3(EINT12)           MODE4()             MODE5(MD_DSPJTCK)                MODE6(DBG_OUT4)      MODE7(CONN_MCU_DBGI_N)       PD       NO                      MODE_ana()                
+GPIO21      =        MODE0(GPIO21)    MODE1(CMDAT3)                MODE2(KROW6)              MODE3(EINT11)           MODE4()             MODE5(MD_DSPJTMS)                MODE6(DBG_OUT5)      MODE7(CONN_MCU_DBGACK_N)     PD       NO                      MODE_ana()                
+GPIO22      =        MODE0(GPIO22)    MODE1(CMDAT4)                MODE2(KROW7)              MODE3(EINT10)           MODE4()             MODE5()                          MODE6()              MODE7(CONN_MCU_TDO)          PD       NO                      MODE_ana()                
+GPIO23      =        MODE0(GPIO23)    MODE1(CMDAT5)                MODE2(KCOL3)              MODE3(EINT7)            MODE4(TDD_TXD)      MODE5()                          MODE6()              MODE7(CONN_GPIO4)            PD       NO                      MODE_ana()                
+GPIO24      =        MODE0(GPIO24)    MODE1(EINT8)                 MODE2(PWM_B)              MODE3(KCOL4)            MODE4()             MODE5(JTCK)                      MODE6(DBG_OUT6)      MODE7(CONN_GPIO5)            PD       NO                      MODE_ana()                
+GPIO25      =        MODE0(GPIO25)    MODE1(EINT9)                 MODE2(MC1_INS)            MODE3(KCOL5)            MODE4()             MODE5(JTMS)                      MODE6(DBG_OUT7)      MODE7(CONN_GPIO6)            PD       NO                      MODE_ana()                
+GPIO26      =        MODE0(GPIO26)    MODE1(EINT14)                MODE2(SCL_1_1)            MODE3(KCOL6)            MODE4(SIM1_SRST)    MODE5(JTDI)                      MODE6(DBG_OUT8)      MODE7(CONN_GPIO7)            PD       NO                      MODE_ana()                
+GPIO27      =        MODE0(GPIO27)    MODE1(EINT15)                MODE2(SDA_1_1)            MODE3(KCOL7)            MODE4(SIM2_SRST)    MODE5(JTDO)                      MODE6(DBG_OUT9)      MODE7(CONN_GPIO8)            PD       NO                      MODE_ana()                
+GPIO28      =        MODE0(GPIO28)    MODE1(SCL_0_0)               MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      NP       NO                      MODE_ana()                
+GPIO29      =        MODE0(GPIO29)    MODE1(SDA_0_0)               MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      NP       NO                      MODE_ana()                
+GPIO30      =        MODE0(GPIO30)    MODE1()                      MODE2(CMVSYNC)            MODE3(EINT1)            MODE4(MD_EINT1)     MODE5()                          MODE6(CONN_GPIO24)   MODE7(CONN_GPIO9)            NP       NO                      MODE_ana(CSI_SUB_PAD_RDP0_A)                
+GPIO31      =        MODE0(GPIO31)    MODE1()                      MODE2(CMHSYNC)            MODE3(EINT4)            MODE4()             MODE5()                          MODE6(CONN_GPIO25)   MODE7(CONN_GPIO10)           NP       NO                      MODE_ana(CSI_SUB_PAD_RDN0_A)      
+GPIO32      =        MODE0(GPIO32)    MODE1()                      MODE2(CMDAT7)             MODE3(EINT7)            MODE4()             MODE5()                          MODE6(CONN_GPIO26)   MODE7(CONN_GPIO11)           NP       NO                      MODE_ana(CSI_SUB_PAD_RDP1_A)      
+GPIO33      =        MODE0(GPIO33)    MODE1()                      MODE2(CMDAT6)             MODE3(EINT8)            MODE4()             MODE5()                          MODE6(CONN_GPIO27)   MODE7(CONN_GPIO12)           NP       NO                      MODE_ana(CSI_SUB_PAD_RDN1_A)      
+GPIO34      =        MODE0(GPIO34)    MODE1()                      MODE2(CMDAT9)             MODE3(MC1_INS)          MODE4()             MODE5()                          MODE6(CONN_GPIO28)   MODE7(CONN_GPIO13)           NP       NO                      MODE_ana(CSI_SUB_PAD_RCP_A)       
+GPIO35      =        MODE0(GPIO35)    MODE1()                      MODE2(CMDAT8)             MODE3(SRCLKENAI)        MODE4()             MODE5()                          MODE6(CONN_GPIO29)   MODE7(CONN_GPIO14)           NP       NO                      MODE_ana(CSI_SUB_PAD_RCN_A)       
+GPIO36      =        MODE0()          MODE1()                      MODE2(LPD10)              MODE3(MC1_INS)          MODE4(DPI_G6)       MODE5()                          MODE6(DBG_OUT10)     MODE7(CONN_GPIO15)           NP       NO                      MODE_ana(DSI_PAD_TDP2)        
+GPIO37      =        MODE0()          MODE1()                      MODE2(LPD11)              MODE3(EINT0)            MODE4(DPI_G7)       MODE5(MD_EINT0)                  MODE6(DBG_OUT11)     MODE7(CONN_GPIO16)           NP       NO                      MODE_ana(DSI_PAD_TDN2)        
+GPIO38      =        MODE0()          MODE1()                      MODE2(LPD12)              MODE3()                 MODE4(DPI_R2)       MODE5(DBG_OUT10)                 MODE6(CONN_GPIO30)   MODE7(CONN_GPIO17)           NP       NO                      MODE_ana(DSI_PAD_TDP0)        
+GPIO39      =        MODE0()          MODE1()                      MODE2(LPD13)              MODE3()                 MODE4(DPI_R3)       MODE5(DBG_OUT11)                 MODE6(CONN_GPIO31)   MODE7(CONN_GPIO18)           NP       NO                      MODE_ana(DSI_PAD_TDN0)        
+GPIO40      =        MODE0()          MODE1()                      MODE2(LPD14)              MODE3()                 MODE4(DPI_R4)       MODE5(DBG_OUT12)                 MODE6()              MODE7(CONN_GPIO19)           NP       NO                      MODE_ana(DSI_PAD_TDP1)        
+GPIO41      =        MODE0()          MODE1()                      MODE2(LPD15)              MODE3()                 MODE4(DPI_R5)       MODE5(DBG_OUT13)                 MODE6()              MODE7(CONN_GPIO20)           NP       NO                      MODE_ana(DSI_PAD_TDN1)        
+GPIO42      =        MODE0()          MODE1()                      MODE2(LPD16)              MODE3()                 MODE4(DPI_R6)       MODE5(DBG_OUT14)                 MODE6()              MODE7(CONN_GPIO21)           NP       NO                      MODE_ana(DSI_PAD_TCP)         
+GPIO43      =        MODE0()          MODE1()                      MODE2(LPD17)              MODE3()                 MODE4(DPI_R7)       MODE5(DBG_OUT15)                 MODE6()              MODE7(CONN_GPIO22)           NP       NO                      MODE_ana(DSI_PAD_TCN)         
+GPIO44      =        MODE0(GPIO44)    MODE1(LPD0)                  MODE2(PWM_C)              MODE3(KROW3)            MODE4(DPI_B2)       MODE5(DBG_OUT8)                  MODE6(DBG_OUT0)      MODE7(CONN_MCU_DBGI_N)       NP       NO                      MODE_ana()                
+GPIO45      =        MODE0(GPIO45)    MODE1(LPD1)                  MODE2(PWM_D)              MODE3(KROW4)            MODE4(DPI_B3)       MODE5(DBG_OUT9)                  MODE6(DBG_OUT1)      MODE7(CONN_MCU_TRST_B)       NP       NO                      MODE_ana()                
+GPIO46      =        MODE0(GPIO46)    MODE1(LPD2)                  MODE2(PWM_E)              MODE3(KROW5)            MODE4(DPI_B4)       MODE5(URXD2)                     MODE6(DBG_OUT2)      MODE7(CONN_MCU_TDI)          NP       NO                      MODE_ana()                
+GPIO47      =        MODE0(GPIO47)    MODE1(LPD3)                  MODE2(CONN_MCU_AICE_TCKC) MODE3(KROW6)            MODE4(DPI_B5)       MODE5(UTXD2)                     MODE6(DBG_OUT3)      MODE7(CONN_MCU_TCK)          NP       NO                      MODE_ana()                
+GPIO48      =        MODE0(GPIO48)    MODE1(LPD4)                  MODE2(CONN_MCU_AICE_TMSC) MODE3(KROW7)            MODE4(DPI_B6)       MODE5(UCTS2)                     MODE6(DBG_OUT4)      MODE7(CONN_MCU_TMS)          NP       NO                      MODE_ana()                
+GPIO49      =        MODE0(GPIO49)    MODE1(LPD5)                  MODE2(EINT2)              MODE3(MD_EINT2)         MODE4(DPI_B7)       MODE5(URTS2)                     MODE6(DBG_OUT5)      MODE7(CONN_MCU_DBGACK_N)     NP       NO                      MODE_ana()                
+GPIO50      =        MODE0(GPIO50)    MODE1(LPD6)                  MODE2(EINT1)              MODE3(MD_EINT1)         MODE4(DPI_G2)       MODE5(MD_CDMA_GPS_SYNC)          MODE6(DBG_OUT6)      MODE7(CONN_MCU_TDO)          NP       NO                      MODE_ana()                
+GPIO51      =        MODE0(GPIO51)    MODE1(LPD7)                  MODE2(EINT7)              MODE3(KCOL3)            MODE4(DPI_G3)       MODE5(MD_EXT_FRAME_SYNC)         MODE6(DBG_OUT7)      MODE7(CONN_GPIO23)           NP       NO                      MODE_ana()                
+GPIO52      =        MODE0(GPIO52)    MODE1(LPD8)                  MODE2(PWM_BL)             MODE3(PWM_A)            MODE4(DPI_G4)       MODE5(I2S_IN_WS)                 MODE6(DBG_OUT8)      MODE7(CONN_GPIO24)           NP       NO                      MODE_ana()                
+GPIO53      =        MODE0(GPIO53)    MODE1(LPD9)                  MODE2(SRCLKENAI)          MODE3(KCOL4)            MODE4(DPI_G5)       MODE5(I2S_IN_CK)                 MODE6(DBG_OUT9)      MODE7(CONN_GPIO25)           NP       NO                      MODE_ana()                
+GPIO54      =        MODE0(GPIO54)    MODE1()                      MODE2(LPTE)               MODE3(LPTE_2ND)         MODE4()             MODE5(DPI_CK)                    MODE6(DBG_OUT10)     MODE7(CONN_GPIO26)           PD       NO                      MODE_ana()                
+GPIO55      =        MODE0(GPIO55)    MODE1(MD_CDMA_GPS_SYNC_OUT)  MODE2(LPA0)               MODE3(I2S_IN_DAT)       MODE4(EINT10)       MODE5(DPI_DE)                    MODE6(DBG_OUT11)     MODE7(CONN_GPIO27)           PU       NO                      MODE_ana()                
+GPIO56      =        MODE0(GPIO56)    MODE1()                      MODE2(LPWRB)              MODE3(I2S_OUT_DAT)      MODE4(EINT11)       MODE5(DPI_VSYNC)                 MODE6(DBG_OUT12)     MODE7(CONN_GPIO28)           PU       NO                      MODE_ana()                
+GPIO57      =        MODE0(GPIO57)    MODE1()                      MODE2(LPRDB)              MODE3(KCOL5)            MODE4(EINT12)       MODE5(DPI_HSYNC)                 MODE6(DBG_OUT13)     MODE7(CONN_GPIO29)           PU       NO                      MODE_ana()                
+GPIO58      =        MODE0(GPIO58)    MODE1()                      MODE2(LRSTB)              MODE3()                 MODE4()             MODE5()                          MODE6(DBG_OUT14)     MODE7(CONN_GPIO30)           PD       NO                      MODE_ana()                
+GPIO59      =        MODE0(GPIO59)    MODE1()                      MODE2(LPCE0B)             MODE3(KCOL6)            MODE4(EINT9)        MODE5(LSCE0B)                    MODE6(DBG_OUT15)     MODE7(CONN_GPIO31)           PU       NO                      MODE_ana()                
+GPIO60      =        MODE0(GPIO60)    MODE1(PWM_BL)                MODE2(PWM_B)              MODE3(EINT3)            MODE4(NFI0)         MODE5(MD_EINT3)                  MODE6()              MODE7(ANT_SEL3)              PD       NO                      MODE_ana()                
+GPIO61      =        MODE0(GPIO61)    MODE1(PWM_BL)                MODE2(PWM_C)              MODE3(EINT4)            MODE4(NFI1)         MODE5(LPD23_nf)                  MODE6(DPI_R1_nf)     MODE7(URXD2)                 PD       NO                      MODE_ana()                
+GPIO62      =        MODE0(GPIO62)    MODE1(PWM_BL)                MODE2(PWM_D)              MODE3(EINT7)            MODE4(NFI2)         MODE5(LPD22_nf)                  MODE6(DPI_R0_nf)     MODE7(UTXD2)                 PD       NO                      MODE_ana()                
+GPIO63      =        MODE0(GPIO63)    MODE1(PWM_BL)                MODE2(PWM_E)              MODE3(EINT14)           MODE4(NFI3)         MODE5(LPD21_nf)                  MODE6(DPI_G1_nf)     MODE7(UCTS2)                 PD       NO                      MODE_ana()                
+GPIO64      =        MODE0(GPIO64)    MODE1(I2S_OUT_WS)            MODE2(SRCLKENAI)          MODE3()                 MODE4(NFI4)         MODE5(LPD20_nf)                  MODE6(DPI_G0_nf)     MODE7(URTS2)                 PD       NO                      MODE_ana()                
+GPIO65      =        MODE0(GPIO65)    MODE1(I2S_OUT_CK)            MODE2(EINT0)              MODE3(MD_EINT0)         MODE4(NFI5)         MODE5(LPD19_nf)                  MODE6(DPI_B1_nf)     MODE7(MD_CDMA_GPS_SYNC)      PD       NO                      MODE_ana()                
+GPIO66      =        MODE0(GPIO66)    MODE1(PWM_A)                 MODE2(EINT13)             MODE3(PWM_BL)           MODE4(NFI6)         MODE5(LPD18_nf)                  MODE6(DPI_B0_nf)     MODE7(MD_EXT_FRAME_SYNC)     PU       NO                      MODE_ana()                
+GPIO67      =        MODE0(GPIO67)    MODE1()                      MODE2(EINT14)             MODE3()                 MODE4(NFI7)         MODE5(I2S_IN_WS)                 MODE6()              MODE7(MD_CDMA_GPS_SYNC_OUT)  PD       NO                      MODE_ana()                
+GPIO68      =        MODE0(GPIO68)    MODE1()                      MODE2(MC1_INS)            MODE3(EINT13)           MODE4(NFI8)         MODE5(I2S_IN_CK)                 MODE6()              MODE7(ANT_SEL4)              PD       NO                      MODE_ana()                
+GPIO69      =        MODE0(GPIO69)    MODE1()                      MODE2(EINT12)             MODE3()                 MODE4(NFI9)         MODE5(I2S_IN_DAT)                MODE6()              MODE7(ANT_SEL5)              PD       NO                      MODE_ana()                
+GPIO70      =        MODE0(GPIO70)    MODE1()                      MODE2(EINT9)              MODE3()                 MODE4(NFI10)        MODE5(I2S_OUT_DAT)               MODE6()              MODE7(ANT_SEL6)              PU       NO                      MODE_ana()                
+GPIO71      =        MODE0(GPIO71)    MODE1()                      MODE2(EINT10)             MODE3()                 MODE4(NFI11)        MODE5()                          MODE6()              MODE7(ANT_SEL7)              PD       NO                      MODE_ana()                
+GPIO72      =        MODE0(GPIO72)    MODE1(MC0_CK)                MODE2(SFWP_B)             MODE3()                 MODE4(NFI12)        MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO73      =        MODE0(GPIO73)    MODE1(MC0_CMD)               MODE2(SFOUT)              MODE3()                 MODE4(NFI13)        MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO74      =        MODE0(GPIO74)    MODE1(MC0_DAT0)              MODE2(SFCS0)              MODE3()                 MODE4(NFI14)        MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO75      =        MODE0(GPIO75)    MODE1(MC0_DAT1)              MODE2(SFHOLD)             MODE3()                 MODE4(NFI15)        MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO76      =        MODE0(GPIO76)    MODE1(MC0_DAT2)              MODE2(SFIN)               MODE3()                 MODE4(NFI16)        MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO77      =        MODE0(GPIO77)    MODE1(MC0_DAT3)              MODE2(SFCK)               MODE3()                 MODE4(NFI17)        MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO78      =        MODE0(GPIO78)    MODE1(MC0_DAT4)              MODE2(SFCS1)              MODE3()                 MODE4(NFI18)        MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO79      =        MODE0(GPIO79)    MODE1(MC0_DAT5)              MODE2()                   MODE3()                 MODE4(NFI19)        MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO80      =        MODE0(GPIO80)    MODE1(MC0_DAT6)              MODE2()                   MODE3()                 MODE4(NFI20)        MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO81      =        MODE0(GPIO81)    MODE1(MC0_DAT7)              MODE2()                   MODE3()                 MODE4(NFI21)        MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO82      =        MODE0(GPIO82)    MODE1(MC0_RSTB)              MODE2()                   MODE3()                 MODE4(NFI22)        MODE5()                          MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO83      =        MODE0(GPIO83)    MODE1(MC1_CK)                MODE2()                   MODE3()                 MODE4(JTMS)         MODE5(TDD_TMS)                   MODE6(DBG_OUT10)     MODE7(CONN_DSP_JDI)          PD       NO                      MODE_ana()                
+GPIO84      =        MODE0(GPIO84)    MODE1(MC1_CMD)               MODE2()                   MODE3()                 MODE4()             MODE5(TDD_TRSTN)                 MODE6(DBG_OUT11)     MODE7(CONN_DSP_JDO)          PU       NO                      MODE_ana()                
+GPIO85      =        MODE0(GPIO85)    MODE1(MC1_DAT0)              MODE2()                   MODE3()                 MODE4(JTCK)         MODE5(TDD_TCK)                   MODE6(DBG_OUT12)     MODE7(CONN_DSP_JCK)          PU       NO                      MODE_ana()                
+GPIO86      =        MODE0(GPIO86)    MODE1(MC1_DAT1)              MODE2()                   MODE3()                 MODE4(TDD_TXD)      MODE5(DAI_RX_GPIO)               MODE6(DBG_OUT13)     MODE7(CONN_GPIO0)            PU       NO                      MODE_ana()                
+GPIO87      =        MODE0(GPIO87)    MODE1(MC1_DAT2)              MODE2()                   MODE3()                 MODE4(JTDI)         MODE5(TDD_TDI)                   MODE6(DBG_OUT14)     MODE7(CONN_DSP_JINTP)        PU       NO                      MODE_ana()                
+GPIO88      =        MODE0(GPIO88)    MODE1(MC1_DAT3)              MODE2()                   MODE3()                 MODE4(JTDO)         MODE5(TDD_TDO)                   MODE6(DBG_OUT15)     MODE7(CONN_DSP_JMS)          PU       NO                      MODE_ana()                
+GPIO89      =        MODE0(GPIO89)    MODE1(SPI_CS)                MODE2(I2S_IN_WS)          MODE3(LPD23)            MODE4(EINT9)        MODE5(DPI_R1)                    MODE6(DBG_OUT0)      MODE7(MD_CDMA_GPS_SYNC)      NP       NO                      MODE_ana()                
+GPIO90      =        MODE0(GPIO90)    MODE1(SPI_SCK)               MODE2(I2S_IN_CK)          MODE3(LPD22)            MODE4(EINT4)        MODE5(DPI_R0)                    MODE6(DBG_OUT1)      MODE7(MD_EXT_FRAME_SYNC)     NP       NO                      MODE_ana()                
+GPIO91      =        MODE0(GPIO91)    MODE1(SPI_MOSI)              MODE2(I2S_IN_DAT)         MODE3(LPD21)            MODE4(EINT7)        MODE5(DPI_G1)                    MODE6(DBG_OUT2)      MODE7(CONN_GPIO1)            NP       NO                      MODE_ana()                
+GPIO92      =        MODE0(GPIO92)    MODE1(SPI_MISO)              MODE2(SRCLKENAI)          MODE3(LPD20)            MODE4(EINT14)       MODE5(DPI_G0)                    MODE6(DBG_OUT3)      MODE7(CONN_GPIO2)            NP       NO                      MODE_ana()                
+GPIO93      =        MODE0(GPIO93)    MODE1(URXD2)                 MODE2(EINT15)             MODE3(LPD19)            MODE4(USB_IDDIG)    MODE5(DPI_B1)                    MODE6(KROW3)         MODE7(JTCK)                  PU       NO                      MODE_ana()                
+GPIO94      =        MODE0(GPIO94)    MODE1(UTXD2)                 MODE2(KCOL7)              MODE3(LPD18)            MODE4(EINT2)        MODE5(DPI_B0)                    MODE6(MD_EINT2)      MODE7(JTMS)                  PU       NO                      MODE_ana()                
+GPIO95      =        MODE0(GPIO95)    MODE1(URXD1)                 MODE2(URXD1_shared)       MODE3()                 MODE4()             MODE5(MD_URXD)                   MODE6()              MODE7()                      PU       NO                      MODE_ana()                
+GPIO96      =        MODE0(GPIO96)    MODE1(UTXD1)                 MODE2(UTXD1_shared)       MODE3()                 MODE4()             MODE5(MD_UTXD)                   MODE6(DBG_OUT9)      MODE7()                      PU       NO                      MODE_ana()                
+GPIO97      =        MODE0(GPIO97)    MODE1(KCOL0)                 MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6(DBG_OUT10)     MODE7(CONN_GPIO3)            PU       NO                      MODE_ana()                
+GPIO98      =        MODE0(GPIO98)    MODE1(KCOL1)                 MODE2(LSA0)               MODE3(PWM_B)            MODE4(UCTS1)        MODE5(MD_URXD)                   MODE6(DBG_OUT11)     MODE7(CONN_GPIO4)            PU       NO                      MODE_ana()                
+GPIO99      =        MODE0(GPIO99)    MODE1(KCOL2)                 MODE2()                   MODE3()                 MODE4(JTCK)         MODE5(LSDA)                      MODE6(DBG_OUT12)     MODE7(CONN_GPIO5)            PU       NO                      MODE_ana()                
+GPIO100     =        MODE0(GPIO100)   MODE1(KROW0)                 MODE2(EINT6)              MODE3(SRCLKENA)         MODE4()             MODE5()                          MODE6(DBG_OUT13)     MODE7(CONN_GPIO6)            PD       NO                      MODE_ana()                
+GPIO101     =        MODE0(GPIO101)   MODE1(KROW1)                 MODE2(LSDI)               MODE3(PWM_A)            MODE4(URTS1)        MODE5(MD_UTXD)                   MODE6(DBG_OUT14)     MODE7(CONN_GPIO7)            PD       NO                      MODE_ana()                
+GPIO102     =        MODE0(GPIO102)   MODE1(KROW2)                 MODE2()                   MODE3(USB_DRVVBUS)      MODE4(JTMS)         MODE5(LSCK)                      MODE6(DBG_OUT15)     MODE7(CONN_GPIO8)            PD       NO                      MODE_ana()                
+GPIO103     =        MODE0(GPIO103)   MODE1(SCL_1_0)               MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      NP       NO                      MODE_ana()                
+GPIO104     =        MODE0(GPIO104)   MODE1(SDA_1_0)               MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      NP       NO                      MODE_ana()                
+GPIO105     =        MODE0(GPIO105)   MODE1(D2D_WB_CTRL5)          MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO106     =        MODE0(GPIO106)   MODE1(D2D_WB_CTRL4)          MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO107     =        MODE0(GPIO107)   MODE1(D2D_WB_CTRL3)          MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO108     =        MODE0(GPIO108)   MODE1(D2D_WB_CTRL2)          MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO109     =        MODE0(GPIO109)   MODE1(D2D_WB_CTRL1)          MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO110     =        MODE0(GPIO110)   MODE1(D2D_WB_CTRL0)          MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO111     =        MODE0(GPIO111)   MODE1(D2D_SEN)               MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO112     =        MODE0(GPIO112)   MODE1(D2D_SDATA)             MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO113     =        MODE0(GPIO113)   MODE1(D2D_SCLK)              MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO114     =        MODE0(GPIO114)   MODE1(D2D_RSTB)              MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO115     =        MODE0(GPIO115)   MODE1(D2D_F2W_CK)            MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO116     =        MODE0(GPIO116)   MODE1(D2D_F2W_DAT)           MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO117     =        MODE0(GPIO117)   MODE1(PWM_A)                 MODE2(EINT5)              MODE3()                 MODE4(PWM_BL)       MODE5(MD_CLKM0)                  MODE6()              MODE7(CONN_GPIO9)            NP       NO                      MODE_ana()                
+GPIO118     =        MODE0(GPIO118)   MODE1(PWM_B)                 MODE2(MC1_INS)            MODE3(EINT3)            MODE4(PWM_BL)       MODE5(MD_CLKM1)                  MODE6(MD_EINT3)      MODE7(CONN_GPIO10)           NP       NO                      MODE_ana()                
+GPIO119     =        MODE0(GPIO119)   MODE1(BPI_BUS0)              MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6(DBG_OUT0)      MODE7(CONN_GPIO11)           PD       NO                      MODE_ana()                
+GPIO120     =        MODE0(GPIO120)   MODE1(BPI_BUS1)              MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6(DBG_OUT1)      MODE7(CONN_GPIO12)           PD       NO                      MODE_ana()                
+GPIO121     =        MODE0(GPIO121)   MODE1(BPI_BUS2)              MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6(DBG_OUT2)      MODE7(CONN_GPIO13)           PD       NO                      MODE_ana()                
+GPIO122     =        MODE0(GPIO122)   MODE1(BPI_BUS3)              MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6(DBG_OUT3)      MODE7(CONN_GPIO14)           PD       NO                      MODE_ana()                
+GPIO123     =        MODE0(GPIO123)   MODE1(BPI_BUS4)              MODE2(ANT_SEL0)           MODE3(SRCLKENA)         MODE4(KROW4)        MODE5(I2S_OUT_WS)                MODE6(DBG_OUT4)      MODE7()                      PD       NO                      MODE_ana()                
+GPIO124     =        MODE0(GPIO124)   MODE1(BPI_BUS5)              MODE2(ANT_SEL1)           MODE3(URXD1)            MODE4(KROW5)        MODE5(I2S_OUT_CK)                MODE6(DBG_OUT5)      MODE7(JTCK)                  PD       NO                      MODE_ana()                
+GPIO125     =        MODE0(GPIO125)   MODE1(BPI_BUS6)              MODE2(ANT_SEL2)           MODE3(UTXD1)            MODE4(EINT8)        MODE5(I2S_OUT_DAT)               MODE6(DBG_OUT6)      MODE7(JTMS)                  PD       NO                      MODE_ana()                
+GPIO126     =        MODE0(GPIO126)   MODE1(BPI_BUS7)              MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6(DBG_OUT7)      MODE7(CONN_GPIO15)           PD       NO                      MODE_ana()                
+GPIO127     =        MODE0(GPIO127)   MODE1(BPI_BUS8)              MODE2(CONN_GPIO16)        MODE3(EINT0)            MODE4(I2S_IN_WS)    MODE5(MD_EINT0)                  MODE6(DBG_OUT8)      MODE7(ANT_SEL3)              PD       NO                      MODE_ana()                
+GPIO128     =        MODE0(GPIO128)   MODE1(BPI_BUS9)              MODE2(PWM_A)              MODE3(KCOL3)            MODE4(I2S_IN_CK)    MODE5(SRCLKENAI)                 MODE6(DBG_OUT9)      MODE7(ANT_SEL4)              PD       NO                      MODE_ana()                
+GPIO129     =        MODE0(GPIO129)   MODE1(BPI_BUS10)             MODE2(PWM_B)              MODE3(KROW3)            MODE4(I2S_IN_DAT)   MODE5(MC1_INS)                   MODE6(DBG_OUT10)     MODE7(ANT_SEL5)              PD       NO                      MODE_ana()                
+GPIO130     =        MODE0(GPIO130)   MODE1(BPI_BUS11)             MODE2(PWM_BL)             MODE3(EINT8)            MODE4()             MODE5(PWM_C)                     MODE6(DBG_OUT11)     MODE7(CONN_GPIO17)           PD       NO                      MODE_ana()                
+GPIO131     =        MODE0(GPIO131)   MODE1(TXBPI)                 MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      NP       NO                      MODE_ana()                
+GPIO132     =        MODE0(GPIO132)   MODE1(VM0)                   MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7(CONN_GPIO18)           NP       NO                      MODE_ana()                
+GPIO133     =        MODE0(GPIO133)   MODE1(VM1)                   MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7(CONN_GPIO19)           NP       NO                      MODE_ana()                
+GPIO134     =        MODE0(GPIO134)   MODE1(BSI_EN)                MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO135     =        MODE0(GPIO135)   MODE1(BSI_CLK)               MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO136     =        MODE0(GPIO136)   MODE1(BSI_DATA0)             MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO137     =        MODE0(GPIO137)   MODE1(BSI_DATA1)             MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO138     =        MODE0(GPIO138)   MODE1(BSI_DATA2)             MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      PD       NO                      MODE_ana()                
+GPIO139     =        MODE0(GPIO139)   MODE1()                      MODE2()                   MODE3(EINT4)            MODE4(MC1_INS)      MODE5()                          MODE6()              MODE7()                      NP       NO                      MODE_ana(AUXADC_AUX_XP)          
+GPIO140     =        MODE0(GPIO140)   MODE1()                      MODE2()                   MODE3(EINT3)            MODE4(MD_EINT3)     MODE5()                          MODE6()              MODE7()                      NP       NO                      MODE_ana(AUXADC_AUX_XM)          
+GPIO141     =        MODE0(GPIO141)   MODE1()                      MODE2()                   MODE3(EINT6)            MODE4()             MODE5()                          MODE6()              MODE7()                      NP       NO                      MODE_ana(AUXADC_AUX_YP)          
+GPIO142     =        MODE0(GPIO142)   MODE1()                      MODE2()                   MODE3(EINT7)            MODE4()             MODE5()                          MODE6()              MODE7()                      NP       NO                      MODE_ana(AUXADC_AUX_YM)          
+GPIO143     =        MODE0(GPIO143)   MODE1()                      MODE2()                   MODE3()                 MODE4()             MODE5()                          MODE6()              MODE7()                      NP       NO                      MODE_ana(AUXADC_AUX_IN0)         
+      
+
+
+
+[GPO]
+
+[EINT]
+EINT_COUNT = 16
+EINT_DEBOUNCE_TIME_COUNT = 12
+
+[EINT_MD1]
+EINT_MD1_COUNT = 4
+
+[ADC]
+ADC_COUNT = 6
+
+[ADC_EX_PIN]
+0
+1
+2
+3
+4
+5
+
+[POWER]
+DVDD28_BPI
+DVDDIO_NFI
+
+
+[DVDD28_BPI]
+V1P8
+V2P8
+
+[DVDDIO_NFI]
+V1P8
+V2P8
+
+[KEYPAD]
+KEY_ROW = 8
+KEY_COLUMN = 9
+
+[KEYPAD_EXTEND_TYPE]     
+KEY_ROW = 3              
+KEY_COLUMN = 6
+KEY_DESIGN_NOTICES = "Please notice that the circuit design are different between single and double keypad, and DO NOT add 1K ohm resistor on double keypad"
+
+[Signal_NeedToSet_VariableName]
+SCL_0_0     GPIO_I2C0_SCA_PIN
+SDA_0_0     GPIO_I2C0_SDA_PIN
+SCL_1_0     GPIO_I2C1_SCA_PIN
+SDA_1_0     GPIO_I2C1_SDA_PIN
+
+
+[Signal_MapTo_VariableName]
+SCL_0_0         GPIO_I2C0_SCA_PIN
+SDA_0_0         GPIO_I2C0_SDA_PIN
+SCL_1_0         GPIO_I2C1_SCA_PIN
+SDA_1_0         GPIO_I2C1_SDA_PIN
+URXD1           GPIO_UART_URXD1_PIN
+UTXD1           GPIO_UART_UTXD1_PIN
+URXD2           GPIO_UART_URXD2_PIN
+UTXD2           GPIO_UART_UTXD2_PIN
+UCTS1           GPIO_UART_UCTS1_PIN
+URTS1           GPIO_UART_URTS1_PIN
+UCTS2           GPIO_UART_UCTS2_PIN
+URTS2           GPIO_UART_URTS2_PIN
+KCOL0           GPIO_KPD_KCOL0_PIN
+KCOL1           GPIO_KPD_KCOL1_PIN
+KCOL2           GPIO_KPD_KCOL2_PIN
+KCOL3           GPIO_KPD_KCOL3_PIN
+KCOL4           GPIO_KPD_KCOL4_PIN
+KCOL5           GPIO_KPD_KCOL5_PIN
+KCOL6           GPIO_KPD_KCOL6_PIN
+KCOL7           GPIO_KPD_KCOL7_PIN
+KROW0           GPIO_KPD_KROW0_PIN
+KROW1           GPIO_KPD_KROW1_PIN
+KROW2           GPIO_KPD_KROW2_PIN
+KROW3           GPIO_KPD_KROW3_PIN
+KROW4           GPIO_KPD_KROW4_PIN
+KROW5           GPIO_KPD_KROW5_PIN
+KROW6           GPIO_KPD_KROW6_PIN
+KROW7           GPIO_KPD_KROW7_PIN
+SPI_CS          GPIO_SPI_CS_PIN
+SPI_SCK         GPIO_SPI_SCK_PIN
+SPI_MISO        GPIO_SPI_MISO_PIN
+SPI_MOSI        GPIO_SPI_MOSI_PIN

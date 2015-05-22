@@ -1,0 +1,7 @@
+menu "Motor Ti drv2605 drivers"
+	depends on ANDROID_TIMED_OUTPUT
+
+config MOTOR_DRV2605
+	tristate "Support Ti drv2605 motor"
+	depends on ANDROID_TIMED_OUTPUT
+endmenu 

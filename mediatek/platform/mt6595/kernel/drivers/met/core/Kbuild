@@ -1,0 +1,35 @@
+
+ifeq ($(MET_TOP),)
+	obj-$(CONFIG_MTK_MET) := met.o
+else
+ifeq ($(CONFIG_MTK_MET),)
+	obj-m := met.o
+endif
+endif
+
+met-y := met_main.o interface.o sampler.o \
+	util.o  stat.o  cookie.o cpu_pmu.o mem_stat.o
+
+
+ifeq ($(ARCH), mips)
+	met-y += mips_pmu_hw.o
+endif
+
+ifeq ($(ARCH), arm)
+	met-y += v7_pmu_hw.o
+	met-y += v6_pmu_hw.o
+endif
+ifeq ($(ARCH), arm64)
+	met-y += v8_pmu_hw.o
+endif
+
+
+ifeq ($(NO_MET_EXT_API), 0)
+	met-y += met_tag_ex.o
+else
+	met-y += met_tag.o
+endif
+
+met-$(CONFIG_CPU_FREQ) += power.o
+
+ccflags-y := -DMET_USER_EVENT_SUPPORT

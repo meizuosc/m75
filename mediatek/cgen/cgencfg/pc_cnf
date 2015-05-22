@@ -1,0 +1,29 @@
+// Size
+Char_Size		1;		// size of char
+Short_Size		2;		// size of short
+Int_Size		4;		// size of int
+Long_Size		4;		// size of long
+LLong_Size		8;		// size of long long
+Float_Size		4;		// size of float
+Double_Size		8;		// size of double
+LDouble_Size	8;		// size of long double
+Pointer_Size	4;		// size of pointer
+
+// Alignment
+Char_Align		1;		// alignment of char
+Short_Align		2;		// alignment of short
+Int_Align		4;		// alignment of int
+Long_Align		4;		// alignment of long
+LLong_Align		8;		// alignment of long long
+Float_Align		4;		// alignment of float
+Double_Align	8;		// alignment of double
+LDouble_Align	8;		// alignment of long double
+Pointer_Align	4;		// alignment of pointer
+Struct_Align	4;		// alignment of struct
+
+// Enum
+Enum_Default_Use	True;	// True or False
+Enum_Default_Type	Int;	// Legal types are Char, UChar, Short, UShort, Int
+
+// Endian
+Endian			Little;		// Little or Big

@@ -1,0 +1,12 @@
+#######################################
+# Sepcify source files
+#######################################
+mach_obj += mach/sec_lib.o
+mach_obj += mach/sec_uid.o
+mach_obj += mach/hacc_lib.o
+mach_obj += mach/hacc_export.o
+mach_obj += mach/hacc_hk.o
+mach_obj += mach/hacc_sk.o
+
+# HEADER FILE
+EXTRA_CFLAGS += -I$(src)/asf/asf_inc

@@ -1,0 +1,353 @@
+---
+- Download: Y
+  Download_File: AUTO
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: BOOTLOADERS
+  Partition_Name: preloader
+  Region: EMMC_BOOT_1
+  Reserved: N
+  Size_KB:
+    eng: 256
+    user: 256
+  Type: Raw data
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: Y
+    user: N
+  FastBoot_Erase:
+    eng: Y
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: pgpt
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 512
+    user: 512
+  Type: Raw data
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: PROTECTED
+  Partition_Name: proinfo
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 3072
+    user: 3072
+  Type: Raw data
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: BINREGION
+  Partition_Name: nvram
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 5120
+    user: 5120
+  Type: Raw data
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: PROTECTED
+  Partition_Name: protect1
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 10240
+    user: 10240
+  Type: EXT4
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: PROTECTED
+  Partition_Name: protect2
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 10240
+    user: 10240
+  Type: EXT4
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: seccfg
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 256
+    user: 256
+  Type: Raw data
+- Download: Y
+  Download_File: lk.bin
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: lk
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 384
+    user: 384
+  Type: Raw data
+- Download: Y
+  Download_File: boot.img
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: boot
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 16384
+    user: 16384
+  Type: Raw data
+- Download: Y
+  Download_File: recovery.img
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: recovery
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 16384
+    user: 16384
+  Type: Raw data
+- Download: Y
+  Download_File: secro.img
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: secro
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 6144
+    user: 6144
+  Type: EXT4
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: para
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 512
+    user: 512
+  Type: Raw data
+- Download: Y
+  Download_File: logo.bin
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: logo
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 8192
+    user: 8192
+  Type: Raw data
+- Download: Y
+  Download_File: AUTO
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: custom
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 524288
+    user: 524288
+  Type: EXT4
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: expdb
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 10240
+    user: 10240
+  Type: Raw data
+- Download: Y
+  Download_File: system.img
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: system
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 2109440
+    user: 2109440
+  Type: EXT4
+- Download: Y
+  Download_File: cache.img
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: cache
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 716800
+    user: 716800
+  Type: EXT4
+- Download: Y
+  Download_File: userdata.img
+  FastBoot_Download:
+    eng: Y
+    user: Y
+  FastBoot_Erase:
+    eng: Y
+    user: Y
+  Operation_Type: AUTO
+  Partition_Name: userdata
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 10485760
+    user: 10485760
+  Type: EXT4
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: AUTO
+  Partition_Name: intsd
+  Region: EMMC_USER
+  Reserved: N
+  Size_KB:
+    eng: 0
+    user: 0
+  Type: FAT
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: RESERVED
+  Partition_Name: otp
+  Region: EMMC_USER
+  Reserved: Y
+  Size_KB:
+    eng: 44032
+    user: 44032
+  Type: Raw data
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: RESERVED
+  Partition_Name: flashinfo
+  Region: EMMC_USER
+  Reserved: Y
+  Size_KB:
+    eng: 16384
+    user: 16384
+  Type: Raw data
+- Download: N
+  Download_File: NONE
+  FastBoot_Download:
+    eng: N
+    user: N
+  FastBoot_Erase:
+    eng: N
+    user: N
+  Operation_Type: RESERVED
+  Partition_Name: sgpt
+  Region: EMMC_USER
+  Reserved: Y
+  Size_KB:
+    eng: 512
+    user: 512
+  Type: Raw data

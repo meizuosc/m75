@@ -1,0 +1,8 @@
+on init
+    mkdir /fat 0700 root root
+on fs_property:ro.mount.fs=YAFFS
+    mount yaffs2 mtd@fat /fat nosuid nodev
+on fs_property:ro.mount.fs=UBIFS
+    mount ubifs ubi@fat /fat nosuid nodev
+on post-fs
+    exec /system/bin/vdc fatcreation

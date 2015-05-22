@@ -1,0 +1,4 @@
+cd /proj/mtk70814/yusu/anyuan/alps/
+file ./out/target/product/mt6516_evb/symbols/system/bin/mediaserver
+set solib-search-path ./out/target/product/mt6516_evb/symbols/system/lib
+                        

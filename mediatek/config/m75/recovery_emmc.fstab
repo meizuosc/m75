@@ -1,0 +1,8 @@
+/dev/block/platform/mtk-msdc.0/by-name/logo           /logo       emmc      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/lk             /uboot      emmc      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/boot           /boot       emmc      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/recovery       /recovery   emmc      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/cache          /cache      ext4      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/userdata       /data       ext4      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/system         /system     ext4      defaults        defaults
+/dev/block/ram0                                       /ram0       vfat      defaults        defaults

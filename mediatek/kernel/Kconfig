@@ -1,0 +1,124 @@
+menuconfig MEDIATEK_SOLUTION
+        bool "MediaTek Properitary Configuration"
+        help
+            Check this to enable MediaTek properity configuration.
+
+if MEDIATEK_SOLUTION
+
+config ARCH_MTK_PLATFORM
+  string
+  option env="ARCH_MTK_PLATFORM"
+
+choice 
+    bool "System Type"
+
+source "../mediatek/platform/$ARCH_MTK_PLATFORM/kernel/Kconfig/Platform"
+
+endchoice
+
+config HAVE_MTK_IN_HOUSE_TEE_SUPPORT
+	def_bool n
+
+config MTK_IN_HOUSE_TEE_SUPPORT
+	bool "Enable MTK In House TEE Support"
+	depends on HAVE_MTK_IN_HOUSE_TEE_SUPPORT
+	default n
+	help
+	  This enable MTK TEE support.
+
+config HAVE_TRUSTONIC_TEE_SUPPORT
+	def_bool n
+	
+#
+# TRUSTONIC TEE configuration
+#
+config TRUSTONIC_TEE_SUPPORT
+    bool "Enable Trustonic TEE Support"
+    depends on HAVE_TRUSTONIC_TEE_SUPPORT
+    default n
+    ---help---
+      Enable Trustonic TEE Support   
+
+#
+# MobiCore configuration
+#
+config MOBICORE_DRIVER
+    tristate "MobiCore Driver"    
+    depends on TRUSTONIC_TEE_SUPPORT
+    default n
+    ---help---
+      Enable Linux Kernel MobiCore Support
+
+config MOBICORE_DEBUG
+    bool "MobiCore Module debug mode"
+    depends on MOBICORE_DRIVER
+    default n
+    ---help---
+      Enable Debug mode in the MobiCore Driver.
+      It enables printing information about mobicore operations
+
+config MOBICORE_VERBOSE
+    bool "MobiCore Module verbose debug mode"
+    depends on MOBICORE_DEBUG
+    default n
+    ---help---
+      Enable Verbose Debug mode in the MobiCore Driver.
+      It enables printing extra information about mobicore operations
+      Beware: this is only useful for debuging deep in the driver because
+      it prints too much logs
+
+config MOBICORE_API
+    tristate "Linux MobiCore API"
+    depends on MOBICORE_DRIVER
+    default n
+    ---help---
+      Enable Linux Kernel MobiCore API	  
+
+config MTK_SEC_VIDEO_PATH_SUPPORT
+	bool "Enable MTK Secure Video Path Support"
+	depends on (MTK_IN_HOUSE_TEE_SUPPORT) || (TRUSTONIC_TEE_SUPPORT)
+	default n
+	help
+	  This enable MTK Secure Video Path Support. (depending on MTK In-House TEE Support or Trustonic TEE Support)
+
+source "../mediatek/platform/$ARCH_MTK_PLATFORM/kernel/Kconfig/Kernel"
+source "../mediatek/platform/$ARCH_MTK_PLATFORM/kernel/Kconfig/Board"
+source "../mediatek/platform/$ARCH_MTK_PLATFORM/kernel/Kconfig/Drivers"
+
+config MTK_THERMAL_STATUS_COLLECTION
+        bool "MTK Thermal Status Information Collection"
+        default n
+
+	
+config MD32_SUPPORT
+	bool "Specifiy If Platform Support MD32"
+	default n
+
+config MTK_MEMCFG
+       bool "Support enhanced memory configurations"
+       default n
+       help
+
+config MTK_FAKE_CORE_COUNT
+	int "FAKE CORE COUNT NUMBER"
+	depends on SMP
+	range 0 32
+	default "0"
+
+config MTK_CPU_TOPOLOGY
+	bool "MTK cpu topology infrastructure"
+	depends on ARM_CPU_TOPOLOGY && OF
+	default y
+	help
+	  Say N if you want to build up another wheel
+
+config MTK_HIBERNATION
+        bool "MTK Hibernation support (IPO-H)"
+        depends on TOI
+        default y
+        ---help---
+        MTK Hibernation is the improved hibernation
+        in kernel for IPO-H.
+
+# Add before this
+endif

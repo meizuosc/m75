@@ -1,0 +1,8 @@
+boot       				  /boot       mtd        defaults        defaults
+cache                     /cache      yaffs2     defaults        defaults
+userdata                  /data       yaffs2     defaults        defaults
+misc      				  /misc       mtd        defaults        defaults
+recovery  				  /recovery   mtd        defaults        defaults
+/dev/block/mmcblk0p1      /sdcard     vfat       defaults        defaults
+system                    /system     yaffs2     defaults        defaults
+

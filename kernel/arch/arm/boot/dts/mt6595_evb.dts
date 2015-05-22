@@ -1,0 +1,14 @@
+/*
+ * Mediatek's MT6595 SoC device tree source
+ *
+ * Copyright (c) 2013 MediaTek Co., Ltd.
+ *              http://www.mediatek.com
+ *
+ */
+
+/dts-v1/;
+/include/ "mt6595.dtsi"
+/include/ "cust_eint.dtsi"
+
+/ {
+};

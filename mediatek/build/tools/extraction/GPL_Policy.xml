@@ -1,0 +1,18 @@
+<Buildable_Packages>
+<Package_Name>mt6582</Package_Name>
+<Dirlist>
+	<Dir>mediatek/build</Dir>
+	<Dir>mediatek/config</Dir>
+	<Dir>mediatek/custom</Dir>
+	<Dir>mediatek/kernel</Dir>
+	<Dir>mediatek/dct</Dir>
+        <Dir>kernel</Dir>
+	<Dir>mediatek/platform/common/kernel</Dir>
+</Dirlist>
+<Filelist>
+	<File>bionic/libc/kernel/common/linux/ccci_ipc_task_ID.h</File>
+	<File>makeMtk</File>
+	<File>mbldenv.sh</File>
+	<File>mk</File>
+</Filelist>
+</Buildable_Packages>

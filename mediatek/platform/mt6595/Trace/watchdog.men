@@ -1,0 +1,28 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// InTargetReset.men
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ADD
+TOOLBAR
+(
+	SEPARATOR	
+	TOOLITEM "WDT" "DO wdt.cmm"
+	[
+ww      ww       ww  
+ww     wwww     ww
+ ww    ww ww    ww
+ ww    ww ww    ww
+ ww    ww ww    ww 
+  ww  ww   ww  ww
+  ww  ww   ww  ww
+  ww  ww   ww  ww
+  ww  ww   ww  ww
+  ww  ww   ww  ww 
+   wwww     wwww   
+    ww       ww  
+    ww       ww   
+	]
+
+
+	
+	SEPARATOR
+)

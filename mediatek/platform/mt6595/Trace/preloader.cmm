@@ -1,0 +1,86 @@
+do project.cmm
+
+; =========================================
+; Please DO NOT modify this section - START
+; =========================================
+SYSTEM.Reset
+SYSTEM.CPU CortexA7MPCore
+System.Option Cflush ON    	;flush the cache to avoid data consistency
+SYSTEM.OPTION ENRESET ON
+SYSTEM.OPTION TRST ON
+SYStem.Option ResBreak OFF
+SYStem.Option WaitReset OFF
+SYStem.JtagClock 5MHz
+
+;R-T Memory Access
+SYSTEM.MULTICORE MEMORYACCESSPORT 0
+SYSTEM.MULTICORE DEBUGACCESSPORT 1
+
+;Setting Core debug register access
+SYSTEM.MULTICORE COREBASE APB:0x80070000
+
+sys.mode go
+wait 500.ms
+sys.mode down
+wait 100.ms
+sys.mode up
+;SYStem.Up
+
+setup.IMASKHLL ON
+setup.IMASKASM ON
+
+;Register.REset
+
+;D.S C15:0x1 0				; Turn off MMU
+
+Break.SELect Program OnChip ; set_hw_breakpoint_by_def   Jau add
+;Break.SELect Hll OnChip     ; setting attribute of breakpoints
+;Break.SELect Spot OnChip
+Break.SELect Read OnChip
+Break.SELect Write OnChip
+
+
+
+print "loading mt6589 pre-loader"
+D.LOAD.BINARY   ../../../../mediatek/preloader/bin/preloader_mt6582_evb_NO_GFH.bin 0x201000
+D.LOAD.ELF      ../../../../mediatek/preloader/bin/preloader_mt6582_evb.elf /nocode /gnu
+r.s pc 0x201000
+
+Y.SPATH.RESET ; reset all source path
+Y.SPATH.SRD 
+Y.SPATH.SRD ../../../../mediatek/platform/mt6589/preloader/src/init
+Y.SPATH.SRD ../../../../mediatek/platform/mt6589/preloader/src/lib
+Y.SPATH.SRD ../../../../mediatek/platform/mt6589/preloader/src/modules
+Y.SPATH.SRD ../../../../mediatek/platform/mt6589/preloader/src/security
+Y.SPATH.SRD ../../../../mediatek/custom/out/&project/preloader
+Y.SPATH.SRD ../../../../mediatek/platform/mt6589/preloader
+
+screen.on
+area.reset
+
+Break.Delete 
+B.set main
+do wdt.cmm  ; disable hw watchdog timer
+
+go
+;go main /Onchip
+;wait !run()
+
+B::
+TOOLBAR ON
+STTUSBAR ON
+;WINPAGE.RESET
+
+WINPOS 0.125 0.125 100. 30. 13. 1. W000
+WINTABS 16. 10. 25. 62.
+d.l
+;WINPAGE.SELECT P000
+
+
+
+
+
+
+
+
+

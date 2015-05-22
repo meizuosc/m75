@@ -1,0 +1,145 @@
+do project.cmm
+; =========================================
+; Please DO NOT modify this section - START
+; =========================================
+;SYSTEM.Reset
+SYStem.CPU CortexA7MPCore
+
+System.Option Cflush on    	;flush the cache to avoid data consistency
+SYSTEM.OPTION ENRESET On
+SYSTEM.OPTION TRST On
+SYStem.Option ResBreak OFF
+SYStem.Option WaitReset OFF
+SYStem.JtagClock 10MHz
+
+;R-T Memory Access
+SYSTEM.MULTICORE MEMORYACCESSPORT 0
+SYSTEM.MULTICORE DEBUGACCESSPORT 1
+
+;Setting Core debug register access
+SYSTEM.CONFIG CORENUMBER 4;
+SYSTEM.MULTICORE COREBASE APB:0x80070000 0x80072000 0x80074000 0x80076000
+
+sys.mode go
+wait 500.ms
+sys.mode down
+wait 100.ms
+sys.mode up
+;SYStem.Up
+
+;Register.REset
+
+SETUP.IMASKASM	ON          ; Disbale interrupt during assembly step
+SETUP.IMASKHLL	ON          ; Disbale interrupt during C step
+
+;D.S C15:0x1 0				; Turn off MMU
+
+do wdt.cmm  ; disable hw watchdog timer
+
+Break.SELect Program OnChip ; set_hw_breakpoint_by_def   Jau add
+;Break.SELect Hll OnChip     ; setting attribute of breakpoints
+;Break.SELect Spot OnChip
+Break.SELect Read OnChip
+Break.SELect Write OnChip
+
+;print "loading mt6582 pre-loader"
+;
+;D.LOAD.ELF ../../../../mediatek/preloader/bin/preloader_&project.elf /nocode
+;
+;Y.SPATH.RESET ; reset all source path
+;Y.SPATH.SRD 
+;Y.SPATH.SRD ../../../../mediatek/platform/mt6582/preloader/src/init
+;Y.SPATH.SRD ../../../../mediatek/platform/mt6582/preloader/src/drivers
+;Y.SPATH.SRD ../../../../mediatek/platform/mt6582/preloader/src/security
+;Y.SPATH.SRD ../../../../mediatek/platform/mt6582/preloader/src/core
+;Y.SPATH.SRD ../../../../mediatek/custom/&project/preloader
+;Y.SPATH.SRD ../../../../mediatek/platform/mt6582/preloader
+;
+;;go JumpCmd /Onchip
+;;wait !run()
+;
+;Break.Delete 
+;B.set jump
+;go
+;wait !run()
+;***************************************************************************************************
+print "load linx kernel image"
+
+Break.Delete 
+sYmbol.RESet
+
+ TrOnchip.Set DABORT OFF        ; used by Linux for page miss!
+ TrOnchip.Set SWI OFF        
+ TrOnchip.Set PABORT OFF        ; used by Linux for page miss!
+ TrOnchip.Set UNDEF OFF         ; used to detect non-existent coprocessor
+ SYStem.Option MMU ON           ; enable space ids to virtual addresses
+
+
+;;disbale interrupt during assembly step
+;SETUP.IMASKASM	ON
+;;disbale interrupt during C step
+;SETUP.IMASKHLL	ON
+
+;; turn off mmu
+;d.s c15:0x1 0
+
+print "loading Linux kernel symbols..."
+
+
+Y.SPATH.RESET ; reset all source path
+Y.SPATH.SRD ../../../../mediatek/platform/mt6582/kernel
+Y.SPATH.SRD ../../../../mediatek/kernel
+Y.SPATH.SRD ../../../../mediatek/custom/out/&project/kernel
+Y.SPATH.SRD ../../../../kernel/out/init
+Y.SPATH.SRD ../../../../kernel/out/drivers/
+Y.SPATH.SRD ../../../../kernel/out/include
+Y.SPATH.SRD ../../../../kernel/out/lib
+Y.SPATH.SRD ../../../../kernel/out/fs/fat
+Y.SPATH.SRD ../../../../kernel/out/tools
+
+Data.LOAD.Elf ../../../../kernel/out/vmlinux /gnu /nocode
+
+;go start_kernel /Onchip
+;wait !run()
+B.set start_kernel
+d.l
+go
+
+print "load kernel symbols down....."
+
+task.config Linux
+menu.reprogram  Linux
+menu.reprogram watchdog
+
+B::
+TOOLBAR ON
+STTUSBAR ON
+;WINPAGE.RESET
+
+WINPOS 0.125 0.125 100. 30. 13. 1. W000
+WINTABS 16. 10. 25. 62.
+;WINPAGE.SELECT P000
+
+&var=0x10007000
+&value=0x22000000
+
+on pbreak gosub
+(
+	if data.long(asd:0x10007000)!=0x00000000
+	(
+	 ;AP WDT disable
+	 d.s asd:0x10007000 %le %long 0x22000000
+
+	 ;SPM WDT disable
+	 d.s ASD:0x10006014 %le %long (DATA.Long(ASD:0x10006014)|(0x400000))
+	 d.s ASD:0x10006014 %le %long (DATA.Long(ASD:0x10006014)&~(0x400000))
+	 d.s ASD:0x10006314 %le %long ((0xb160000)|DATA.Long(ASD:0x10006314)&~(0x100))
+	 d.s ASD:0x100063E4 %le %long 0x0002
+	)
+)
+
+stop
+end
+
+
+

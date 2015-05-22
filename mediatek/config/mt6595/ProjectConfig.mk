@@ -1,0 +1,194 @@
+MTK_CPU=arm_cortexa7
+
+MTK_SEC_SECRO_AC_SUPPORT=yes
+
+TARGET_ARCH_VARIANT=armv7-a-neon
+
+MTK_FIRST_MD=1
+MTK_FLIGHT_MODE_POWER_OFF_MD=yes
+
+MTK_YAML_SCATTER_FILE_SUPPORT=yes
+
+
+MTK_ION_SUPPORT=yes
+
+MTK_ENABLE_MD1=yes
+
+MD1_SIZE=0x05000000
+MD1_SMEM_SIZE=0x00200000
+
+MTK_MD1_SUPPORT=5
+
+MTK_SWIP_VORBIS=yes
+
+MTK_PRODUCT_INFO_SUPPORT=yes
+
+
+
+
+MTK_USES_VR_DYNAMIC_QUALITY_MECHANISM=yes
+MTK_PQ_SUPPORT=PQ_HW_VER_2
+MTK_FM_RX_AUDIO=FM_DIGITAL_INPUT
+
+MTK_BWC_SUPPORT=yes
+
+MTK_LCEEFT_SUPPORT=yes
+
+MTK_WFD_SUPPORT=yes
+
+MTK_AUDIO_BLOUD_CUSTOMPARAMETER_REV = MTK_AUDIO_BLOUD_CUSTOMPARAMETER_V5
+
+FEATURE_FTM_AUDIO_AUTOTEST=yes
+
+# Capability of the underlay modem
+#  single or gemini
+MTK_SHARE_MODEM_SUPPORT=2
+
+MTK_MD_SHUT_DOWN_NT=yes
+
+MTK_MASS_STORAGE=yes
+
+# common part
+CUSTOM_HAL_COMBO=mt6630
+CUSTOM_HAL_ANT=mt6630_ant_m1
+MTK_COMBO_CHIP=MT6630
+MTK_COMBO_CORE_DUMP_SUPPORT=no
+MTK_COMBO_QUICK_SLEEP_SUPPORT=no
+
+
+MTK_WLAN_CHIP=MT6630
+
+#
+# MTK Chip
+#
+MTK_BT_CHIP=MTK_MT6630
+
+# When this option set to yes, the Bluetooth "SIM Access Profile" (SIMAP) will be enabled.
+
+# When this option set to yes, the Bluetooth Low Energy "Proximity Profile - Monitor Role" (PRXM) will be enabled.
+
+# When this option set to yes, the Bluetooth Low Energy "Proximity Profile - Reporter Role" (PRXR) will be enabled.
+
+# When this option set to yes, the Bluetooth "File Transfer Profile" (FTP) will be enabled.
+
+# When this option set to yes, the Bluetooth "Basic Printing Profile" (BPP) will be enabled.
+
+# When this option set to yes, the Bluetooth "Basic Imaging Profile" (BIP) will be enabled.
+
+# When this option set to yes, the Bluetooth "Dial-Up Networking Profile" (DUN) will be enabled.
+
+# When this option set to yes, the Bluetooth "Message Access Profile - Server Role" (MAPS) will be enabled.
+
+# When this option set to yes, the Bluetooth "Message Access Profile - Client Role" (MAPC) will be enabled.
+
+MTK_GPS_CHIP=MTK_GPS_MT6630
+
+MTK_AUDENH_SUPPORT=yes
+
+# display framework impl
+MTK_DP_FRAMEWORK=yes
+
+MTK_HANDSFREE_DMNR_SUPPORT=yes
+
+
+MTK_VOICE_UI_SUPPORT=yes
+
+MTK_TINY_UTIL=yes
+
+MTK_KERNEL_POWER_OFF_CHARGING=yes
+
+MTK_DMNR_TUNING_AT_MD=no
+
+MTK_VIDEO_THUMBNAIL_PLAY_SUPPORT=yes
+
+MTK_PLATFORM_OPTIMIZE=yes
+
+MTK_CTP_RESET_CONFIG=yes
+
+MTK_GPU_SUPPORT=yes
+USE_OPENGL_RENDERER=true
+
+MTK_VIDEO_HEVC_SUPPORT=yes
+BUILD_MD32=yes
+MTK_NEW_COMBO_EMMC_SUPPORT=yes
+LINUX_KERNEL_VERSION=kernel-3.10
+
+#FIX-ME mark for porting
+CUSTOM_KERNEL_SSW=
+
+# triple buffer # yu-fu
+NUM_FRAMEBUFFER_SURFACE_BUFFERS=3
+
+MTK_LOMO_SUPPORT=yes
+MTK_CAM_GESTURE_SUPPORT=yes
+
+MTK_CLEARMOTION_SUPPORT=yes
+MTK_CAM_OT_SUPPORT=yes
+MTK_CAM_NR3D_SUPPORT = yes
+MTK_IPO_SUPPORT=no
+
+MTK_CAM_NATIVE_PIP_SUPPORT= yes
+
+MTK_MERGE_INTERFACE_SUPPORT = yes
+MTK_CAM_LOMO_SUPPORT=yes
+
+MTK_PERMISSION_CONTROL = yes
+MTK_MOBILE_MANAGEMENT = yes
+MTK_CAM_FACEBEAUTY_SUPPORT=yes
+MTK_CAM_VIDEO_FACEBEAUTY_SUPPORT=yes
+MTK_CAM_EIS_SUPPORT=yes
+MTK_BESLOUDNESS_SUPPORT = yes
+MTK_CAM_HDR_SUPPORT=yes
+
+MTK_HIGH_RESOLUTION_AUDIO_SUPPORT = yes
+MTK_SHARED_SDCARD = yes
+
+MTK_LTE_SUPPORT = yes
+
+MTK_SLOW_MOTION_VIDEO_SUPPORT = yes 
+
+
+MTK_CAM_MFB_SUPPORT = 3
+
+MTK_GPT_SCHEME_SUPPORT=yes
+
+MTK_LIVE_PHOTO_SUPPORT = yes
+
+MTK_BT_BLE_MANAGER_SUPPORT = yes
+
+MTK_MIRAVISION_SETTING_SUPPORT = yes
+
+MTK_ANT_SUPPORT = yes
+
+MTK_BT_FM_OVER_BT_VIA_CONTROLLER = yes
+
+
+MTK_MOTION_TRACK_SUPPORT = yes
+
+MTK_VIDEOORB_APP = yes
+
+MTK_CAM_MMSDK_SUPPORT = yes
+
+MTK_WFD_SINK_SUPPORT = yes
+MTK_WFD_SINK_UIBC_SUPPORT = yes
+MTK_ANTIBRICKING_LEVEL = 2
+MTK_THERMAL_PA_VIA_ATCMD = yes
+
+MTK_JAZZ=yes
+MTK_PLANT3D_APP = yes
+
+MTK_BESSURROUND_SUPPORT = yes
+
+MTK_ENABLE_S263_DECODER=yes
+
+MTK_ENABLE_DIVX_DECODER = yes
+
+MTK_PASSPOINT_R1_SUPPORT = yes
+
+MULTI_CH_PLAYBACK_SUPPORT = yes
+
+MTK_APPENDED_DTB_SUPPORT = yes
+
+MTK_CAM_VHDR_SUPPORT = yes
+
+MTK_UART_USB_SWITCH = no
