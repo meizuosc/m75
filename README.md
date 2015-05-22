@@ -4,15 +4,15 @@ M75 repo is Linux kernel source code for Meizu MX4 Ubuntu edition smartphones. W
 
 HOW TO COMPILE
 
-1. Download source code
+1.Download source code
 
 git clone https://github.com/meizuosc/m75.git
 
-2. Compiling
+2.Compiling
 
 ./makeMtk m75 n k
 
-3. make boot image
+3.make boot image
 
 cd testboot
 ./mkbootimg.sh
