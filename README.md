@@ -12,6 +12,11 @@ git clone https://github.com/meizuosc/m75.git
 
 ./makeMtk m75 n k
 
+3. make boot image
+
+cd testboot
+./mkbootimg.sh
+
 Note:
 
 Make sure you have arm cross tool chain, maybe you can download here
