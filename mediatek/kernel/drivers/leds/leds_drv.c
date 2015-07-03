@@ -504,11 +504,11 @@ static void mt65xx_leds_early_suspend(struct early_suspend *h)
 	 struct mt65xx_led_data *led =
 			 container_of(h, struct mt65xx_led_data, early_suspend);
  
-	int brightness = led->cdev.brightness;
+//	int brightness = led->cdev.brightness;
 
-	led->cdev.brightness_set(&led->cdev,0);
+//	led->cdev.brightness_set(&led->cdev,0);
 
-	led->cdev.brightness = brightness;	
+//	led->cdev.brightness = brightness;
 }
  
 static void mt65xx_leds_late_resume(struct early_suspend *h)
@@ -516,7 +516,7 @@ static void mt65xx_leds_late_resume(struct early_suspend *h)
 	 struct mt65xx_led_data *led =
 			 container_of(h, struct mt65xx_led_data, early_suspend);
  
-	 led->cdev.brightness_set(&led->cdev,led->cdev.brightness); 
+//	 led->cdev.brightness_set(&led->cdev,led->cdev.brightness);
 }
 #endif
 
