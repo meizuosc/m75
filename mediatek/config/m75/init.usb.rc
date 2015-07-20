@@ -5,7 +5,7 @@ on init
     write /sys/class/android_usb/android0/iSerial $ro.serialno
     write /sys/class/android_usb/android0/idVendor $sys.usb.vid
     write /sys/class/android_usb/android0/iManufacturer meizu
-    write /sys/class/android_usb/android0/iProduct arale
+    write /sys/class/android_usb/android0/iProduct MX4_Ubuntu_Edition
 
 on post-fs-data
     chown system system /sys/class/android_usb/android0/f_mass_storage/lun/file

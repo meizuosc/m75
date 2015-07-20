@@ -228,16 +228,102 @@ void pa12_swap(u8 *x, u8 *y)
         *y = temp;
 }
 
+static int pa122_run_fast_calibration(struct i2c_client *client)
+{
+
+	struct txc_data *data = i2c_get_clientdata(client);
+	int i = 0;
+	int j = 0;
+	u16 sum_of_pdata = 0;
+	u8  xtalk_temp = 0;
+	u8 temp_pdata[4], cfg0data = 0,cfg2data = 0,cfg3data = 0;
+	unsigned int ArySize = 4;
+
+	APS_LOG("START proximity sensor calibration\n");
+
+	i2c_write_reg(client, REG_PS_TH, 0xFF);
+	i2c_write_reg(client, REG_PS_TL, 0);
+
+	i2c_read_reg(client, REG_CFG0, &cfg0data);
+	i2c_read_reg(client, REG_CFG2, &cfg2data);
+	i2c_read_reg(client, REG_CFG3, &cfg3data);
+
+	/*Offset mode & disable intr from ps*/
+	i2c_write_reg(client, REG_CFG2, cfg2data & 0x33);
+
+	/*PS sleep time 6.5ms */
+	i2c_write_reg(client, REG_CFG3, cfg3data & 0xC7);
+
+	/*Set crosstalk = 0*/
+	i2c_write_reg(client, REG_PS_OFFSET, 0x00);
+
+	/*PS On*/
+	i2c_write_reg(client, REG_CFG0, cfg0data | 0x02);
+	mdelay(50);
+
+	for(i = 0; i < 4; i++)
+	{
+		mdelay(7);
+		i2c_read_reg(client,REG_PS_DATA,temp_pdata+i);
+		APS_LOG("temp_data = %d\n", temp_pdata[i]);
+	}
+
+	/* pdata sorting */
+	for (i = 0; i < ArySize - 1; i++)
+		for (j = i+1; j < ArySize; j++)
+			if (temp_pdata[i] > temp_pdata[j])
+				pa12_swap(temp_pdata + i, temp_pdata + j);
+
+	/* calculate the cross-talk using central 2 data */
+	for (i = 1; i < 3; i++)
+	{
+		APS_LOG("%s: temp_pdata = %d\n", __func__, temp_pdata[i]);
+		sum_of_pdata = sum_of_pdata + temp_pdata[i];
+	}
+
+	xtalk_temp = sum_of_pdata/2;
+	APS_LOG("%s: sum_of_pdata = %d   calibvalue = %d\n",
+                        __func__, sum_of_pdata, xtalk_temp);
+
+	/* Restore Data */
+	i2c_write_reg(client, REG_CFG0, cfg0data);
+	i2c_write_reg(client, REG_CFG2, cfg2data | 0xC0); //make sure return normal mode
+	i2c_write_reg(client, REG_CFG3, cfg3data);
+
+	i2c_write_reg(client, REG_PS_TH, PA12_PS_FAR_TH_HIGH);
+	i2c_write_reg(client, REG_PS_TL, PA12_PS_NEAR_TH_LOW);
+
+	if (((xtalk_temp + PA12_PS_OFFSET_EXTRA) > data->factory_calibvalue) && (xtalk_temp < PA12_PS_OFFSET_MAX))
+	{
+		printk("Fast calibrated data=%d\n",xtalk_temp);
+		data->fast_calib_flag = 1;
+		data->fast_calibvalue = xtalk_temp + PA12_PS_OFFSET_EXTRA;
+		/* Write offset value to 0x10 */
+		i2c_write_reg(client, REG_PS_OFFSET, xtalk_temp + PA12_PS_OFFSET_EXTRA);
+		return xtalk_temp + PA12_PS_OFFSET_EXTRA;
+	}
+	else
+	{
+		printk("Fast calibration fail, calibvalue=%d, use factory_calibvalue %d\n",xtalk_temp, data->factory_calibvalue);
+		data->fast_calib_flag = 0;
+		i2c_write_reg(client, REG_PS_OFFSET, data->factory_calibvalue);
+		xtalk_temp = data->factory_calibvalue;
+
+		return xtalk_temp;
+        }
+}
+
 static int pa122_run_calibration(struct txc_data *data)
 {
-    	struct i2c_client *client = data->client;
-	int i, j;	
+	struct i2c_client *client = data->client;
+	int i, j;
 	int ret;
 	u16 sum_of_pdata = 0;
 	u8 temp_pdata[20],buftemp[1],cfg0data=0,cfg2data=0;
 	unsigned int ArySize = 20;
 	unsigned int cal_check_flag = 0;	
 	u8 value=0;
+	int calibvalue;
 
 	printk("%s: START proximity sensor calibration\n", __func__);
 
@@ -286,7 +372,7 @@ RECALIBRATION:
 		APS_LOG("%s: temp_pdata = %d\n", __func__, temp_pdata[i]);
 		sum_of_pdata = sum_of_pdata + temp_pdata[i];
 	}
-	data->ps_calibvalue = sum_of_pdata/10;
+	calibvalue = sum_of_pdata/10;
 
 	/* Restore CFG2 (Normal mode) and Measure base x-talk */
 	ret = i2c_write_reg(client, REG_CFG0, cfg0data);
@@ -295,8 +381,10 @@ RECALIBRATION:
 	i2c_write_reg(client, REG_PS_TH, PA12_PS_FAR_TH_HIGH);
 	i2c_write_reg(client, REG_PS_TL, PA12_PS_NEAR_TH_LOW);
  	
-	if (data->ps_calibvalue > PA12_PS_OFFSET_MAX) {
-		printk("%s: invalid calibrated data, calibvalue %d\n", __func__, data->ps_calibvalue);
+	if (calibvalue < PA12_PS_OFFSET_MAX) {
+		data->ps_calibvalue = calibvalue + PA12_PS_OFFSET_EXTRA;
+	} else {
+		printk("%s: invalid calibrated data, calibvalue %d\n", __func__, calibvalue);
 
 		if(cal_check_flag == 0)
 		{
@@ -307,13 +395,13 @@ RECALIBRATION:
 		else
 		{
 			APS_LOG("%s: CALIBRATION FAIL -> "
-                               "cross_talk is set to DEFAULT\n", __func__);
-			ret = i2c_write_reg(client, REG_PS_OFFSET, data->ps_calibvalue);
-			return -EINVAL;
-         	}
-	}
+			       "cross_talk is set to DEFAULT\n", __func__);
+			ret = i2c_write_reg(client, REG_PS_OFFSET, data->factory_calibvalue);
 
-	data->ps_calibvalue += PA12_PS_OFFSET_EXTRA;
+			data->pa122_sys_run_cal = 0;
+			return -EINVAL;
+		}
+	}
 
 CROSSTALKBASE_RECALIBRATION:
 	
@@ -359,6 +447,7 @@ CROSSTALKBASE_RECALIBRATION:
 			data->ps_calibvalue += 1;
 		goto CROSSTALKBASE_RECALIBRATION;
 	} else if (data->calibvalue_base == 0) {
+		data->factory_calibvalue = data->ps_calibvalue;
 		data->pa122_sys_run_cal = 1;
 	}
 
@@ -378,6 +467,9 @@ static void txc_set_enable(struct txc_data *txc, int enable)
     if (enable) {
 	    mt_eint_mask(CUST_EINT_INTI_INT_NUM);
 	    pa12201001_set_ps_mode(client);
+#if defined(PA12_FAST_CAL)
+	    pa122_run_fast_calibration(client);
+#endif
         } else {
 	    input_report_abs(txc->input_dev, ABS_DISTANCE, PS_UNKONW);
 	    input_sync(txc->input_dev);
@@ -405,7 +497,7 @@ static ssize_t txc_ps_enable_show(struct device *dev,
 
 	enabled = txc_info->ps_enable;
 
-	return sprintf(buf, "%d, %d\n", enabled);
+	return sprintf(buf, "%d, %d\n", enabled, txc_info->factory_calibvalue);
 }
 
 static ssize_t txc_ps_enable_store(struct device *dev, struct device_attribute *attr, const char *buf,
@@ -522,7 +614,7 @@ static ssize_t txc_calibvalue_store(struct device *dev, struct device_attribute 
 {
 	int ret;
 
-	//txc_info->factory_calibvalue = simple_strtol(buf, NULL, 10);
+	txc_info->factory_calibvalue = simple_strtol(buf, NULL, 10);
 
 	return count;
 }
@@ -638,6 +730,7 @@ static void txc_ps_handler(struct work_struct *work)
 	}
 
 	if (txc->ps_data != ps_data) {
+		wake_lock_timeout(&txc->ps_wake_lock, 2*HZ);
 		txc->ps_data = ps_data;
 		input_report_abs(txc->input_dev, ABS_DISTANCE, ps_data);
 		input_sync(txc->input_dev);
@@ -744,6 +837,7 @@ static int txc_probe(struct i2c_client *client, const struct i2c_device_id *id)
 	txc->client = client;
 	i2c_set_clientdata(client, txc);
 	txc_info = txc;
+	txc->ps_dev = &client->dev;
 
 	if (!i2c_check_functionality(client->adapter, I2C_FUNC_I2C)) {
 		pr_err("%s()->%d:i2c adapter don't support i2c operation!\n",
@@ -752,6 +846,8 @@ static int txc_probe(struct i2c_client *client, const struct i2c_device_id *id)
 	}
 	mutex_init(&txc->enable_lock);
 	mutex_init(&txc->i2c_lock);
+	wake_lock_init(&txc->ps_wake_lock, WAKE_LOCK_SUSPEND,
+			"ps_wake_lock");
 
 	/*create input device for reporting data*/
 	ret = txc_create_input(txc);
@@ -806,6 +902,11 @@ static int txc_remove(struct i2c_client *client)
 static int ps_suspend(struct device *dev)
 {
 	int ps_gpio = mt_get_gpio_in(GPIO_IR_EINT_PIN);	
+	if (!txc_info->wakeup_enable) {
+		mt_eint_mask(CUST_EINT_INTI_INT_NUM);
+		mt_set_gpio_mode(GPIO_IR_EINT_PIN, GPIO_MODE_02);
+		txc_info->irq_wake_enabled = 1;
+	}
 	printk(KERN_CRIT"%s:ps_gpio %d, ps enable %d\n", __func__, ps_gpio, txc_info->ps_enable);
 	return 0;
 }
@@ -813,6 +914,12 @@ static int ps_suspend(struct device *dev)
 static int ps_resume(struct device *dev)
 {
 	int ps_gpio = mt_get_gpio_in(GPIO_IR_EINT_PIN);	
+
+	if (txc_info->irq_wake_enabled) {
+		mt_set_gpio_mode(GPIO_IR_EINT_PIN, GPIO_MODE_00);
+		mt_eint_unmask(CUST_EINT_INTI_INT_NUM);
+		txc_info->irq_wake_enabled = 0;
+	}
 	printk(KERN_CRIT"%s:ps_gpio %d, ps enable %d\n", __func__, ps_gpio, txc_info->ps_enable);
 	return 0;
 }

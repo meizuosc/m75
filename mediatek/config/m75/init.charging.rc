@@ -181,14 +181,14 @@ on fs_property:ro.mount.fs=YAFFS
 
 on fs_property:ro.mount.fs=EXT4
     write /proc/bootprof "INIT:eMMC:Mount_START"
-    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/system /system noatime ro wait commit=1,noauto_da_alloc
-    exec /sbin/e2fsck -pfD /dev/block/platform/mtk-msdc.0/by-name/userdata
-    exec /sbin/tune2fs -O has_journal /dev/block/platform/mtk-msdc.0/by-name/userdata
-    exec /system/bin/ext4_resize
-    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/userdata /data noatime nosuid nodev wait noauto_da_alloc,discard
-    exec /sbin/e2fsck -p /dev/block/platform/mtk-msdc.0/by-name/cache
-    exec /sbin/tune2fs -O has_journal /dev/block/platform/mtk-msdc.0/by-name/cache
-    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/cache /cache noatime nosuid nodev wait noauto_da_alloc,discard
+#    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/system /system noatime ro wait commit=1,noauto_da_alloc
+#    exec /sbin/e2fsck -pfD /dev/block/platform/mtk-msdc.0/by-name/userdata
+#    exec /sbin/tune2fs -O has_journal /dev/block/platform/mtk-msdc.0/by-name/userdata
+#    exec /system/bin/ext4_resize
+#    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/userdata /data noatime nosuid nodev wait noauto_da_alloc,discard
+#    exec /sbin/e2fsck -p /dev/block/platform/mtk-msdc.0/by-name/cache
+#    exec /sbin/tune2fs -O has_journal /dev/block/platform/mtk-msdc.0/by-name/cache
+#    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/cache /cache noatime nosuid nodev wait noauto_da_alloc,discard
 		
     #change partition permissions
     exec /system/bin/chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/boot

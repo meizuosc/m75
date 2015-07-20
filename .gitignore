@@ -1,3 +1,9 @@
+# followed upstream for Ubuntu ramdisk
+testboot/initrd.img
+
+makeMtk.ini
+out/
+
 # Object files
 *.o
 *.ko

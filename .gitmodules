@@ -1,0 +1,3 @@
+[submodule "ubuntu/ubuntu_prebuilt_initrd_debs"]
+	path = ubuntu/ubuntu_prebuilt_initrd_debs
+	url = https://code-review.phablet.ubuntu.com/p/ubuntu/initrd/ubuntu_prebuilt_initrd_debs

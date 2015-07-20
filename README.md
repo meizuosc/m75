@@ -9,6 +9,11 @@ Build the kernel
 ----------------
 ./makeMtk -t m75 n k
 
+Get latest initrd
+----------------
+git submodule init  
+git submodule update
+
 Build a boot.img 
 ----------------
 cd testboot && ./mkbootimg.sh

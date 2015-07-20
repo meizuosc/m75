@@ -84,7 +84,7 @@
 #define PA12_PS_FAR_TH_LOW		0
 
 #define PA12_PS_OFFSET_DEFAULT  2 	// for X-talk canceling
-#define PA12_PS_OFFSET_MAX	95
+#define PA12_PS_OFFSET_MAX	100
 #define PA12_PS_OFFSET_EXTRA 	1
 #define PA12_FAST_CAL		1	
 #define PA12_FAST_CAL_ONCE	0
@@ -144,14 +144,18 @@ struct txc_data {
     bool pa122_sys_run_cal; 
     int ps_syscall;
     int gesture;
-    struct notifier_block als_enable_notifier;
     int ps_resumed;
     int mobile_leather;
-    int als_enable;
     struct mutex i2c_lock;
     int fast_calibvalue;
     int fast_calib_flag;
     struct notifier_block ps_pm_notifier;
+    int factory_calibvalue;
+    struct wake_lock ps_wake_lock;
+    int wakeup_enable;
+    int irq_wake_enabled;
+    struct device *ps_dev;
+    int debug;
 };
 
 #endif

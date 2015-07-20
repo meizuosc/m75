@@ -985,6 +985,8 @@ on boot
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/blue/brightness
     chown system system /sys/class/leds/mx-led/brightness
+    chown system system /sys/class/leds/mx-led/blink
+    chmod 0666 /sys/class/leds/mx-led/blink
 #    chown system system /sys/class/leds/mx-led0/brightness
     chown system system /sys/class/leds/mx-led1/brightness
     chown system system /sys/class/leds/mx-led2/brightness
@@ -1853,7 +1855,7 @@ service shutdown /system/bin/shutdown
     group root
     disabled
 
-service thermal_manager /system/bin/thermal_manager
+service thermal_manager /system/bin/thermal_manager /system/etc/.tp/thermal.mid.conf
 	user root
     oneshot
 
