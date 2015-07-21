@@ -493,11 +493,22 @@ static int logger_open(struct inode *inode, struct file *file)
  *
  * Note this is a total no-op in the write-only case. Keep it that way!
  */
-static int logger_release(struct inode *ignored, struct file *file)
+static int logger_release(struct inode *inode, struct file *file)
 {
+	struct logger_log *log;
+	unsigned long flags;
+
+	log = get_log_from_minor(MINOR(inode->i_rdev));
+	if (!log)
+		return -ENODEV;
+
 	if (file->f_mode & FMODE_READ) {
 		struct logger_reader *reader = file->private_data;
+
+		spin_lock_irqsave(&log->lock, flags);
 		list_del(&reader->list);
+		spin_unlock_irqrestore(&log->lock, flags);
+
 		kfree(reader);
 	}
 
