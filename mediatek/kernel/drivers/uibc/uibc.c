@@ -247,11 +247,6 @@ static int uibc_kbd_dev_open(struct inode *inode, struct file *file) {
     TPD_RES_X = simple_strtoul(LCM_WIDTH, NULL, 0);
     TPD_RES_Y = simple_strtoul(LCM_HEIGHT, NULL, 0);
 
-    uibckbd = kzalloc(sizeof(struct uibckeyboard), GFP_KERNEL);
-    uibc_input_dev = input_allocate_device();
-    if (!uibckbd || !uibc_input_dev)
-        goto fail;
-
     memcpy(uibckbd->keymap, uibc_keycode,
            sizeof(uibc_keycode));
     uibckbd->input = uibc_input_dev;
@@ -285,11 +280,6 @@ static int uibc_kbd_dev_open(struct inode *inode, struct file *file) {
     uibc_input_dev->id.bustype = BUS_HOST;
 
     return 0;
-fail:
-    input_free_device(uibc_input_dev);
-    kfree(uibckbd);
-
-    return -EINVAL;
 }
 
 static int uibc_kbd_dev_release(struct inode *inode, struct file *file) {
