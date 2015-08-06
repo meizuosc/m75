@@ -2956,6 +2956,14 @@ static void hci_cmd_complete_evt(struct hci_dev *hdev, struct sk_buff *skb,
 
 	case HCI_OP_READ_LOCAL_EXT_FEATURES:
 		hci_cc_read_local_ext_features(hdev, skb);
+
+		if (*status == 0x30) {
+			/* If we end up here the BT chip might have report a different maximum
+			 * page number than it allows us to read when we try. As this would
+			 * break our initialization process but isn't really preventing us
+			 * from finishing we're switching the status back to a sane one. */
+			*status = 0x0;
+		}
 		break;
 
 	case HCI_OP_READ_BUFFER_SIZE:
