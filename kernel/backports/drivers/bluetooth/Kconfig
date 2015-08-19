@@ -265,6 +265,15 @@ config BACKPORT_BT_HCIBTUART
 	  Say Y here to compile support for HCI UART devices into the
 	  kernel or say M to compile it as module (btuart_cs).
 
+config BACKPORT_BT_HCISTP
+	tristate "HCI STP device driver"
+	depends on !MTK_COMBO_BT_HCI
+	help
+	  Bluetooth HCI STP device driver
+
+	  Say Y here to compile support for HCI STP devices into the
+	  kernel or say M to compile it as module (hci_stp).
+
 config BACKPORT_BT_HCIVHCI
 	tristate "HCI VHCI (Virtual HCI device) driver"
 	depends on !BT_HCIVHCI

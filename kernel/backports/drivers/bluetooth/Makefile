@@ -12,6 +12,8 @@ obj-$(CONFIG_BACKPORT_BT_HCIBT3C)	+= bt3c_cs.o
 obj-$(CONFIG_BACKPORT_BT_HCIBLUECARD)	+= bluecard_cs.o
 obj-$(CONFIG_BACKPORT_BT_HCIBTUART)	+= btuart_cs.o
 
+obj-$(CONFIG_BACKPORT_BT_HCISTP) 	+= hci_stp.o
+
 obj-$(CONFIG_BACKPORT_BT_HCIBTUSB)	+= btusb.o
 obj-$(CONFIG_BACKPORT_BT_HCIBTSDIO)	+= btsdio.o
 
