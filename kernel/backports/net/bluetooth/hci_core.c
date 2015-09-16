@@ -823,9 +823,16 @@ static void hci_init4_req(struct hci_request *req, unsigned long opt)
 	if (hdev->commands[29] & 0x20)
 		hci_req_add(req, HCI_OP_READ_LOCAL_CODECS, 0, NULL);
 
+	/* NOTE: We're not sending the HCI_OP_GET_MWS_TRANSPORT_CONFIG
+	 * command here as it will come back with an error and will
+	 * cause the whole initialization to fail. This is a misbehaviour of
+	 * the BT chip but can't be fixed. Dropping this will not cause
+	 * any side effects as nobody is using MWS yet. */
+#if 0
 	/* Get MWS transport configuration if the HCI command is supported */
 	if (hdev->commands[30] & 0x08)
 		hci_req_add(req, HCI_OP_GET_MWS_TRANSPORT_CONFIG, 0, NULL);
+#endif
 
 	/* Check for Synchronization Train support */
 	if (lmp_sync_train_capable(hdev))
