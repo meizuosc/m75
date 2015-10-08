@@ -188,6 +188,6 @@ PRODUCT_COPY_FILES += \
     $(MTK_ROOT_CONFIG_OUT)/ubuntu/touch-custom:ubuntu/ramdisk/scripts/touch-custom\
     $(MTK_ROOT_CONFIG_OUT)/ubuntu/udev.rules:system/ubuntu/lib/udev/rules.d/70-android.rules \
     $(MTK_ROOT_CONFIG_OUT)/ubuntu/powerd-config.xml:system/ubuntu/usr/share/powerd/device_configs/config-default.xml \
-    $(MTK_ROOT_CONFIG_OUT)/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
+    $(MTK_ROOT_CONFIG_OUT)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
     $(MTK_ROOT_CONFIG_OUT)/ubuntu/ubuntu-location-service.conf:system/ubuntu/etc/init/ubuntu-location-service.conf \
     $(MTK_ROOT_CONFIG_OUT)/ubuntu/gps.conf:system/ubuntu/etc/gps.conf
