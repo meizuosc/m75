@@ -86,8 +86,6 @@ static unsigned int dbgLevel = BT_LOG_INFO;
 static struct hci_dev *hdev = NULL;
 static int reset = 0;
 
-static struct delayed_work late_init;
-
 /* maybe struct hci_stp is a better place to put these data */
 #if (HCI_STP_TX == HCI_STP_TX_TASKLET)
 static struct tasklet_struct hci_tx_tasklet;
@@ -1500,7 +1498,11 @@ static void hci_stp_destruct(struct hci_dev *hdev)
 
 struct class    *cls;
 
-static int hci_stp_init_real(void)
+#if 0
+static int __init hci_stp_init(void)
+#else
+static int hci_stp_init(void)
+#endif
 {
     struct hci_stp *hu = NULL;
     dev_t dev = MKDEV(BT_major, 0);
@@ -1588,39 +1590,6 @@ static int hci_stp_init_real(void)
     BT_INFO_FUNC("HCI STP driver ver %s, hdev(0x%p), init done\n", VERSION, hdev);
 
     return 0;
-}
-
-static void hci_stp_late_init(struct work_struct *work)
-{
-    int err;
-
-    BT_DBG_FUNC("checking if STP is ready now ...\n");
-
-    if (!mtk_wcn_stp_is_ready()) {
-        /* not ready so schedule another try */
-        schedule_delayed_work(&late_init, HCI_STP_READY_TIMEOUT);
-        return;
-    }
-
-    err = hci_stp_init_real();
-    if (!err)
-        BT_ERR_FUNC("Failed to init HCI STP driver");
-}
-
-#if 0
-static int __init hci_stp_init(void)
-#else
-static int hci_stp_init(void)
-#endif
-{
-    INIT_DELAYED_WORK(&late_init, hci_stp_late_init);
-
-    if (!mtk_wcn_stp_is_ready()) {
-        schedule_delayed_work(&late_init, HCI_STP_READY_TIMEOUT);
-        return 0;
-    }
-
-    return hci_stp_init_real();
 }
 
 #if 0
