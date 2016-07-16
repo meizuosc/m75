@@ -21,7 +21,6 @@
 			      <4 0x00000000 0x04000000>;
 			bank-width = <4>;
 		};
-
 		vram@2,00000000 {
 			compatible = "arm,vexpress-vram";
 			reg = <2 0x00000000 0x00800000>;
